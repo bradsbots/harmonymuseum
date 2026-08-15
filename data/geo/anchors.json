@@ -1,0 +1,60 @@
+{
+ "town": {
+  "lat": 40.8020132,
+  "lon": -80.1274462,
+  "type": "administrative",
+  "class": "boundary",
+  "display": "Harmony, Butler County, Pennsylvania, United States"
+ },
+ "museum": {
+  "lat": 40.8027215,
+  "lon": -80.1276893,
+  "type": "museum",
+  "class": "tourism",
+  "display": "Harmony Museum, 218, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United St"
+ },
+ "wagner": {
+  "lat": 40.8028888,
+  "lon": -80.1273333,
+  "type": "post_office",
+  "class": "amenity",
+  "display": "United States Post Office, 222, Mercer Street, Harmony, Butler County, Pennsylvania, 16037"
+ },
+ "ziegler_log": {
+  "lat": 40.8017365,
+  "lon": -80.1275743,
+  "type": "house",
+  "class": "place",
+  "display": "546, Main Street, Harmony, Butler County, Pennsylvania, 16037, United States"
+ },
+ "weavers": {
+  "lat": 40.8035651,
+  "lon": -80.1251933,
+  "type": "house",
+  "class": "place",
+  "display": "245, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States"
+ },
+ "barn": {
+  "lat": 40.8037795,
+  "lon": -80.1248593,
+  "type": "tertiary",
+  "class": "highway",
+  "display": "Mercer Road, Harmony, Butler County, Pennsylvania, 16037, United States"
+ },
+ "meetinghouse": null,
+ "harmony_inn": {
+  "lat": 40.8029435,
+  "lon": -80.1265021,
+  "type": "restaurant",
+  "class": "amenity",
+  "display": "The Harmony Inn, 230, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United S"
+ },
+ "rapps_seat": {
+  "lat": 40.8046336,
+  "lon": -80.1231274,
+  "type": "viewpoint",
+  "class": "tourism",
+  "display": "Rapp's Seat, Rapp's Seat Trail, Harmony, Butler County, Pennsylvania, 16037, United States"
+ },
+ "cemetery": null
+}

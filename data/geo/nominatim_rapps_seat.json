@@ -1,0 +1,23 @@
+[
+ {
+  "place_id": 369573114,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "node",
+  "osm_id": 6276865009,
+  "lat": "40.8046336",
+  "lon": "-80.1231274",
+  "category": "tourism",
+  "type": "viewpoint",
+  "place_rank": 30,
+  "importance": 3.919050888833475e-05,
+  "addresstype": "tourism",
+  "name": "Rapp's Seat",
+  "display_name": "Rapp's Seat, Rapp's Seat Trail, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8045836",
+   "40.8046836",
+   "-80.1231774",
+   "-80.1230774"
+  ]
+ }
+]

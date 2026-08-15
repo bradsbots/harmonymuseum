@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a tour — Harmony Museum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141A24;--indigo:#1F2E48;--paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--sage:#6C7A5C;--rule:rgba(20,26,36,.14);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.6;font-weight:300}
+h1,h2{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.1}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.closure{display:none;background:var(--madder);color:var(--paper);text-align:center;padding:11px 18px;font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.closure.show{display:block}
+header{background:var(--ink);color:var(--paper);padding:12px 18px;display:flex;align-items:center;gap:16px}
+header .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+header .back:hover{opacity:1}
+header h1{font-size:20px}
+.wrap{max-width:860px;margin:0 auto;padding:40px 22px 80px}
+.stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:14px 18px;font-size:15px;margin:22px 0 34px}
+.ledger{border-top:2px solid var(--ink);margin-top:12px}
+.row{display:grid;grid-template-columns:150px 90px 1fr 120px 110px;align-items:center;gap:16px;border-bottom:1px solid var(--rule);padding:13px 0}
+.row.hdr{padding:0 0 8px;color:rgba(20,26,36,.5)}
+.row .when{font-family:"Bodoni Moda",serif;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums}
+.row .seats{font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--sage)}
+.row .seats.none{color:var(--madder)}
+.btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:10px 16px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.btn:hover{background:#A2453A}
+.btn[disabled]{background:var(--paper-deep);color:rgba(20,26,36,.45);cursor:not-allowed}
+.closedRow{opacity:.55;font-style:italic}
+@media(max-width:700px){.row{grid-template-columns:1fr 1fr;row-gap:8px}.row.hdr{display:none}}
+.confirm{display:none;background:var(--sage);color:var(--white);padding:14px 18px;margin-top:24px;font-size:15.5px}
+.confirm.show{display:block}
+</style>
+</head>
+<body>
+
+<div class="closure" id="closureBanner" role="status"></div>
+
+<header>
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Book a guided tour</h1>
+</header>
+
+<div class="wrap">
+  <span class="lbl" style="color:var(--madder)">Tuesday – Saturday · tours at 1:00 &amp; 2:30 · 12 places per tour</span>
+  <h2 style="font-size:34px;margin-top:8px">The next two weeks</h2>
+  <p id="pricing" style="margin:10px 0 0;font-size:15.5px;opacity:.75"></p>
+  <p style="margin:4px 0 0"><a href="calendar.html" style="font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:600;color:var(--madder)">See the full calendar &rarr;</a></p>
+
+  <div class="stubNote">
+    <b>Prototype.</b> No payment or reservation happens on this page. At launch these
+    buttons hand off to a hosted booking service (FareHarbor or Bookeo — see REPORT.md)
+    so no volunteer ever maintains a payment integration. What <em>is</em> real: the
+    schedule below is generated from <code>data/site.js</code> — closed days and dated
+    closures drop out automatically. Try <a href="?today=2026-12-26">?today=2026-12-26</a>.
+  </div>
+
+  <div class="ledger" id="slots"></div>
+
+  <div class="confirm" id="confirm"></div>
+</div>
+
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var S = window.SITE, start = window.SITE_TODAY || new Date();
+  document.getElementById("pricing").innerHTML =
+    "<b>Book online and save $1.</b> Online: " +
+    S.onlinePricing.map(function(p){ return p[0] + " " + p[1]; }).join(" · ") +
+    " — all fees included. At the door: adults $8, seniors $7.";
+  var out = ['<div class="row hdr"><span class="lbl">Date</span><span class="lbl">Time</span><span class="lbl">Tour</span><span class="lbl">Places</span><span></span></div>'];
+  var fmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric" });
+
+  function inClosure(d){
+    return (S.closures || []).some(function(c){
+      return new Date(c.start + "T00:00:00") <= d && d <= new Date(c.end + "T23:59:59");
+    });
+  }
+
+  for (var i = 0; i < 14; i++) {
+    var d = new Date(start); d.setDate(d.getDate() + i); d.setHours(12, 0, 0, 0);
+    var label = fmt.format(d);
+    if (S.hours.closedDays.indexOf(d.getDay()) >= 0) continue;       /* Sun/Mon never listed */
+    if (inClosure(d)) {
+      out.push('<div class="row closedRow"><span class="when">' + label + '</span><span></span><span>Closed — scheduled closure</span><span></span><span></span></div>');
+      continue;
+    }
+    S.hours.tourTimes.forEach(function(t, j){
+      /* sample availability, deterministic per date+slot so the page is stable */
+      var seed = (d.getDate() * 7 + j * 3) % 13;
+      var left = seed === 0 ? 0 : (seed % 9) + 2;
+      out.push('<div class="row"><span class="when">' + label + '</span><span class="when">' + t + '</span>' +
+        '<span>Museum guided tour<br><span style="font-size:13.5px;opacity:.6">1809 warehouse, wine cellar &amp; Ziegler Log House</span></span>' +
+        (left ? '<span class="seats">' + left + ' of ' + S.hours.capacityPerTour + '</span><span><button class="btn" data-when="' + label + " " + t + '">Book</button></span>'
+              : '<span class="seats none">Full</span><span><button class="btn" disabled>Full</button></span>'));
+      out[out.length-1] += "</div>";
+    });
+  }
+  document.getElementById("slots").innerHTML = out.join("");
+
+  document.getElementById("slots").addEventListener("click", function(e){
+    var b = e.target.closest("button[data-when]");
+    if (!b) return;
+    var c = document.getElementById("confirm");
+    c.textContent = "Prototype — nothing was booked. At launch, choosing “" + b.dataset.when +
+      "” opens the hosted booking service's checkout with this slot preselected.";
+    c.classList.add("show");
+    c.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+})();
+</script>
+</body>
+</html>

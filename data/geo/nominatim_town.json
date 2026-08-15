@@ -1,0 +1,23 @@
+[
+ {
+  "place_id": 366894402,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "relation",
+  "osm_id": 187234,
+  "lat": "40.8020132",
+  "lon": "-80.1274462",
+  "category": "boundary",
+  "type": "administrative",
+  "place_rank": 16,
+  "importance": 0.38867939096549164,
+  "addresstype": "village",
+  "name": "Harmony",
+  "display_name": "Harmony, Butler County, Pennsylvania, United States",
+  "boundingbox": [
+   "40.7913540",
+   "40.8091348",
+   "-80.1319826",
+   "-80.1121690"
+  ]
+ }
+]

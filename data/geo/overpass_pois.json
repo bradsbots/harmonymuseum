@@ -1,0 +1,2698 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.62.11 87bfad18",
+ "osm3s": {
+  "timestamp_osm_base": "2026-08-15T16:06:36Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "node",
+   "id": 4916862795,
+   "lat": 40.8017143,
+   "lon": -80.1390855,
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "100",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "amenity": "restaurant",
+    "cuisine": "italian",
+    "delivery": "no",
+    "name": "Della Terra Italian Bistro",
+    "opening_hours": "Tu-Th 16:00-21:00, Fr-Sa 16:00-22:00",
+    "outdoor_seating": "no",
+    "phone": "+1 724-473-0630",
+    "website": "https://www.dellaterrapgh.com/"
+   }
+  },
+  {
+   "type": "node",
+   "id": 4916862797,
+   "lat": 40.8016895,
+   "lon": -80.1394451,
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "100",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "amenity": "restaurant",
+    "cuisine": "burger;american",
+    "delivery": "no",
+    "name": "Burgh'ers",
+    "outdoor_seating": "no",
+    "phone": "+1 724-473-0710"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5368677281,
+   "lat": 40.8044958,
+   "lon": -80.1289056,
+   "tags": {
+    "historic": "monument"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5369190453,
+   "lat": 40.8028556,
+   "lon": -80.1316753,
+   "tags": {
+    "information": "board",
+    "tourism": "information"
+   }
+  },
+  {
+   "type": "node",
+   "id": 5455084888,
+   "lat": 40.8037383,
+   "lon": -80.1384,
+   "tags": {
+    "board_type": "map",
+    "direction": "180",
+    "information": "board",
+    "name": "Trail Info Board",
+    "source": "gps;Mapped by Scharf Computer Solutions",
+    "tourism": "information"
+   }
+  },
+  {
+   "type": "node",
+   "id": 6276865009,
+   "lat": 40.8046336,
+   "lon": -80.1231274,
+   "tags": {
+    "name": "Rapp's Seat",
+    "tourism": "viewpoint"
+   }
+  },
+  {
+   "type": "node",
+   "id": 8994247244,
+   "lat": 40.7968504,
+   "lon": -80.1374536,
+   "tags": {
+    "historic": "monument"
+   }
+  },
+  {
+   "type": "way",
+   "id": 151745263,
+   "center": {
+    "lat": 40.8016091,
+    "lon": -80.1236736
+   },
+   "tags": {
+    "landuse": "cemetery"
+   }
+  },
+  {
+   "type": "way",
+   "id": 235236352,
+   "center": {
+    "lat": 40.8086785,
+    "lon": -80.1118338
+   },
+   "tags": {
+    "building": "school",
+    "name": "Ryan Gloyer Middle School"
+   }
+  },
+  {
+   "type": "way",
+   "id": 235249110,
+   "center": {
+    "lat": 40.8030348,
+    "lon": -80.1359708
+   },
+   "tags": {
+    "building": "retail",
+    "name": "Northgate Plaza"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373044316,
+   "center": {
+    "lat": 40.793755,
+    "lon": -80.1354865
+   },
+   "tags": {
+    "amenity": "bank",
+    "building": "yes",
+    "name": "NexTier Bank"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373044317,
+   "center": {
+    "lat": 40.7938323,
+    "lon": -80.1357191
+   },
+   "tags": {
+    "amenity": "bank",
+    "building": "yes",
+    "name": "NexTier Bank"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373110782,
+   "center": {
+    "lat": 40.8014902,
+    "lon": -80.1390538
+   },
+   "tags": {
+    "building": "retail",
+    "name": "Creekside plaza"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373218487,
+   "center": {
+    "lat": 40.7971911,
+    "lon": -80.1336517
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "320",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "name": "St Peter's Reformed Church",
+    "phone": "+1 724-452-8120",
+    "religion": "christian",
+    "website": "https://www.stpzelie.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373218488,
+   "center": {
+    "lat": 40.7973671,
+    "lon": -80.1332961
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "324",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "building": "service",
+    "name": "Boylan Funeral Home & Cremation Services",
+    "phone": "+1 724-452-8005",
+    "shop": "funeral_directors",
+    "website": "www.boylanfamilyservices.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373218492,
+   "center": {
+    "lat": 40.7971716,
+    "lon": -80.1342584
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "306",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "building": "service",
+    "description": "Web Design",
+    "name": "Media Post",
+    "phone": "+1 724-453-1290",
+    "website": "www.mediapostinc.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373249194,
+   "center": {
+    "lat": 40.8043641,
+    "lon": -80.1092548
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Evergreen Nursing Home"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373250870,
+   "center": {
+    "lat": 40.7970358,
+    "lon": -80.1355502
+   },
+   "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "English Evangelical Lutheran Church",
+    "religion": "christian"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373301569,
+   "center": {
+    "lat": 40.7975403,
+    "lon": -80.1311836
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "415",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "presbyterian",
+    "name": "Calvin Presbyterian Church",
+    "phone": "+1 724-452-7560",
+    "religion": "christian",
+    "website": "https://www.calvinchurchzelie.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373343776,
+   "center": {
+    "lat": 40.797818,
+    "lon": -80.1292013
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "123",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "North Pittsburgh Street",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "methodist",
+    "name": "Harmony-Zelienople United Methodist Church",
+    "phone": "+1 724-452-7670",
+    "religion": "christian",
+    "website": "https://www.hzumc.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373343810,
+   "center": {
+    "lat": 40.7987796,
+    "lon": -80.128604
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "502",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "amenity": "restaurant",
+    "brand": "Fox's Pizza Den",
+    "brand:wikidata": "Q5476498",
+    "building": "commercial",
+    "contact:website": "https://www.foxspizza.com/store/pennsylvania/zelienople-pa/",
+    "cuisine": "pizza",
+    "delivery": "yes",
+    "name": "Fox's Pizza Den",
+    "phone": "+1 724-452-0511",
+    "takeaway": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373350226,
+   "center": {
+    "lat": 40.793903,
+    "lon": -80.1347157
+   },
+   "tags": {
+    "building": "apartments",
+    "name": "Maple Court"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373547399,
+   "center": {
+    "lat": 40.7971596,
+    "lon": -80.1210531
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "6",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Whitney Drive",
+    "building": "industrial",
+    "name": "Main Steel Polishing Co",
+    "phone": "+1 724-453-3000",
+    "website": "www.mainsteel.com/harmony"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373708814,
+   "center": {
+    "lat": 40.7976523,
+    "lon": -80.134999
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "219",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "building": "service",
+    "name": "Glenn-Kildoo Funeral Home & Cremation Services",
+    "phone": "+1 724-452-6160",
+    "shop": "funeral_directors",
+    "website": "www.boylanfamilyservices.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373708821,
+   "center": {
+    "lat": 40.7974072,
+    "lon": -80.1366499
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "115",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "East Grandview Avenue",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "presbyterian",
+    "name": "Park United Presbyterian Church",
+    "phone": "+1 724-452-9570",
+    "religion": "christian",
+    "website": "https://www.parkup.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373708833,
+   "center": {
+    "lat": 40.798459,
+    "lon": -80.1367031
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "300",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "North Main Street",
+    "building": "commercial",
+    "name": "Hearth & Home Furnishings",
+    "phone": "+1 724-452-6732",
+    "shop": "furniture",
+    "website": "www.hearthandhomepa.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 373708834,
+   "center": {
+    "lat": 40.7977506,
+    "lon": -80.1376378
+   },
+   "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "St. Paul's Lutheran Church",
+    "religion": "christian"
+   }
+  },
+  {
+   "type": "way",
+   "id": 374953388,
+   "center": {
+    "lat": 40.7966972,
+    "lon": -80.1393501
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "214",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "West Grandview Avenue",
+    "amenity": "dentist",
+    "building": "yes",
+    "email": "jeremiahbondraDMDPC@gmail.com",
+    "healthcare": "dentist",
+    "name": "Jeremiah Bondra DMD",
+    "opening_hours": "Mo-Tu 09:00-19:00, We 07:00-17:00, Th 07:30-17:00",
+    "phone": "+1 724-452-7960",
+    "website": "https://www.drjeremiahbondra.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375584362,
+   "center": {
+    "lat": 40.7906809,
+    "lon": -80.1366993
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "100",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "Burgess Drive",
+    "amenity": "social_facility",
+    "building": "yes",
+    "name": "Lutheran SeniorLife, Newhaven Court",
+    "operator": "Lutheran SeniorLife",
+    "social_facility": "nursing_home",
+    "social_facility:for": "senior",
+    "website": "https://www.lutheranseniorlife.org/",
+    "wheelchair": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375865881,
+   "center": {
+    "lat": 40.7968239,
+    "lon": -80.1382144
+   },
+   "tags": {
+    "building": "yes",
+    "email": "sales@tsivideo.com",
+    "name": "TSI Transit Solutions",
+    "phone": "+1 724-473-0336",
+    "shop": "electronics",
+    "website": "https://www.tsivideo.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375865891,
+   "center": {
+    "lat": 40.7957964,
+    "lon": -80.1382598
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "121",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "West New Castle Street",
+    "beauty": "nails",
+    "building": "yes",
+    "name": "Polished",
+    "shop": "beauty"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375865894,
+   "center": {
+    "lat": 40.7958225,
+    "lon": -80.1378774
+   },
+   "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Zelienople Police Department"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375865895,
+   "center": {
+    "lat": 40.7958608,
+    "lon": -80.1376657
+   },
+   "tags": {
+    "amenity": "fast_food",
+    "brand": "Vocelli Pizza",
+    "brand:wikidata": "Q7939247",
+    "building": "yes",
+    "cuisine": "pizza",
+    "name": "Vocelli Pizza",
+    "takeaway": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375865898,
+   "center": {
+    "lat": 40.7959633,
+    "lon": -80.1373243
+   },
+   "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Herbe's Z Town Cafe"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375866596,
+   "center": {
+    "lat": 40.7964734,
+    "lon": -80.1377352
+   },
+   "tags": {
+    "addr:street": "North Main Street",
+    "building": "yes",
+    "name": "Zelienople Mini Mart",
+    "shop": "convenience",
+    "toilets": "no"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375866597,
+   "center": {
+    "lat": 40.796509,
+    "lon": -80.1374191
+   },
+   "tags": {
+    "amenity": "fuel",
+    "brand": "Sunoco",
+    "brand:wikidata": "Q1423218",
+    "building": "yes",
+    "check_date": "2024-09-27",
+    "name": "Sunoco",
+    "phone": "+1 724-473-0776",
+    "website": "https://www.sunoco.com/locations/store/129-n-main-st-zelienople-pa-0634648003"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375866603,
+   "center": {
+    "lat": 40.7966834,
+    "lon": -80.1368394
+   },
+   "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Goodfello's Pizza and Pasta"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375866604,
+   "center": {
+    "lat": 40.7964852,
+    "lon": -80.1369041
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Mathew Jewelers",
+    "shop": "jewelry"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869632,
+   "center": {
+    "lat": 40.7962482,
+    "lon": -80.1374072
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "119",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "North Main Street",
+    "amenity": "cinema",
+    "building": "yes",
+    "name": "The Strand Theater Initiative",
+    "wikidata": "Q7621247"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869633,
+   "center": {
+    "lat": 40.7963319,
+    "lon": -80.1373592
+   },
+   "tags": {
+    "building": "yes",
+    "name": "The Green Barn",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869636,
+   "center": {
+    "lat": 40.796109,
+    "lon": -80.1368738
+   },
+   "tags": {
+    "alt_name": "Edward Jones Investments",
+    "brand": "Edward Jones",
+    "brand:wikidata": "Q5343830",
+    "building": "yes",
+    "name": "Edward Jones",
+    "office": "financial_advisor"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869637,
+   "center": {
+    "lat": 40.7960257,
+    "lon": -80.1367332
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Andrea's Country Shop",
+    "shop": "gift"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869638,
+   "center": {
+    "lat": 40.7959402,
+    "lon": -80.1368351
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Mussig Flower Shop",
+    "shop": "florist"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869639,
+   "center": {
+    "lat": 40.7958495,
+    "lon": -80.136814
+   },
+   "tags": {
+    "amenity": "bank",
+    "atm": "yes",
+    "brand": "Citizens Bank",
+    "brand:wikidata": "Q5122694",
+    "building": "yes",
+    "drive_through": "no",
+    "name": "Citizens Bank",
+    "short_name": "Citizens"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869654,
+   "center": {
+    "lat": 40.7970292,
+    "lon": -80.1362227
+   },
+   "tags": {
+    "amenity": "dentist",
+    "building": "yes",
+    "healthcare": "dentist",
+    "name": "Grandview Dental"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869661,
+   "center": {
+    "lat": 40.7955639,
+    "lon": -80.1373491
+   },
+   "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "delivery": "no",
+    "name": "Kaufman Hotel & Restaurant"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869662,
+   "center": {
+    "lat": 40.7954177,
+    "lon": -80.1372694
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Maddalon Jewelers",
+    "shop": "jewelry"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869665,
+   "center": {
+    "lat": 40.7952856,
+    "lon": -80.1374744
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "111",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "South Main Street",
+    "addr:unit": "Suite 300",
+    "amenity": "bar",
+    "building": "commercial",
+    "microbrewery": "no",
+    "name": "Lolev Zelienople"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869667,
+   "center": {
+    "lat": 40.7950534,
+    "lon": -80.1371878
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Sarah II Nails",
+    "shop": "beauty"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869670,
+   "center": {
+    "lat": 40.7949556,
+    "lon": -80.1371018
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "131",
+    "addr:state": "PA",
+    "addr:street": "South Main Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Fisher's Bar & Restaurant",
+    "phone": "+1 724 452-1350",
+    "start_date": "1978",
+    "website": "https://www.fishersbarzelie.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869674,
+   "center": {
+    "lat": 40.7947604,
+    "lon": -80.1370823
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Whitey's General Store",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375869677,
+   "center": {
+    "lat": 40.7945622,
+    "lon": -80.1371245
+   },
+   "tags": {
+    "building": "yes",
+    "name": "C.T. McCormick Hardware",
+    "shop": "hardware"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970879,
+   "center": {
+    "lat": 40.794208,
+    "lon": -80.1371347
+   },
+   "tags": {
+    "building": "yes",
+    "name": "One Enchanted Evening",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970880,
+   "center": {
+    "lat": 40.7941277,
+    "lon": -80.1370616
+   },
+   "tags": {
+    "building": "yes",
+    "name": "The Newstand",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970881,
+   "center": {
+    "lat": 40.7940584,
+    "lon": -80.137098
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Griffin Insurance Group",
+    "office": "insurance"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970882,
+   "center": {
+    "lat": 40.7939944,
+    "lon": -80.1368987
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Kesco, Inc",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970885,
+   "center": {
+    "lat": 40.7938656,
+    "lon": -80.1369108
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Dapper Bicycle",
+    "service:bicycle:repair": "yes",
+    "service:bicycle:retail": "yes",
+    "shop": "bicycle"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970886,
+   "center": {
+    "lat": 40.7937963,
+    "lon": -80.1368592
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "221",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "South Main Street",
+    "building": "yes",
+    "historic": "building",
+    "name": "Buhl House"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970887,
+   "center": {
+    "lat": 40.7936773,
+    "lon": -80.1368468
+   },
+   "tags": {
+    "building": "yes",
+    "name": "The Murray Agency",
+    "office": "estate_agent"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970889,
+   "center": {
+    "lat": 40.793378,
+    "lon": -80.1368147
+   },
+   "tags": {
+    "amenity": "fuel",
+    "brand": "Valero",
+    "brand:wikidata": "Q1283291",
+    "building": "yes",
+    "name": "Valero Zelienople"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970894,
+   "center": {
+    "lat": 40.7929801,
+    "lon": -80.1367097
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Zelienople Historical Society",
+    "tourism": "museum"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970895,
+   "center": {
+    "lat": 40.7928546,
+    "lon": -80.1368118
+   },
+   "tags": {
+    "amenity": "post_office",
+    "building": "yes",
+    "check_date": "2026-05-27",
+    "name": "Zelienople Post Office",
+    "operator": "United States Postal Service",
+    "operator:short": "USPS",
+    "operator:type": "public",
+    "operator:website": "https://www.usps.com",
+    "operator:wikidata": "Q668687",
+    "operator:wikipedia": "en:United States Postal Service",
+    "website": "https://tools.usps.com/locations/details/1388579"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970896,
+   "center": {
+    "lat": 40.792654,
+    "lon": -80.1367271
+   },
+   "tags": {
+    "amenity": "bank",
+    "brand": "WesBanco",
+    "brand:wikidata": "Q7983629",
+    "building": "yes",
+    "name": "WesBanco"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970897,
+   "center": {
+    "lat": 40.7925629,
+    "lon": -80.1376216
+   },
+   "tags": {
+    "amenity": "bank",
+    "brand": "WesBanco",
+    "brand:wikidata": "Q7983629",
+    "building": "yes",
+    "name": "WesBanco"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970915,
+   "center": {
+    "lat": 40.7947757,
+    "lon": -80.1365011
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Carol's Pastry Shop",
+    "shop": "bakery"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970916,
+   "center": {
+    "lat": 40.7946987,
+    "lon": -80.1364407
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Room to Grow",
+    "shop": "toys"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970917,
+   "center": {
+    "lat": 40.7947032,
+    "lon": -80.1370906
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Stylin' Sherri",
+    "shop": "beauty"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970918,
+   "center": {
+    "lat": 40.7946409,
+    "lon": -80.1370795
+   },
+   "tags": {
+    "amenity": "community_centre",
+    "building": "yes",
+    "community_centre": "social_centre",
+    "community_centre:for": "disabled",
+    "name": "Parents in Toto",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970919,
+   "center": {
+    "lat": 40.7948549,
+    "lon": -80.1370813
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Boney Joe Tattoos",
+    "shop": "tattoo"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970920,
+   "center": {
+    "lat": 40.7949045,
+    "lon": -80.1370919
+   },
+   "tags": {
+    "amenity": "arts_centre",
+    "building": "yes",
+    "name": "Ooh & Aah"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970922,
+   "center": {
+    "lat": 40.7951449,
+    "lon": -80.1371247
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Stocking Stuffers Plus",
+    "shop": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970923,
+   "center": {
+    "lat": 40.7951983,
+    "lon": -80.1371385
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Salon Dannielle",
+    "shop": "beauty"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970924,
+   "center": {
+    "lat": 40.7953536,
+    "lon": -80.1371768
+   },
+   "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Kountry Kitchen"
+   }
+  },
+  {
+   "type": "way",
+   "id": 375970925,
+   "center": {
+    "lat": 40.7953029,
+    "lon": -80.1371629
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Eva Brynn Shoetique",
+    "shop": "shoes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022128,
+   "center": {
+    "lat": 40.7959015,
+    "lon": -80.1373129
+   },
+   "tags": {
+    "building": "yes",
+    "name": "A-1 PC Computer Shop",
+    "shop": "computer"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022129,
+   "center": {
+    "lat": 40.7958371,
+    "lon": -80.1373014
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Jack Bonus & Assoc. Insurance",
+    "office": "insurance"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022130,
+   "center": {
+    "lat": 40.7960349,
+    "lon": -80.1374127
+   },
+   "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Spring Main Cafe",
+    "outdoor_seating": "yes",
+    "takeaway": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022132,
+   "center": {
+    "lat": 40.7962212,
+    "lon": -80.1369281
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Integrative Staffing Group, LLC",
+    "office": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022133,
+   "center": {
+    "lat": 40.796174,
+    "lon": -80.1369165
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Temporary Personnel Services, Inc",
+    "office": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022138,
+   "center": {
+    "lat": 40.7954473,
+    "lon": -80.1366594
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Northwest Consumer Loans",
+    "office": "financial"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022139,
+   "center": {
+    "lat": 40.7953895,
+    "lon": -80.136594
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Health Naturale",
+    "shop": "herbalist"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022140,
+   "center": {
+    "lat": 40.7950741,
+    "lon": -80.1366784
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Dan's Barber",
+    "shop": "hairdresser"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022141,
+   "center": {
+    "lat": 40.7950118,
+    "lon": -80.1366657
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Kennedy-Meeder Insurance, Inc",
+    "office": "insurance"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022142,
+   "center": {
+    "lat": 40.7949398,
+    "lon": -80.1365541
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Kash Mortgage Group, Inc",
+    "office": "financial"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022143,
+   "center": {
+    "lat": 40.7948902,
+    "lon": -80.1365438
+   },
+   "tags": {
+    "building": "yes",
+    "name": "The Presbytery Center",
+    "office": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022144,
+   "center": {
+    "lat": 40.7948398,
+    "lon": -80.1365313
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Complete Travel Service",
+    "shop": "travel_agency"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022145,
+   "center": {
+    "lat": 40.794274,
+    "lon": -80.1365159
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Roach & Ziegler",
+    "shop": "furniture"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022148,
+   "center": {
+    "lat": 40.7941099,
+    "lon": -80.136429
+   },
+   "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Shu Brew"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022149,
+   "center": {
+    "lat": 40.7940291,
+    "lon": -80.1365092
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Rich's Barber Shop",
+    "shop": "hairdresser"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022151,
+   "center": {
+    "lat": 40.7938409,
+    "lon": -80.1364723
+   },
+   "tags": {
+    "brand": "Allstate",
+    "brand:wikidata": "Q2645636",
+    "building": "yes",
+    "name": "Allstate Insurance",
+    "office": "insurance"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022153,
+   "center": {
+    "lat": 40.7936148,
+    "lon": -80.1363112
+   },
+   "tags": {
+    "amenity": "bank",
+    "building": "yes",
+    "name": "NexTier Bank"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022154,
+   "center": {
+    "lat": 40.7933649,
+    "lon": -80.1358289
+   },
+   "tags": {
+    "amenity": "pharmacy",
+    "branch": "Walgreens Pharmacy & Photo",
+    "brand": "Walgreens",
+    "brand:wikidata": "Q1591889",
+    "building": "yes",
+    "healthcare": "pharmacy",
+    "name": "Walgreens"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022156,
+   "center": {
+    "lat": 40.7931289,
+    "lon": -80.1361078
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Hovis Auto & Truck Supply",
+    "shop": "car_parts"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376022168,
+   "center": {
+    "lat": 40.7933876,
+    "lon": -80.1354374
+   },
+   "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "Zelienople Public Library"
+   }
+  },
+  {
+   "type": "way",
+   "id": 376408615,
+   "center": {
+    "lat": 40.8015965,
+    "lon": -80.1369416
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "1",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Northgate Plaza",
+    "amenity": "bank",
+    "atm": "yes",
+    "building": "yes",
+    "name": "Huntington Bank"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377169616,
+   "center": {
+    "lat": 40.7986195,
+    "lon": -80.1394495
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "64",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "Halstead Boulevard",
+    "building": "warehouse",
+    "name": "Hindman Moving & Storage",
+    "phone": "+1 724-446-3626",
+    "website": "www.hindmanmoving.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923019,
+   "center": {
+    "lat": 40.8031431,
+    "lon": -80.1377107
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Carlson's Bait & Tackle",
+    "shop": "outdoor"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923020,
+   "center": {
+    "lat": 40.8026632,
+    "lon": -80.1380725
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "112",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "pizza",
+    "delivery": "no",
+    "name": "Pizza Hut",
+    "phone": "+1 724-452-4720",
+    "takeaway": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923021,
+   "center": {
+    "lat": 40.8030906,
+    "lon": -80.1381516
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "114",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "yes",
+    "name": "Zelienople Beer Distributor",
+    "phone": "+1 724-452-7860",
+    "shop": "alcohol"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923025,
+   "center": {
+    "lat": 40.8036839,
+    "lon": -80.1375142
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "120",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "yes",
+    "name": "The Enchanted Olive",
+    "opening_hours": "Mo-Sa 10:00-18:00",
+    "phone": "+1 724-473-0017",
+    "shop": "yes",
+    "website": "https://enchantedolive.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923028,
+   "center": {
+    "lat": 40.804358,
+    "lon": -80.1369858
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "132",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "commercial",
+    "name": "Apex Surfaces",
+    "phone": "+1 724-452-7190",
+    "website": "www.apexsurfaces.com"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923030,
+   "center": {
+    "lat": 40.8050978,
+    "lon": -80.1361999
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "134",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "yes",
+    "name": "T & M Hardware",
+    "opening_hours": "Mo-Sa 08:00-20:00, Su 08:00-17:00",
+    "phone": "+1 724-452-5544",
+    "shop": "hardware",
+    "website": "https://www.tandmhardware.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923031,
+   "center": {
+    "lat": 40.8047089,
+    "lon": -80.1351514
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "155",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "amenity": "fast_food",
+    "brand": "Burger King",
+    "brand:wikidata": "Q177054",
+    "building": "yes",
+    "cuisine": "burger",
+    "delivery": "no",
+    "drive_through": "yes",
+    "internet_access": "wlan",
+    "name": "Burger King",
+    "opening_hours": "Mo-We 05:30-20:00; Th 05:30-19:00; Fr 05:30-20:00; Sa 05:30-21:00; Su 07:00-22:00",
+    "phone": "+1 724-452-6900",
+    "ref": "2869",
+    "takeaway": "yes",
+    "website": "https://www.bk.com/store-locator/store/restaurant_1568"
+   }
+  },
+  {
+   "type": "way",
+   "id": 377923033,
+   "center": {
+    "lat": 40.8044099,
+    "lon": -80.1357863
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "145",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "alt_name": "Dairy Queen",
+    "amenity": "fast_food",
+    "brand": "DQ Grill & Chill",
+    "brand:wikidata": "Q1141226",
+    "building": "yes",
+    "cuisine": "ice_cream;burger",
+    "delivery": "no",
+    "name": "DQ Grill & Chill",
+    "operator": "Dairy Queen",
+    "outdoor_seating": "yes",
+    "phone": "+1 724-452-4747",
+    "takeaway": "yes",
+    "website": "https://www.dairyqueen.com/locations/pa/harmony/145-perry-hwy/5760"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796903,
+   "center": {
+    "lat": 40.7922487,
+    "lon": -80.1367061
+   },
+   "tags": {
+    "amenity": "fuel",
+    "brand": "7-Eleven",
+    "brand:wikidata": "Q259340",
+    "building": "yes",
+    "name": "7-Eleven"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796904,
+   "center": {
+    "lat": 40.792029,
+    "lon": -80.1366003
+   },
+   "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Three B's Lounge"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796906,
+   "center": {
+    "lat": 40.7916153,
+    "lon": -80.1370969
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Zelienople Market",
+    "shop": "supermarket"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796913,
+   "center": {
+    "lat": 40.7918741,
+    "lon": -80.1364702
+   },
+   "tags": {
+    "brand": "State Farm",
+    "brand:wikidata": "Q2007336",
+    "building": "yes",
+    "name": "State Farm - Jim Hinkle",
+    "office": "insurance"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796915,
+   "center": {
+    "lat": 40.7917569,
+    "lon": -80.1364408
+   },
+   "tags": {
+    "amenity": "social_facility",
+    "building": "yes",
+    "name": "Lutheran Senior Life Home Health Care",
+    "social_facility": "group_home",
+    "social_facility:for": "senior"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796917,
+   "center": {
+    "lat": 40.7915653,
+    "lon": -80.1364273
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Camelot Coal Company",
+    "office": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796922,
+   "center": {
+    "lat": 40.7922821,
+    "lon": -80.1361112
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Ronin Advertising",
+    "office": "company"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796923,
+   "center": {
+    "lat": 40.7920998,
+    "lon": -80.1360775
+   },
+   "tags": {
+    "building": "yes",
+    "name": "R. Douglas Falk, CFP",
+    "office": "company"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796924,
+   "center": {
+    "lat": 40.7919384,
+    "lon": -80.135978
+   },
+   "tags": {
+    "building": "yes",
+    "name": "National Charter Education Foundation",
+    "office": "company"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796925,
+   "center": {
+    "lat": 40.7917505,
+    "lon": -80.1359379
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Avaya Hearing Care Centers",
+    "shop": "hearing_aids"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796926,
+   "center": {
+    "lat": 40.7916249,
+    "lon": -80.1359279
+   },
+   "tags": {
+    "building": "hospital",
+    "name": "Butler Health System Outpatient Services"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796947,
+   "center": {
+    "lat": 40.7916506,
+    "lon": -80.1357515
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Northern States Mortgage, LLC",
+    "office": "financial"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796950,
+   "center": {
+    "lat": 40.7910403,
+    "lon": -80.1353005
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Meyer's Tire Services",
+    "shop": "tyres"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796951,
+   "center": {
+    "lat": 40.7908965,
+    "lon": -80.1353888
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Laundry",
+    "shop": "laundry"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379796952,
+   "center": {
+    "lat": 40.7906581,
+    "lon": -80.1356351
+   },
+   "tags": {
+    "building": "yes",
+    "name": "T-Shirt Loft",
+    "shop": "clothes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379800831,
+   "center": {
+    "lat": 40.7904578,
+    "lon": -80.1354672
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "424",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "South Main Street",
+    "building": "yes",
+    "name": "Jack Hockenberger Motors",
+    "opening_hours": "Mo-Fr 09:00-17:30, Sa 09:00-13:00",
+    "phone": "+1 724-452-8100",
+    "service:vehicle:air_conditioning": "yes",
+    "service:vehicle:batteries": "yes",
+    "service:vehicle:brakes": "yes",
+    "service:vehicle:car_repair": "yes",
+    "service:vehicle:diagnostics": "yes",
+    "service:vehicle:inspection": "yes",
+    "service:vehicle:notary": "yes",
+    "service:vehicle:oil_change": "yes",
+    "service:vehicle:towing": "yes",
+    "service:vehicle:transmission_repair": "yes",
+    "service:vehicle:tyres": "yes",
+    "service:vehicle:used_car_sales": "yes",
+    "service:vehicle:wheels": "yes",
+    "shop": "car_repair"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379856583,
+   "center": {
+    "lat": 40.8016925,
+    "lon": -80.1199875
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "3",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Tara Drive",
+    "building": "yes",
+    "description": "Industrial Equipment Supplier",
+    "name": "A W Miller Technical Sales",
+    "phone": "+1 724-453-1690",
+    "shop": "hardware",
+    "website": "https://www.awmiller.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379941979,
+   "center": {
+    "lat": 40.7992353,
+    "lon": -80.1301225
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:housenumber": "400",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "Robinson Drive",
+    "building": "industrial",
+    "name": "Robinson Fans",
+    "phone": "+1 724-452-6121",
+    "website": "https://robinsonfans.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379942054,
+   "center": {
+    "lat": 40.8012929,
+    "lon": -80.128251
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "317",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "German Street",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "methodist",
+    "name": "United Methodist Church",
+    "phone": "+1 724-452-0589",
+    "religion": "christian"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379960739,
+   "center": {
+    "lat": 40.8091774,
+    "lon": -80.127582
+   },
+   "tags": {
+    "historic": "heritage_building",
+    "name": "Harmony Mennonite Meeting House"
+   }
+  },
+  {
+   "type": "way",
+   "id": 379960742,
+   "center": {
+    "lat": 40.8084125,
+    "lon": -80.1299897
+   },
+   "tags": {
+    "building": "yes",
+    "emergency": "ambulance_station",
+    "name": "Harmony EMS"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634611,
+   "center": {
+    "lat": 40.8026312,
+    "lon": -80.1289209
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "217",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Street",
+    "amenity": "townhall",
+    "building": "yes",
+    "name": "Harmony Borough Office",
+    "phone": "+1 724-452-6780",
+    "website": "https://www.harmony-pa.us/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634616,
+   "center": {
+    "lat": 40.8028104,
+    "lon": -80.1282729
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "534",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Main Street",
+    "building": "yes",
+    "name": "Lagerhaus Bakery",
+    "shop": "bakery"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634621,
+   "center": {
+    "lat": 40.8029905,
+    "lon": -80.1283077
+   },
+   "tags": {
+    "building": "yes",
+    "name": "McPharlin Music Shop",
+    "shop": "musical_instrument"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634624,
+   "center": {
+    "lat": 40.8033132,
+    "lon": -80.1284404
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Algone Corporation",
+    "office": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634638,
+   "center": {
+    "lat": 40.8034429,
+    "lon": -80.1263855
+   },
+   "tags": {
+    "building:material": "wood",
+    "name": "Harmony Weaver's Cabin",
+    "tourism": "attraction"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634639,
+   "center": {
+    "lat": 40.8035873,
+    "lon": -80.1258974
+   },
+   "tags": {
+    "addr:housenumber": "251",
+    "addr:street": "Mercer Street",
+    "building": "yes",
+    "building:colour": "brown",
+    "building:levels": "2",
+    "building:material": "wood",
+    "name": "Historic Harmony Rope Maker Shop"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634640,
+   "center": {
+    "lat": 40.8036993,
+    "lon": -80.1257951
+   },
+   "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "cuisine": "coffee_shop;crepe",
+    "name": "Wunderbar Coffe & Crepes",
+    "phone": "+1 724-256-7383",
+    "website": "https://www.wunderbarharmony.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634641,
+   "center": {
+    "lat": 40.8038656,
+    "lon": -80.1257792
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "253",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Street",
+    "building": "yes",
+    "building:colour": "blue",
+    "building:levels": "1",
+    "name": "Darn Yarn Needles & Thread",
+    "roof:colour": "red",
+    "shop": "fabric"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634643,
+   "center": {
+    "lat": 40.803741,
+    "lon": -80.1253626
+   },
+   "tags": {
+    "addr:housenumber": "257",
+    "addr:street": "Mercer Street",
+    "building": "commercial",
+    "building:colour": "white",
+    "building:levels": "2",
+    "name": "The Healing House"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634653,
+   "center": {
+    "lat": 40.8024618,
+    "lon": -80.12834
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "538",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Main Street",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "name": "Grace Church of Harmony",
+    "phone": "+1 724-452-7270",
+    "religion": "christian",
+    "website": "https://gcoh.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634662,
+   "center": {
+    "lat": 40.8027019,
+    "lon": -80.1276967
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "218",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Street",
+    "building": "yes",
+    "name": "Harmony Museum",
+    "opening_hours": "Tu-Su 13:00-16:00",
+    "phone": "+1 724-452-7341",
+    "tourism": "museum",
+    "website": "https://www.harmonymuseum.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634663,
+   "center": {
+    "lat": 40.8025354,
+    "lon": -80.1276611
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Bottlebrush Gallery & Shop",
+    "shop": "art"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634664,
+   "center": {
+    "lat": 40.8022794,
+    "lon": -80.1273212
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "543",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Main Street",
+    "amenity": "fire_station",
+    "building": "service",
+    "name": "Harmony Fire District",
+    "phone": "+1 724-452-4046",
+    "website": "https://www.harmony-pa.us/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634666,
+   "center": {
+    "lat": 40.8027004,
+    "lon": -80.1269856
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "226",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Street",
+    "building": "yes",
+    "name": "Sapienza's Service Station",
+    "phone": "+1 724-452-7740",
+    "service:vehicle:car_parts": "yes",
+    "service:vehicle:car_repair": "yes",
+    "shop": "car_repair"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634668,
+   "center": {
+    "lat": 40.8028943,
+    "lon": -80.1273246
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "222",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Street",
+    "amenity": "post_office",
+    "brand": "United States Post Office",
+    "brand:wikidata": "Q668687",
+    "building": "yes",
+    "name": "United States Post Office",
+    "phone": "+1 724-452-8333"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634672,
+   "center": {
+    "lat": 40.8029512,
+    "lon": -80.1265139
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "230",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Street",
+    "amenity": "restaurant",
+    "building": "commercial",
+    "contact:email": "info@theharmonyinn.com",
+    "contact:facebook": "https://www.facebook.com/theharmonyinn/",
+    "contact:instagram": "https://www.instagram.com/theharmonyinn/",
+    "contact:phone": "+1 724 452 5124",
+    "contact:twitter": "https://twitter.com/theharmonyinn",
+    "contact:website": "https://theharmonyinn.com/",
+    "cuisine": "american;german;burger",
+    "delivery": "no",
+    "name": "The Harmony Inn",
+    "opening_hours": "Mo-Th 11:00-23:00; Fr 11:00-24:00; Sa 09:00-24:00; Su 09:00-22:00",
+    "opening_hours:kitchen": "Mo-Th 11:00-22:00; Fr 11:00-23:00; Sa 09:00-23:00; Su 09:00-21:00"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634684,
+   "center": {
+    "lat": 40.8033164,
+    "lon": -80.1255192
+   },
+   "tags": {
+    "addr:housenumber": "250",
+    "addr:street": "Mercer Street",
+    "building": "retail",
+    "building:colour": "red",
+    "building:levels": "2",
+    "building:material": "brick",
+    "name": "Harmony Emproium",
+    "shop": "antiques"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634685,
+   "center": {
+    "lat": 40.8030045,
+    "lon": -80.1250344
+   },
+   "tags": {
+    "building": "commercial",
+    "name": "Rambo Welding"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634686,
+   "center": {
+    "lat": 40.8031989,
+    "lon": -80.1249405
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Small Parts Machine, Inc",
+    "shop": "car_repair"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380634692,
+   "center": {
+    "lat": 40.8029621,
+    "lon": -80.1239634
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "270",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Road",
+    "building": "yes",
+    "name": "Harmony Moose Lodge",
+    "phone": "+1 724-452-9068"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380638097,
+   "center": {
+    "lat": 40.8011992,
+    "lon": -80.1267957
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "430",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Harmony Way",
+    "building": "commercial",
+    "name": "George Riggin Specialty Auto",
+    "phone": "+1 724-473-8575",
+    "service:vehicle:car_parts": "yes",
+    "service:vehicle:car_repair": "yes",
+    "shop": "car",
+    "website": "https://grspecialty.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380638148,
+   "center": {
+    "lat": 40.8017548,
+    "lon": -80.1252113
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "328",
+    "addr:street": "German Street",
+    "building": "yes",
+    "name": "Dambach Lumber & Supply",
+    "shop": "doityourself"
+   }
+  },
+  {
+   "type": "way",
+   "id": 380638198,
+   "center": {
+    "lat": 40.8025397,
+    "lon": -80.1208905
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "2576",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Evans City Road",
+    "amenity": "fuel",
+    "building": "yes",
+    "name": "Buy 'N' Fly",
+    "phone": "+1 724-453-0660"
+   }
+  },
+  {
+   "type": "way",
+   "id": 381269730,
+   "center": {
+    "lat": 40.8057478,
+    "lon": -80.1239358
+   },
+   "tags": {
+    "amenity": "events_venue",
+    "building": "barn",
+    "name": "Historic Harmony Barn"
+   }
+  },
+  {
+   "type": "way",
+   "id": 466748082,
+   "center": {
+    "lat": 40.7895403,
+    "lon": -80.1384186
+   },
+   "tags": {
+    "addr:city": "Zelienople",
+    "addr:postcode": "16063",
+    "addr:state": "PA",
+    "addr:street": "Burgess Drive",
+    "amenity": "social_facility",
+    "building": "residential",
+    "name": "Lutheran SeniorLife",
+    "operator": "Lutheran SeniorLife",
+    "phone": "+1 724-452-3580",
+    "social_facility": "nursing_home",
+    "social_facility:for": "senior",
+    "website": "https://www.lutheranseniorlife.org/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 467832802,
+   "center": {
+    "lat": 40.8114197,
+    "lon": -80.1240567
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "365",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Mercer Road",
+    "amenity": "pub",
+    "building": "yes",
+    "cuisine": "burger;ice_cream;american",
+    "delivery": "no",
+    "drive_through": "no",
+    "microbrewery": "yes",
+    "name": "Union Brothers Brewing",
+    "opening_hours": "Mo-Fr 11:00-19:00",
+    "outdoor_seating": "yes",
+    "smoking": "outside",
+    "takeaway": "yes"
+   }
+  },
+  {
+   "type": "way",
+   "id": 467832821,
+   "center": {
+    "lat": 40.8123585,
+    "lon": -80.1247227
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "251",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "industrial",
+    "name": "Harmony Castings LLC",
+    "phone": "+1 724-452-5811",
+    "website": "https://www.harmonycastings.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 467832834,
+   "center": {
+    "lat": 40.8108389,
+    "lon": -80.1279085
+   },
+   "tags": {
+    "amenity": "fuel",
+    "building": "yes",
+    "description": "They also have gas cans, and some food items. (listed in description field)",
+    "fuel:diesel": "yes",
+    "fuel:gasoline": "yes",
+    "fuel:kerosene": "yes",
+    "name": "Bi-Lo Gas n' Go",
+    "note": "They also have gas cans, and some food items. (listed in notes field)"
+   }
+  },
+  {
+   "type": "way",
+   "id": 467832836,
+   "center": {
+    "lat": 40.8110868,
+    "lon": -80.1276125
+   },
+   "tags": {
+    "amenity": "fuel",
+    "building": "yes",
+    "fuel:diesel": "yes",
+    "fuel:gasoline": "yes",
+    "fuel:kerosene": "yes",
+    "name": "Bi-Lo gas pumps"
+   }
+  },
+  {
+   "type": "way",
+   "id": 480888501,
+   "center": {
+    "lat": 40.7911292,
+    "lon": -80.1296298
+   },
+   "tags": {
+    "amenity": "theatre",
+    "building": "roof",
+    "name": "Zelienople Community Park Amphitheater"
+   }
+  },
+  {
+   "type": "way",
+   "id": 481521114,
+   "center": {
+    "lat": 40.8134441,
+    "lon": -80.1244576
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "265",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "commercial",
+    "fee": "no",
+    "name": "Hufnagel & Majors Inc RV Sales",
+    "phone": "+1 724-452-7593",
+    "power_supply": "no",
+    "sanitary_dump_station": "no",
+    "tourism": "caravan_site",
+    "website": "https://www.hufnagel-majors.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 484583675,
+   "center": {
+    "lat": 40.7999854,
+    "lon": -80.1227204
+   },
+   "tags": {
+    "building": "yes",
+    "name": "Park Pavillion"
+   }
+  },
+  {
+   "type": "way",
+   "id": 499324377,
+   "center": {
+    "lat": 40.8113087,
+    "lon": -80.124051
+   },
+   "tags": {
+    "tourism": "picnic_site"
+   }
+  },
+  {
+   "type": "way",
+   "id": 519995304,
+   "center": {
+    "lat": 40.8106421,
+    "lon": -80.1248604
+   },
+   "tags": {
+    "building": "college",
+    "fixme": "This is a trade school. What's the best tagging here?",
+    "name": "Steamfitters Technology Center",
+    "phone": "+1 412-481-0333",
+    "website": "https://ua449.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 533228535,
+   "center": {
+    "lat": 40.7920168,
+    "lon": -80.1255597
+   },
+   "tags": {
+    "building": "yes",
+    "man_made": "water_tower",
+    "name": "Zelienople Water Tower"
+   }
+  },
+  {
+   "type": "way",
+   "id": 552691129,
+   "center": {
+    "lat": 40.8085731,
+    "lon": -80.1284549
+   },
+   "tags": {
+    "denomination": "protestant",
+    "landuse": "cemetery",
+    "name": "Harmony Mennonite Cemetery",
+    "religion": "christian"
+   }
+  },
+  {
+   "type": "way",
+   "id": 557511887,
+   "center": {
+    "lat": 40.8059898,
+    "lon": -80.1314629
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "179",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "building": "yes",
+    "description": "Construction equipment dealer.",
+    "name": "Groff Tractor & Equipment Co. (fka Murphy Tractor)",
+    "phone": "+1 724-776-3636",
+    "shop": "hardware",
+    "website": "https://www.grofftractor.com/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 626301071,
+   "center": {
+    "lat": 40.8016401,
+    "lon": -80.1332923
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "159",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Perry Highway",
+    "caravans": "yes",
+    "dog": "leashed",
+    "drinking_water": "yes",
+    "email": "indianbravecamp@gmail.com",
+    "fee": "yes",
+    "name": "Indian Brave Campground",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "payment:visa_debit": "yes",
+    "phone": "+1 724-452-9204",
+    "picnic_table": "yes",
+    "power_supply": "yes",
+    "reservation": "yes",
+    "shower": "yes",
+    "static_caravans": "no",
+    "tents": "yes",
+    "toilets": "yes",
+    "tourism": "camp_site",
+    "website": "https://www.indianbravecampground.net/"
+   }
+  },
+  {
+   "type": "way",
+   "id": 670264887,
+   "center": {
+    "lat": 40.801789,
+    "lon": -80.1273331
+   },
+   "tags": {
+    "building": "yes",
+    "information": "office",
+    "name": "Harmony Welcome Cabin",
+    "operator": "Harmony Museum",
+    "tourism": "information"
+   }
+  },
+  {
+   "type": "way",
+   "id": 1320424035,
+   "center": {
+    "lat": 40.8125282,
+    "lon": -80.1274631
+   },
+   "tags": {
+    "brand": "ALDI",
+    "brand:wikidata": "Q41171672",
+    "building": "retail",
+    "name": "ALDI",
+    "shop": "supermarket"
+   }
+  },
+  {
+   "type": "way",
+   "id": 1486400426,
+   "center": {
+    "lat": 40.7997527,
+    "lon": -80.1205317
+   },
+   "tags": {
+    "addr:city": "Harmony",
+    "addr:housenumber": "1",
+    "addr:postcode": "16037",
+    "addr:state": "PA",
+    "addr:street": "Whitney Drive",
+    "building": "warehouse",
+    "name": "Sysco Pittsburgh LLC",
+    "phone": "+1 724-452-2100",
+    "website": "https://www.sysco.com/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5714004,
+   "center": {
+    "lat": 40.7928716,
+    "lon": -80.1263511
+   },
+   "tags": {
+    "building": "school",
+    "name": "Connoquenessing Valley School",
+    "type": "multipolygon"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5714005,
+   "center": {
+    "lat": 40.8083392,
+    "lon": -80.1092569
+   },
+   "tags": {
+    "building": "school",
+    "name": "Seneca Valley Intermediate High School",
+    "type": "multipolygon"
+   }
+  }
+ ]
+}

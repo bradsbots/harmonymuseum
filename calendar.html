@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar — Harmony Museum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141A24;--paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--sage:#6C7A5C;--rule:rgba(20,26,36,.14);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.5;font-weight:300}
+h1,h2{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.1}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.closure{display:none;background:var(--madder);color:var(--paper);text-align:center;padding:11px 18px;font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.closure.show{display:block}
+header{background:var(--ink);color:var(--paper);padding:12px 18px;display:flex;align-items:center;gap:16px}
+header .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+header .back:hover{opacity:1}
+header h1{font-size:20px}
+.wrap{max-width:1080px;margin:0 auto;padding:34px 20px 80px}
+.calhead{display:flex;align-items:center;gap:18px;margin:6px 0 20px}
+.calhead h2{font-size:32px;min-width:270px}
+.calhead button{font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;background:transparent;border:1px solid var(--rule);padding:8px 14px;cursor:pointer;color:var(--ink)}
+.calhead button:hover{background:var(--paper-deep)}
+.keyrow{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+.key{display:flex;align-items:center;gap:6px;font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.swatch{width:10px;height:10px;border-radius:50%}
+.swatch.gold{background:var(--gold)} .swatch.madder{background:var(--madder)} .swatch.sage{background:var(--sage)} .swatch.grey{background:var(--paper-deep);border:1px solid var(--rule)}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:2px solid var(--ink);border-left:1px solid var(--rule)}
+.dow{font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:9px 10px;border-right:1px solid var(--rule);border-bottom:1px solid var(--ink);color:rgba(20,26,36,.55)}
+.day{min-height:104px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 9px;position:relative;background:var(--white)}
+.day.out{background:var(--paper);opacity:.45}
+.day.closed{background:var(--paper-deep)}
+.day .n{font-family:"Bodoni Moda",serif;font-weight:600;font-size:16px}
+.day.today .n{color:var(--madder)}
+.tag{display:block;font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:5px;padding:3px 6px;text-decoration:none;line-height:1.35}
+.tag.tour{background:rgba(176,141,82,.16);color:#7A5E2F}
+a.tag.tour:hover{background:var(--gold);color:var(--ink)}
+.tag.event{background:rgba(140,58,46,.12);color:var(--madder)}
+.tag.venue{background:rgba(108,122,92,.16);color:#49543E}
+.tag.closedTag{color:rgba(20,26,36,.55);padding-left:0;background:none}
+.stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:15px;margin:26px 0 0}
+@media(max-width:720px){
+  .grid{grid-template-columns:1fr;border-left:0}
+  .dow{display:none}
+  .day{min-height:0;border-right:0}
+  .day.out{display:none}
+  .day .n::after{content:attr(data-dow);font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-left:8px;opacity:.5}
+}
+</style>
+</head>
+<body>
+
+<div class="closure" id="closureBanner" role="status"></div>
+
+<header>
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Calendar</h1>
+</header>
+
+<div class="wrap">
+  <div class="calhead">
+    <button id="prev" aria-label="Previous month">&larr; Prev</button>
+    <h2 id="mTitle"></h2>
+    <button id="next" aria-label="Next month">Next &rarr;</button>
+    <div class="keyrow">
+      <span class="key"><span class="swatch gold"></span>Guided tours</span>
+      <span class="key"><span class="swatch madder"></span>Events</span>
+      <span class="key"><span class="swatch sage"></span>Venue booked</span>
+      <span class="key"><span class="swatch grey"></span>Closed</span>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <div class="stubNote">
+    <b>How this stays true:</b> tour days come from the weekly pattern and dated closures in
+    <code>data/site.js</code>; events and venue holds are one-line entries in the same file.
+    Seat-level availability lives in the hosted booking service — clicking a tour day hands
+    off to the booking page. Entries marked SAMPLE are demo data.
+  </div>
+</div>
+
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var S = window.SITE, today = window.SITE_TODAY || new Date();
+  var cur = new Date(today.getFullYear(), today.getMonth(), 1);
+  var DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var venueName = {};
+  (S.venues || []).forEach(function(v){ venueName[v.key] = v.name; });
+
+  function iso(d){
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+  }
+  function inClosure(d){
+    return (S.closures || []).some(function(c){
+      return new Date(c.start+"T00:00:00") <= d && d <= new Date(c.end+"T23:59:59");
+    });
+  }
+
+  function render(){
+    document.getElementById("mTitle").textContent =
+      cur.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    var html = DOW.map(function(d){ return '<div class="dow">' + d + "</div>"; }).join("");
+    var first = new Date(cur), last = new Date(cur.getFullYear(), cur.getMonth()+1, 0);
+    var lead = first.getDay();
+    for (var i = 0; i < lead; i++) html += '<div class="day out"></div>';
+    for (var day = 1; day <= last.getDate(); day++) {
+      var d = new Date(cur.getFullYear(), cur.getMonth(), day, 12);
+      var key = iso(d), closed = inClosure(d), open = !closed && S.hours.closedDays.indexOf(d.getDay()) < 0;
+      var cls = "day" + (closed ? " closed" : "") + (key === iso(today) ? " today" : "");
+      var cell = '<div class="' + cls + '"><span class="n" data-dow="' + DOW[d.getDay()] + '">' + day + "</span>";
+      if (closed) cell += '<span class="tag closedTag">Closed</span>';
+      else if (open) cell += '<a class="tag tour" href="booking.html">Tours 1:00 &amp; 2:30</a>';
+      (S.events || []).forEach(function(e){
+        if (e.date === key) cell += '<span class="tag event">' + e.time + " · " + e.title + "</span>";
+      });
+      (S.venueHolds || []).forEach(function(h){
+        if (h.date === key) cell += '<a class="tag venue" href="rental.html?venue=' + h.venue + '">' +
+          (venueName[h.venue] || h.venue) + " — " + (h.status === "booked" ? "booked" : "on hold") +
+          (h.label ? " " + h.label : "") + "</a>";
+      });
+      html += cell + "</div>";
+    }
+    document.getElementById("grid").innerHTML = html;
+  }
+  document.getElementById("prev").onclick = function(){ cur.setMonth(cur.getMonth()-1); render(); };
+  document.getElementById("next").onclick = function(){ cur.setMonth(cur.getMonth()+1); render(); };
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+ {
+  "place_id": 407498246,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 19321849,
+  "lat": "40.8035651",
+  "lon": "-80.1251933",
+  "category": "place",
+  "type": "house",
+  "place_rank": 30,
+  "importance": 9.99999999995449e-06,
+  "addresstype": "place",
+  "name": "",
+  "display_name": "245, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8035151",
+   "40.8036151",
+   "-80.1252433",
+   "-80.1251433"
+  ]
+ },
+ {
+  "place_id": 407502019,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 19321849,
+  "lat": "40.8034167",
+  "lon": "-80.1262401",
+  "category": "place",
+  "type": "house",
+  "place_rank": 30,
+  "importance": 9.99999999995449e-06,
+  "addresstype": "place",
+  "name": "",
+  "display_name": "245, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8033667",
+   "40.8034667",
+   "-80.1262901",
+   "-80.1261901"
+  ]
+ },
+ {
+  "place_id": 407511924,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 19321849,
+  "lat": "40.8039058",
+  "lon": "-80.1246591",
+  "category": "place",
+  "type": "house",
+  "place_rank": 30,
+  "importance": 9.99999999995449e-06,
+  "addresstype": "place",
+  "name": "",
+  "display_name": "245, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8038558",
+   "40.8039558",
+   "-80.1247091",
+   "-80.1246091"
+  ]
+ }
+]

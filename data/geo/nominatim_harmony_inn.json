@@ -1,0 +1,23 @@
+[
+ {
+  "place_id": 370409999,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 380634672,
+  "lat": "40.8029435",
+  "lon": "-80.1265021",
+  "category": "amenity",
+  "type": "restaurant",
+  "place_rank": 30,
+  "importance": 4.161669336990948e-05,
+  "addresstype": "amenity",
+  "name": "The Harmony Inn",
+  "display_name": "The Harmony Inn, 230, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8028427",
+   "40.8030596",
+   "-80.1266680",
+   "-80.1263598"
+  ]
+ }
+]

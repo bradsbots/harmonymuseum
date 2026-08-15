@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harmony Museum — concept with real assets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141A24;--indigo:#1F2E48;--indigo-deep:#182338;
+  --paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--gold-lit:#D8B87C;--sage:#6C7A5C;
+  --rule:rgba(20,26,36,.14);--rule-gold:rgba(176,141,82,.32);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Bodoni Moda",Didot,serif;margin:0;line-height:1.05;font-weight:600;letter-spacing:-.01em}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:70px 0}
+img{display:block;max-width:100%}
+.btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .18s}
+.btn:hover{background:#A2453A}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn.ghost:hover{background:var(--paper-deep)}
+.btn.onphoto{background:transparent;color:var(--paper);border:1px solid rgba(233,227,212,.55)}
+.btn.onphoto:hover{background:rgba(233,227,212,.15)}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:var(--gold-lit)}
+
+.frame{position:relative;overflow:hidden;background:var(--indigo)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.tone img{filter:saturate(.82) contrast(1.04)}
+
+/* utility */
+.util{background:var(--ink);color:var(--paper)}
+.util .wrap{display:flex;align-items:center;gap:20px;height:40px;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.util .open{color:var(--gold-lit)}
+.util .right{margin-left:auto;display:flex;gap:20px}
+.util a{text-decoration:none;opacity:.72}.util a:hover{opacity:1}
+@media(max-width:760px){.util .right a:nth-child(n+3){display:none}}
+
+/* masthead */
+.mast{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--rule)}
+.mast .wrap{display:flex;align-items:center;gap:18px;height:78px}
+.mast .logo{height:46px;width:auto}
+.mast nav{margin-left:auto;display:flex;gap:24px}
+.mast nav a{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11.5px;font-weight:600;text-decoration:none;opacity:.7;padding:5px 0;border-bottom:1px solid transparent}
+.mast nav a:hover{opacity:1;border-bottom-color:var(--madder)}
+@media(max-width:980px){.mast nav{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(68vh,580px);display:flex;align-items:flex-end;color:var(--paper)}
+.hero .frame{position:absolute;inset:0}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,26,36,.93),rgba(20,26,36,.5) 46%,rgba(20,26,36,.28))}
+.hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:44px}
+.hero h1{font-size:clamp(38px,6vw,72px);max-width:15ch}
+.hero p{font-size:18.5px;max-width:52ch;opacity:.88;margin:18px 0 28px}
+.hero .acts{display:flex;gap:13px;flex-wrap:wrap}
+.hero .eyebrow{color:var(--gold-lit);display:block;margin-bottom:16px}
+.credit{position:absolute;right:16px;bottom:10px;z-index:3;font-family:"Archivo Narrow",sans-serif;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,227,212,.45)}
+
+/* three doors */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.door{text-decoration:none;display:block}
+.door .frame{aspect-ratio:4/3}
+.door h3{font-size:25px;margin:16px 0 7px}
+.door p{font-size:15.5px;opacity:.74;margin:0 0 12px}
+.door .go{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600;color:var(--madder);border-bottom:1px solid var(--madder);padding-bottom:2px}
+.door:hover .go{color:var(--ink);border-color:var(--ink)}
+@media(max-width:880px){.doors{grid-template-columns:1fr;gap:36px}}
+
+/* ledger */
+.today{background:var(--paper)}
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:32px}
+.head h2{font-size:clamp(28px,3.8vw,42px)}
+.head .lbl{color:var(--madder);display:block;margin-bottom:11px}
+.ledger{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:104px 1fr 116px 126px;align-items:center;gap:20px;min-height:56px;border-bottom:1px solid var(--rule);padding:12px 0}
+.row.hdr{border-bottom:1px solid var(--ink);min-height:0;padding:0 0 9px}
+.row.hdr span{color:rgba(20,26,36,.5)}
+.row .when{font-family:"Bodoni Moda",serif;font-size:23px;font-weight:600;font-variant-numeric:tabular-nums}
+.row .what small{display:block;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;color:rgba(20,26,36,.48);margin-top:3px}
+.row .seats{font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--sage)}
+.row .seats.none{color:var(--madder)}
+.row .act{text-align:right}
+@media(max-width:760px){.row{grid-template-columns:1fr auto;grid-template-areas:"when seats" "what act";row-gap:11px;padding:17px 0}.row.hdr{display:none}.row .when{grid-area:when}.row .what{grid-area:what}.row .seats{grid-area:seats;text-align:right}.row .act{grid-area:act;text-align:left}}
+
+/* properties strip */
+.props{background:var(--indigo-deep);color:var(--paper)}
+.props .head .lbl{color:var(--gold)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.p{position:relative;text-decoration:none;color:var(--paper)}
+.p .frame{aspect-ratio:1}
+.p .lay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,26,36,.9),rgba(20,26,36,.05) 62%);padding:18px;display:flex;flex-direction:column;justify-content:flex-end;transition:background .2s}
+.p:hover .lay{background:linear-gradient(to top,rgba(140,58,46,.88),rgba(20,26,36,.15) 62%)}
+.p h4{font-size:18px;line-height:1.15}
+.p span{font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.72;margin-top:5px;display:block}
+.p.wide{grid-column:span 2}
+.p.wide .frame{aspect-ratio:2/1}
+@media(max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}.p.wide{grid-column:span 2}}
+
+/* venues */
+.venues{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.venue .frame{aspect-ratio:4/3}
+.venue h3{font-size:24px;margin:15px 0 5px}
+.venue .cap2{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;color:var(--madder);font-weight:600}
+.venue p{font-size:15.5px;opacity:.75;margin:9px 0 15px}
+@media(max-width:880px){.venues{grid-template-columns:1fr;gap:34px}}
+
+/* newsletter band */
+.band{background:var(--gold);color:var(--ink);padding:52px 0}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.band .wing{height:30px;width:auto;margin-bottom:12px;filter:brightness(0) opacity(.5)}
+.band h3{font-size:31px;margin-bottom:8px}
+.band p{margin:0;font-size:16.5px;opacity:.78}
+.band .form{display:flex}
+.band input{flex:1;border:1px solid rgba(20,26,36,.35);border-right:0;background:rgba(255,255,255,.62);padding:14px 15px;font-family:"Newsreader",serif;font-size:17px;color:var(--ink)}
+.band .fine{font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;opacity:.6;margin-top:11px}
+@media(max-width:820px){.band .wrap{grid-template-columns:1fr;gap:24px}}
+
+/* visit */
+.visit{background:var(--ink);color:var(--paper)}
+.visit .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:46px}
+.visit h3{font-size:14px;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);margin-bottom:15px;font-weight:600}
+.visit p{font-size:16.5px;opacity:.8;margin:0 0 6px}
+.price{display:flex;justify-content:space-between;border-bottom:1px dotted rgba(233,227,212,.22);padding:7px 0;font-size:15.5px;font-variant-numeric:tabular-nums}
+@media(max-width:860px){.visit .cols{grid-template-columns:1fr;gap:32px}}
+
+footer{background:var(--indigo-deep);color:var(--paper);padding:40px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;opacity:.7}
+.note{background:#0E141C;color:rgba(233,227,212,.55);font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:16px 0;text-align:center;line-height:1.8}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span class="open">Open today <b id="hrs">1–4 p.m.</b></span>
+    <span class="right"><a href="#today">Tickets</a><a href="#">Become a member</a><a href="#">Donate</a><a href="#venues">Host an event</a></span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="wrap">
+    <a href="#"><img class="logo" src="https://harmonymuseum.org/wp-content/uploads/elementor/thumbs/aa-logo-rnh9jp9ohjy8zdlqj8c9s6ls4qmi5vo9uf3sozxnm6.png" alt="Harmony Museum"></a>
+    <nav>
+      <a href="#today">Visit</a><a href="#properties">Properties</a><a href="#">Walking tour</a>
+      <a href="#venues">Rentals</a><a href="#">History</a><a href="#">Get involved</a>
+    </nav>
+    <a class="btn" href="#today">Book a tour</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="frame tone">
+    <img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Museum.jpg" alt="The 1809 Harmony Society warehouse, now the museum, at 218 Mercer Street">
+  </div>
+  <div class="veil"></div>
+  <span class="credit">Museum's own photo · 218 Mercer Street</span>
+  <div class="wrap">
+    <span class="eyebrow lbl">Historic Harmony, Inc. · nine properties · founded 1804</span>
+    <h1>Built in 1809. Still open Tuesday.</h1>
+    <p>The Harmony Society's brick warehouse — wine cellar and all — is now the museum. Guided tours at 1:00 and 2:30, Tuesday through Saturday.</p>
+    <div class="acts">
+      <a class="btn" href="#today">Book a tour</a>
+      <a class="btn onphoto" href="#">Walking tour map</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="doors">
+      <a class="door" href="#today">
+        <div class="frame tone" style="aspect-ratio:4/3"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Zeigler-Log-Cabin-1024x768.jpg" alt="Ziegler Log House, a reconstructed 19th-century cabin on Main Street"></div>
+        <h3>Take the guided tour</h3>
+        <p>The 1809 warehouse and the Ziegler Log House, furnished as Mennonite families kept it. Tours at 1:00 and 2:30.</p>
+        <span class="go">Times &amp; tickets</span>
+      </a>
+      <a class="door" href="#">
+        <div class="frame tone" style="aspect-ratio:4/3"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Harmonist-Cemetery.jpg" alt="The Harmonist Cemetery gate on Route 68"></div>
+        <h3>Walk the town yourself</h3>
+        <p>Twenty minutes and a quarter mile gets you most of it. The full loop is three miles and about two hours.</p>
+        <span class="go">Open the map</span>
+      </a>
+      <a class="door" href="#venues">
+        <div class="frame tone" style="aspect-ratio:4/3"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/barn-8-1024x775.jpg" alt="The 1805 Harmonist Barn"></div>
+        <h3>Hold your event here</h3>
+        <p>An 1805 barn, a hall with an 1809 wine cellar, and an 1825 meetinghouse on the National Register.</p>
+        <span class="go">Check availability</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="today" id="today">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="lbl">Saturday, 15 August</span><h2>Tours today</h2></div>
+      <a class="btn ghost" href="#">Full calendar</a>
+    </div>
+    <div class="ledger">
+      <div class="row hdr"><span class="lbl">Time</span><span class="lbl">Tour</span><span class="lbl">Places left</span><span></span></div>
+      <div class="row">
+        <span class="when">1:00</span>
+        <span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>
+        <span class="seats">6 of 12</span><span class="act"><a class="btn" href="#">Book</a></span>
+      </div>
+      <div class="row">
+        <span class="when">2:30</span>
+        <span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>
+        <span class="seats none">Full</span><span class="act"><a class="btn ghost" href="#">Waitlist</a></span>
+      </div>
+      <div class="row">
+        <span class="when">Any</span>
+        <span class="what">Walking tour of historic Harmony<small>Self-guided · 28 stops · free · ¼ mile or 3 miles, your call</small></span>
+        <span class="seats">Open</span><span class="act"><a class="btn ghost" href="#">Open map</a></span>
+      </div>
+      <div class="row">
+        <span class="when">By appt</span>
+        <span class="what">Group &amp; school tours<small>Call the office to arrange</small></span>
+        <span class="seats">Enquire</span><span class="act"><a class="btn ghost" href="tel:+17244527341">Call</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="props" id="properties">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="lbl">Historic Harmony, Inc. owns and preserves nine</span><h2>The properties</h2></div>
+      <a class="btn onphoto" href="#">See them all on the map</a>
+    </div>
+    <div class="pgrid">
+      <a class="p wide" href="#">
+        <div class="frame tone"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-meeting-house-sm.jpg" alt="1825 Mennonite Meetinghouse on Wise Road"></div>
+        <div class="lay"><h4>Mennonite Meetinghouse</h4><span>1825 · 114 Wise Rd · National Register</span></div>
+      </a>
+      <a class="p" href="#">
+        <div class="frame tone"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Wagner-1024x768.jpg" alt="Wagner/Bentel Haus at 222 Mercer Street"></div>
+        <div class="lay"><h4>Wagner/Bentel Haus</h4><span>Early 1800s · 222 Mercer St</span></div>
+      </a>
+      <a class="p" href="#">
+        <div class="frame tone"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Weavers-Cabin-1024x768.jpg" alt="Weavers Cabin at 245 Mercer Street"></div>
+        <div class="lay"><h4>Weavers Cabin</h4><span>245 Mercer St · demonstrations</span></div>
+      </a>
+      <a class="p" href="#">
+        <div class="frame tone"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Rapps-Seat-1024x768.jpg" alt="Rapp's Seat, a stone outcrop above the town"></div>
+        <div class="lay"><h4>Rapp's Seat</h4><span>Evergreen Mill Rd · a steep climb</span></div>
+      </a>
+      <a class="p" href="#">
+        <div class="frame tone"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Harmonist-Barn-1024x682.jpg" alt="The Harmonist/Ziegler Barn on Mercer Road"></div>
+        <div class="lay"><h4>Harmonist/Ziegler Barn</h4><span>1805 · 303 Mercer Rd</span></div>
+      </a>
+      <a class="p wide" href="#">
+        <div class="frame tone"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Properties-Visitors-Cabin.jpg" alt="The Washington 1753 Cabin on Main Street"></div>
+        <div class="lay"><h4>Washington 1753 Cabin</h4><span>Where the future president was nearly shot</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="venues">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="lbl">Weddings · receptions · concerts · meetings</span><h2>Three venues for hire</h2></div>
+      <a class="btn ghost" href="#">Rates &amp; policies</a>
+    </div>
+    <div class="venues">
+      <div class="venue">
+        <div class="frame tone" style="aspect-ratio:4/3"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/barn-8-1024x775.jpg" alt="The 1805 Harmonist Barn exterior"></div>
+        <span class="cap2">260 auditorium · 200 seated</span>
+        <h3>1805 Harmonist Barn</h3>
+        <p>One of the oldest barns west of the Alleghenies. Four bays, room for a ceremony and dancing both.</p>
+        <a class="btn ghost" href="#">Check availability</a>
+      </div>
+      <div class="venue">
+        <div class="frame tone" style="aspect-ratio:4/3"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Meetinghouse-Pulpit-1024x768.jpg" alt="Interior of the 1825 Mennonite Meetinghouse, original bench seating"></div>
+        <span class="cap2">130–150 on original benches</span>
+        <h3>1825 Mennonite Church</h3>
+        <p>On the National Register. Original bleacher-style benches and a pulpit platform. Music carries better here than in most modern churches.</p>
+        <a class="btn ghost" href="#">Check availability</a>
+      </div>
+      <div class="venue">
+        <div class="frame tone" style="aspect-ratio:4/3"><img src="https://harmonymuseum.org/wp-content/uploads/2019/07/Stewart-Hall-from-stage.jpg" alt="Stewart Hall interior seen from the stage"></div>
+        <span class="cap2">120 dining · full kitchen</span>
+        <h3>Stewart Hall</h3>
+        <p>Attached to the museum. Stage, bar, full kitchen, accessible restrooms — and the 1809 wine cellar next door, rented separately.</p>
+        <a class="btn ghost" href="#">Check availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div>
+      <img class="wing" src="https://harmonymuseum.org/wp-content/uploads/2019/07/wing2-separator.png" alt="">
+      <h3>The Harmony Dispatch</h3>
+      <p>One email a month — what's open, what's coming up, and one object out of the collection.</p>
+    </div>
+    <div>
+      <div class="form">
+        <input type="email" placeholder="your@email.com" aria-label="Email address">
+        <button class="btn">Subscribe</button>
+      </div>
+      <div class="fine">Free · roughly monthly · unsubscribe anytime</div>
+    </div>
+  </div>
+</div>
+
+<section class="visit">
+  <div class="wrap cols">
+    <div>
+      <h3>Hours</h3>
+      <p>Tuesday – Saturday, 1–4 p.m.</p>
+      <p>Guided tours only, at 1:00 and 2:30.</p>
+      <p style="margin-top:14px;opacity:.55">Closed Sunday and Monday.</p>
+    </div>
+    <div>
+      <h3>Admission</h3>
+      <div class="price"><span>Ages 5 and under</span><span>Free</span></div>
+      <div class="price"><span>Ages 6–17</span><span>$3</span></div>
+      <div class="price"><span>Ages 18–59</span><span>$7</span></div>
+      <div class="price"><span>Ages 60 and up</span><span>$6</span></div>
+      <div class="price"><span>Members</span><span>Free</span></div>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <p>218 Mercer Street<br>Harmony, PA 16037</p>
+      <p style="margin-top:10px;opacity:.6">I-79 exits 87–88 · 30 miles north of Pittsburgh</p>
+      <p style="margin-top:10px"><a href="tel:+17244527341">(724) 452-7341</a></p>
+      <p><a href="mailto:hmuseum@zoominternet.net">hmuseum@zoominternet.net</a></p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc.</span><span>Concept — not the live site</span></div></footer>
+
+<div class="note">
+  All photography loaded live from harmonymuseum.org — these are the museum's own files.<br>
+  Most were uploaded in 2019 and are 1024px wide; they hold up at these crop sizes but not full-bleed on a large display.
+</div>
+
+<script>
+(function(){const d=new Date().getDay();
+  document.getElementById('hrs').textContent=(d>=2&&d<=6)?'1–4 p.m.':'— closed Sun & Mon';})();
+</script>
+</body>
+</html>

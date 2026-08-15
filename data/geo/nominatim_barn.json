@@ -1,0 +1,44 @@
+[
+ {
+  "place_id": 370796969,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 19332123,
+  "lat": "40.8037795",
+  "lon": "-80.1248593",
+  "category": "highway",
+  "type": "tertiary",
+  "place_rank": 26,
+  "importance": 0.05337252384222168,
+  "addresstype": "road",
+  "name": "Mercer Road",
+  "display_name": "Mercer Road, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8035364",
+   "40.8040227",
+   "-80.1256314",
+   "-80.1240873"
+  ]
+ },
+ {
+  "place_id": 370776818,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 519995328,
+  "lat": "40.8074297",
+  "lon": "-80.1233181",
+  "category": "highway",
+  "type": "tertiary",
+  "place_rank": 26,
+  "importance": 0.05337252384222168,
+  "addresstype": "road",
+  "name": "Mercer Road",
+  "display_name": "Mercer Road, Jackson Township, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8055936",
+   "40.8092828",
+   "-80.1235632",
+   "-80.1233153"
+  ]
+ }
+]

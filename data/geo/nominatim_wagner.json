@@ -1,0 +1,23 @@
+[
+ {
+  "place_id": 369449524,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 380634668,
+  "lat": "40.8028888",
+  "lon": "-80.1273333",
+  "category": "amenity",
+  "type": "post_office",
+  "place_rank": 30,
+  "importance": 4.161669336990948e-05,
+  "addresstype": "amenity",
+  "name": "United States Post Office",
+  "display_name": "United States Post Office, 222, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8028257",
+   "40.8029629",
+   "-80.1274411",
+   "-80.1272082"
+  ]
+ }
+]

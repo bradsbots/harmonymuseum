@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walking Tour of Historic Harmony — Harmony Museum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<style>
+:root{
+  --ink:#141A24;--indigo:#1F2E48;--indigo-deep:#182338;
+  --paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--gold-lit:#D8B87C;--sage:#6C7A5C;
+  --rule:rgba(20,26,36,.14);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.55;font-weight:300;display:flex;flex-direction:column}
+h1,h2,h3{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.1}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+header{background:var(--ink);color:var(--paper);padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;z-index:1200}
+header .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+header .back:hover{opacity:1}
+header h1{font-size:20px;flex:1;min-width:200px}
+.legend{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.legend .key{display:flex;align-items:center;gap:5px;font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.dot{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(246,243,234,.8)}
+.dot.gold{background:var(--gold)} .dot.sage{background:var(--sage)} .dot.inkd{background:#4A5568}
+.tools{display:flex;gap:8px}
+.tools button{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;font-weight:600;background:transparent;color:var(--paper);border:1px solid rgba(233,227,212,.45);padding:7px 12px;cursor:pointer}
+.tools button:hover,.tools button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+
+.stage{position:relative;flex:1;min-height:0}
+#map{position:absolute;inset:0;background:var(--paper-deep)}
+#map.hidden{display:none}
+
+/* stop markers */
+.stopIcon{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;color:#F6F3EA;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:13px;border:2px solid #F6F3EA;box-shadow:0 1px 5px rgba(20,26,36,.5);cursor:pointer}
+.stopIcon.gold{background:var(--gold)} .stopIcon.sage{background:var(--sage)} .stopIcon.inkd{background:#4A5568}
+.stopIcon.approx{border-style:dashed}
+.stopIcon.active{transform:scale(1.25);border-color:var(--madder)}
+
+/* detail panel */
+.panel{position:absolute;z-index:1100;background:var(--white);box-shadow:0 -6px 30px rgba(20,26,36,.25);display:none;flex-direction:column;overflow:auto}
+.panel.open{display:flex}
+@media(min-width:761px){.panel{top:0;right:0;bottom:0;width:390px;box-shadow:-6px 0 30px rgba(20,26,36,.25)}}
+@media(max-width:760px){.panel{left:0;right:0;bottom:0;max-height:62%;border-top:3px solid var(--gold)}}
+.panel .photo{background:var(--indigo);aspect-ratio:16/9;flex:none}
+.panel .photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.03)}
+.panel .photo .noimg{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--paper);gap:6px}
+.panel .photo .noimg .big{font-family:"Bodoni Moda",serif;font-size:44px}
+.panel .body{padding:18px 20px 24px}
+.panel .close{position:absolute;top:10px;right:10px;background:rgba(20,26,36,.55);color:var(--paper);border:0;width:34px;height:34px;border-radius:50%;font-size:17px;cursor:pointer;line-height:1}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 10px}
+.chip{font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:4px 9px;color:var(--white)}
+.chip.gold{background:var(--gold);color:var(--ink)} .chip.sage{background:var(--sage)} .chip.inkd{background:#4A5568}
+.chip.warn{background:var(--madder)}
+.chip.plain{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.panel h2{font-size:26px;margin-bottom:4px}
+.panel .addr{opacity:.65;font-size:15px;margin:2px 0 12px}
+.panel p{margin:0 0 12px}
+.variants{background:var(--paper);border-left:3px solid var(--madder);padding:10px 12px;font-size:14.5px;margin-bottom:12px}
+.variants b{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:10.5px}
+.approxNote{font-size:14px;opacity:.7;font-style:italic;margin-bottom:12px}
+.panel .go{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:600;color:var(--madder);text-decoration:none;border-bottom:1px solid var(--madder);padding-bottom:2px}
+
+/* list view (also the tiles-failed fallback) */
+#list{position:absolute;inset:0;z-index:1000;overflow:auto;background:var(--white);display:none;padding:22px 16px 60px}
+#list.open{display:block}
+#list .wrap{max-width:760px;margin:0 auto}
+#list .fallbackNote{background:var(--madder);color:var(--paper);padding:12px 16px;margin-bottom:18px;font-size:15px;display:none}
+#list .fallbackNote.show{display:block}
+.stopRow{display:flex;gap:14px;padding:14px 6px;border-bottom:1px solid var(--rule);cursor:pointer}
+.stopRow:hover{background:var(--paper)}
+.stopRow .n{flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:14px}
+.stopRow .n.gold{background:var(--gold)} .stopRow .n.sage{background:var(--sage)} .stopRow .n.inkd{background:#4A5568}
+.stopRow h3{font-size:18px;margin-bottom:2px}
+.stopRow p{margin:0;font-size:14.5px;opacity:.72}
+.sectionHead{margin:26px 0 6px}
+.leaflet-container{font-family:"Archivo Narrow",sans-serif}
+.note{background:#0E141C;color:rgba(233,227,212,.6);font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Walking Tour of Historic Harmony</h1>
+  <div class="legend" aria-hidden="true">
+    <span class="key"><span class="dot gold"></span>Harmonist</span>
+    <span class="key"><span class="dot sage"></span>Mennonite</span>
+    <span class="key"><span class="dot inkd"></span>Later</span>
+  </div>
+  <div class="tools">
+    <button id="btnLocate" type="button">Locate me</button>
+    <button id="btnList" type="button" aria-pressed="false">List</button>
+  </div>
+</header>
+
+<div class="stage">
+  <div id="map" role="application" aria-label="Map of the 28 walking tour stops"></div>
+
+  <div id="list">
+    <div class="wrap">
+      <div class="fallbackNote" id="fallbackNote">Map tiles couldn't load — here's the full tour as a list instead.</div>
+      <span class="lbl" style="color:var(--madder)">28 stops · in-town loop ≈ ¼ mile, 20 minutes · full loop ≈ 3 miles, 2 hours</span>
+      <h2 class="sectionHead">In town</h2>
+      <div id="listTown"></div>
+      <h2 class="sectionHead">Outlying</h2>
+      <div id="listOut"></div>
+    </div>
+  </div>
+
+  <aside class="panel" id="panel" aria-live="polite">
+    <button class="close" id="panelClose" aria-label="Close">&times;</button>
+    <div class="photo" id="panelPhoto"></div>
+    <div class="body">
+      <div class="chips" id="panelChips"></div>
+      <h2 id="panelName"></h2>
+      <div class="addr" id="panelAddr"></div>
+      <div class="variants" id="panelVariants" hidden></div>
+      <div class="approxNote" id="panelApprox" hidden>Location is approximate — placed from the printed brochure map, pending a confirmed address from the museum.</div>
+      <p id="panelDesc"></p>
+      <a class="go" id="panelNav" target="_blank" rel="noopener">Open in your maps app</a>
+    </div>
+  </aside>
+</div>
+
+<div class="note">Prototype · stop names pending museum confirmation are marked · map data © OpenStreetMap contributors</div>
+
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="data/walking-tour.js"></script>
+<script>
+(function(){
+  var DATA = window.WALKING_TOUR, STOPS = DATA.stops;
+  // photos exist only for museum-owned properties (museum's own 2019 shots)
+  var PHOTOS = {
+    1:  ["Properties-Museum.jpg", "The 1809 Harmony Society warehouse, now the museum, at 218 Mercer Street"],
+    4:  ["Properties-Zeigler-Log-Cabin-1024x768.jpg", "Ziegler Log House, a reconstructed 19th-century cabin on Main Street"],
+    14: ["Properties-Wagner-1024x768.jpg", "Wagner-Bentel Haus at 222 Mercer Street"],
+    24: ["Properties-Harmonist-Barn-1024x682.jpg", "The 1805 Harmonist/Ziegler Barn on Mercer Road"],
+    25: ["Properties-meeting-house-sm.jpg", "The 1825 Mennonite Meetinghouse on Wise Road"],
+    27: ["Properties-Rapps-Seat-1024x768.jpg", "Rapp's Seat, the stone outcrop above the town"],
+    28: ["Properties-Harmonist-Cemetery.jpg", "The Harmonist Cemetery gate with its revolving stone door"]
+  };
+  function tone(s){ return s.era === "harmonist" ? "gold" : s.era === "mennonite" ? "sage" : "inkd"; }
+  function eraLabel(s){
+    return s.era === "harmonist" ? "Harmonist era" : s.era === "mennonite" ? "Mennonite era"
+         : s.era === "later" ? "Later Harmony" : "Era undetermined";
+  }
+
+  var map = L.map("map", { zoomControl: true });
+  map.fitBounds(L.latLngBounds(STOPS.map(function(s){ return [s.lat, s.lng]; })).pad(0.08));
+  var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // degrade to the list if tiles never arrive
+  var tileOK = false, tileErrs = 0;
+  tiles.on("load tileload", function(){ tileOK = true; });
+  tiles.on("tileerror", function(){
+    tileErrs++;
+    if (!tileOK && tileErrs > 4) { showList(true); }
+  });
+
+  var markers = {}, activeIcon = null;
+  STOPS.forEach(function(s){
+    var cls = "stopIcon " + tone(s) + (s.geo.approximate ? " approx" : "");
+    var icon = L.divIcon({ className: "", html: '<div class="' + cls + '" id="mk' + s.number + '">' + s.number + "</div>",
+                           iconSize: [30, 30], iconAnchor: [15, 15] });
+    markers[s.number] = L.marker([s.lat, s.lng], { icon: icon, keyboard: true,
+        title: s.number + ". " + s.name, alt: "Stop " + s.number + ": " + s.name })
+      .addTo(map).on("click", function(){ openStop(s.number, false); });
+  });
+
+  var panel = document.getElementById("panel");
+  function openStop(n, pan){
+    var s = STOPS[n - 1];
+    if (activeIcon) activeIcon.classList.remove("active");
+    var el = document.getElementById("mk" + n);
+    if (el) { el.classList.add("active"); activeIcon = el; }
+
+    var ph = document.getElementById("panelPhoto");
+    if (PHOTOS[n]) {
+      ph.innerHTML = '<img src="assets/originals/' + PHOTOS[n][0] + '" alt="' + PHOTOS[n][1] + '">';
+    } else {
+      ph.innerHTML = '<div class="noimg"><span class="big">' + n + '</span><span class="lbl">No photograph yet</span></div>';
+    }
+    var chips = '<span class="chip ' + tone(s) + '">' + eraLabel(s) + "</span>"
+              + '<span class="chip plain">' + (s.inTown ? "In town" : "Outlying") + "</span>";
+    if (s.needsConfirmation) chips += '<span class="chip warn">Name under review</span>';
+    document.getElementById("panelChips").innerHTML = chips;
+    document.getElementById("panelName").textContent = n + ". " + s.name;
+    document.getElementById("panelAddr").textContent = s.address || "";
+
+    var v = document.getElementById("panelVariants");
+    var vs = s.nameVariants, uniq = {};
+    [vs.pdfFacts, vs.pdfLegend, vs.website].forEach(function(x){ uniq[x] = 1; });
+    if (Object.keys(uniq).length > 1) {
+      v.hidden = false;
+      v.innerHTML = "<b>The sources disagree on this name</b><br>Brochure: &ldquo;" + vs.pdfFacts +
+        (vs.pdfLegend !== vs.pdfFacts ? "&rdquo; / &ldquo;" + vs.pdfLegend : "") +
+        "&rdquo;<br>Website: &ldquo;" + vs.website + "&rdquo; &mdash; awaiting the museum's ruling.";
+    } else { v.hidden = true; }
+
+    document.getElementById("panelApprox").hidden = !s.geo.approximate;
+    document.getElementById("panelDesc").textContent = s.description;
+    document.getElementById("panelNav").href = "geo:" + s.lat + "," + s.lng +
+      "?q=" + s.lat + "," + s.lng + "(Stop " + n + ")";
+    panel.classList.add("open");
+    if (pan !== false) map.panTo([s.lat, s.lng]);
+    if (history.replaceState) history.replaceState(null, "", "#stop-" + n);
+  }
+  document.getElementById("panelClose").onclick = function(){
+    panel.classList.remove("open");
+    if (activeIcon) { activeIcon.classList.remove("active"); activeIcon = null; }
+    if (history.replaceState) history.replaceState(null, "", location.pathname);
+  };
+
+  // list view
+  var listEl = document.getElementById("list"), btnList = document.getElementById("btnList");
+  function rowHTML(s){
+    return '<div class="stopRow" data-n="' + s.number + '" tabindex="0" role="button">' +
+      '<span class="n ' + tone(s) + '">' + s.number + "</span><div><h3>" + s.name +
+      (s.needsConfirmation ? ' <span class="lbl" style="color:var(--madder)">· name under review</span>' : "") +
+      "</h3><p>" + eraLabel(s) + (s.address ? " · " + s.address : "") + "</p></div></div>";
+  }
+  document.getElementById("listTown").innerHTML = STOPS.filter(function(s){ return s.inTown; }).map(rowHTML).join("");
+  document.getElementById("listOut").innerHTML  = STOPS.filter(function(s){ return !s.inTown; }).map(rowHTML).join("");
+  listEl.addEventListener("click", function(e){
+    var row = e.target.closest(".stopRow");
+    if (!row) return;
+    showList(false);
+    openStop(+row.dataset.n);
+  });
+  listEl.addEventListener("keydown", function(e){
+    if (e.key === "Enter" && e.target.classList.contains("stopRow")) e.target.click();
+  });
+  function showList(on, fallback){
+    listEl.classList.toggle("open", on);
+    btnList.setAttribute("aria-pressed", String(on));
+    if (fallback) document.getElementById("fallbackNote").classList.add("show");
+  }
+  btnList.onclick = function(){ showList(!listEl.classList.contains("open")); };
+
+  // locate me
+  var meMarker = null, meRing = null;
+  document.getElementById("btnLocate").onclick = function(){ map.locate({ setView: false, maxZoom: 18 }); };
+  map.on("locationfound", function(e){
+    if (meMarker) { map.removeLayer(meMarker); map.removeLayer(meRing); }
+    meRing = L.circle(e.latlng, { radius: e.accuracy / 2, color: "#8C3A2E", weight: 1, fillOpacity: .08 }).addTo(map);
+    meMarker = L.circleMarker(e.latlng, { radius: 7, color: "#F6F3EA", weight: 2, fillColor: "#8C3A2E", fillOpacity: 1 }).addTo(map);
+    map.setView(e.latlng, Math.max(map.getZoom(), 17));
+  });
+  map.on("locationerror", function(){
+    console.warn("Geolocation unavailable or denied.");
+  });
+
+  // permalink
+  var m = location.hash.match(/^#stop-(\d{1,2})$/);
+  if (m && +m[1] >= 1 && +m[1] <= 28) { openStop(+m[1]); }
+})();
+</script>
+</body>
+</html>

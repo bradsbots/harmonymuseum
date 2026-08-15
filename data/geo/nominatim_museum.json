@@ -1,0 +1,23 @@
+[
+ {
+  "place_id": 369206976,
+  "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "way",
+  "osm_id": 380634662,
+  "lat": "40.8027215",
+  "lon": "-80.1276893",
+  "category": "tourism",
+  "type": "museum",
+  "place_rank": 30,
+  "importance": 4.161669336990948e-05,
+  "addresstype": "tourism",
+  "name": "Harmony Museum",
+  "display_name": "Harmony Museum, 218, Mercer Street, Harmony, Butler County, Pennsylvania, 16037, United States",
+  "boundingbox": [
+   "40.8025719",
+   "40.8028320",
+   "-80.1278669",
+   "-80.1275265"
+  ]
+ }
+]

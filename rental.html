@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Host an event — Harmony Museum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141A24;--paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--sage:#6C7A5C;--rule:rgba(20,26,36,.14);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.6;font-weight:300}
+h1,h2,h3{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.15}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+header{background:var(--ink);color:var(--paper);padding:12px 18px;display:flex;align-items:center;gap:16px}
+header .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+header .back:hover{opacity:1}
+header h1{font-size:20px}
+.wrap{max-width:960px;margin:0 auto;padding:38px 22px 80px;display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}}
+.stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:14.5px;margin-top:20px}
+label{display:block;margin:16px 0 5px}
+label .lbl{color:rgba(20,26,36,.6)}
+input,select,textarea{width:100%;border:1px solid rgba(20,26,36,.3);background:#fff;padding:11px 12px;font-family:"Newsreader",serif;font-size:16.5px;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+.btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:13px 22px;cursor:pointer;margin-top:20px}
+.btn:hover{background:#A2453A}
+.confirm{display:none;background:var(--sage);color:var(--white);padding:14px 18px;margin-top:18px;font-size:15.5px}
+.confirm.show{display:block}
+.venueCard{border-top:2px solid var(--ink);padding:16px 0 18px;border-bottom:1px solid var(--rule)}
+.venueCard h3{font-size:22px}
+.venueCard .cap{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;color:var(--madder);font-weight:600;margin:4px 0 8px}
+.holds{font-size:14.5px;opacity:.75}
+.holds b{font-weight:600}
+.deposit{font-size:14.5px;opacity:.7;margin-top:16px}
+</style>
+</head>
+<body>
+
+<div class="closure" id="closureBanner" role="status" style="display:none"></div>
+
+<header>
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Host an event</h1>
+</header>
+
+<div class="wrap">
+  <div>
+    <span class="lbl" style="color:var(--madder)">Weddings · receptions · concerts · meetings</span>
+    <h2 style="font-size:32px;margin:8px 0 18px">Three historic venues</h2>
+    <div id="venueList"></div>
+    <p class="deposit">Deposit $350, refundable. Rates on request — the published rate card
+    is dated Oct 2020 and under review. <span class="lbl" style="color:var(--madder)">TODO: current rates from the museum</span></p>
+  </div>
+
+  <div>
+    <h2 style="font-size:26px">Check a date</h2>
+    <form id="enq">
+      <label><span class="lbl">Venue</span>
+        <select id="fVenue" name="venue"></select>
+      </label>
+      <label><span class="lbl">Preferred date</span>
+        <input type="date" name="date" required>
+      </label>
+      <label><span class="lbl">Type of event</span>
+        <select name="type"><option>Wedding / reception</option><option>Concert or performance</option><option>Meeting or banquet</option><option>Other</option></select>
+      </label>
+      <label><span class="lbl">Rough guest count</span>
+        <input type="number" name="guests" min="1" max="300" placeholder="e.g. 120">
+      </label>
+      <label><span class="lbl">Your name</span>
+        <input type="text" name="name" required>
+      </label>
+      <label><span class="lbl">Email or phone</span>
+        <input type="text" name="contact" required>
+      </label>
+      <label><span class="lbl">Anything else</span>
+        <textarea name="notes" placeholder="Interested in adding the 1809 wine cellar to Stewart Hall?"></textarea>
+      </label>
+      <button class="btn" type="submit">Send enquiry</button>
+      <div class="confirm" id="confirm"></div>
+    </form>
+    <div class="stubNote">
+      <b>Prototype.</b> Nothing is sent yet. At launch this form posts to the host's
+      built-in form handler (e.g. Netlify Forms) which emails the museum — no server,
+      no plugin, nothing to maintain. Booked and held dates shown at left come from
+      <code>data/site.js</code>; entries marked SAMPLE are demo data.
+    </div>
+  </div>
+</div>
+
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var S = window.SITE;
+  var pre = (location.search.match(/[?&]venue=([a-z]+)/) || [])[1];
+
+  var fmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+  document.getElementById("venueList").innerHTML = (S.venues || []).map(function(v){
+    var holds = (S.venueHolds || []).filter(function(h){ return h.venue === v.key; })
+      .map(function(h){
+        return "<b>" + fmt.format(new Date(h.date + "T12:00:00")) + "</b> — " +
+               (h.status === "booked" ? "booked" : "on hold") + (h.label ? " " + h.label : "");
+      });
+    return '<div class="venueCard"><h3>' + v.name + '</h3><div class="cap">' + v.cap + "</div>" +
+      '<div class="holds">' + (holds.length ? "Unavailable: " + holds.join(" · ") : "No dates currently held.") + "</div></div>";
+  }).join("");
+
+  var sel = document.getElementById("fVenue");
+  sel.innerHTML = (S.venues || []).map(function(v){
+    return '<option value="' + v.key + '"' + (v.key === pre ? " selected" : "") + ">" + v.name + "</option>";
+  }).join("");
+
+  document.getElementById("enq").addEventListener("submit", function(e){
+    e.preventDefault();
+    var c = document.getElementById("confirm");
+    c.textContent = "Prototype — nothing was sent. At launch this enquiry goes straight to the museum's inbox, typically answered within a few days.";
+    c.classList.add("show");
+  });
+})();
+</script>
+</body>
+</html>

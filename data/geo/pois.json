@@ -1,0 +1,1485 @@
+[
+ {
+  "name": "Della Terra Italian Bistro",
+  "lat": 40.8017143,
+  "lon": -80.1390855,
+  "tags": {
+   "addr:housenumber": "100",
+   "addr:street": "Perry Highway",
+   "amenity": "restaurant"
+  }
+ },
+ {
+  "name": "Burgh'ers",
+  "lat": 40.8016895,
+  "lon": -80.1394451,
+  "tags": {
+   "addr:housenumber": "100",
+   "addr:street": "Perry Highway",
+   "amenity": "restaurant"
+  }
+ },
+ {
+  "name": "Trail Info Board",
+  "lat": 40.8037383,
+  "lon": -80.1384,
+  "tags": {
+   "tourism": "information"
+  }
+ },
+ {
+  "name": "Rapp's Seat",
+  "lat": 40.8046336,
+  "lon": -80.1231274,
+  "tags": {
+   "tourism": "viewpoint"
+  }
+ },
+ {
+  "name": "Ryan Gloyer Middle School",
+  "lat": 40.8086785,
+  "lon": -80.1118338,
+  "tags": {
+   "building": "school"
+  }
+ },
+ {
+  "name": "Northgate Plaza",
+  "lat": 40.8030348,
+  "lon": -80.1359708,
+  "tags": {
+   "building": "retail"
+  }
+ },
+ {
+  "name": "NexTier Bank",
+  "lat": 40.793755,
+  "lon": -80.1354865,
+  "tags": {
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "NexTier Bank",
+  "lat": 40.7938323,
+  "lon": -80.1357191,
+  "tags": {
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Creekside plaza",
+  "lat": 40.8014902,
+  "lon": -80.1390538,
+  "tags": {
+   "building": "retail"
+  }
+ },
+ {
+  "name": "St Peter's Reformed Church",
+  "lat": 40.7971911,
+  "lon": -80.1336517,
+  "tags": {
+   "addr:housenumber": "320",
+   "addr:street": "East Grandview Avenue",
+   "amenity": "place_of_worship",
+   "building": "church",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Boylan Funeral Home & Cremation Services",
+  "lat": 40.7973671,
+  "lon": -80.1332961,
+  "tags": {
+   "addr:housenumber": "324",
+   "addr:street": "East Grandview Avenue",
+   "building": "service"
+  }
+ },
+ {
+  "name": "Media Post",
+  "lat": 40.7971716,
+  "lon": -80.1342584,
+  "tags": {
+   "addr:housenumber": "306",
+   "addr:street": "East Grandview Avenue",
+   "building": "service"
+  }
+ },
+ {
+  "name": "Evergreen Nursing Home",
+  "lat": 40.8043641,
+  "lon": -80.1092548,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "English Evangelical Lutheran Church",
+  "lat": 40.7970358,
+  "lon": -80.1355502,
+  "tags": {
+   "amenity": "place_of_worship",
+   "building": "yes",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Calvin Presbyterian Church",
+  "lat": 40.7975403,
+  "lon": -80.1311836,
+  "tags": {
+   "addr:housenumber": "415",
+   "addr:street": "East Grandview Avenue",
+   "amenity": "place_of_worship",
+   "building": "church",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Harmony-Zelienople United Methodist Church",
+  "lat": 40.797818,
+  "lon": -80.1292013,
+  "tags": {
+   "addr:housenumber": "123",
+   "addr:street": "North Pittsburgh Street",
+   "amenity": "place_of_worship",
+   "building": "church",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Fox's Pizza Den",
+  "lat": 40.7987796,
+  "lon": -80.128604,
+  "tags": {
+   "addr:housenumber": "502",
+   "addr:street": "East Grandview Avenue",
+   "amenity": "restaurant",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "Maple Court",
+  "lat": 40.793903,
+  "lon": -80.1347157,
+  "tags": {
+   "building": "apartments"
+  }
+ },
+ {
+  "name": "Main Steel Polishing Co",
+  "lat": 40.7971596,
+  "lon": -80.1210531,
+  "tags": {
+   "addr:housenumber": "6",
+   "addr:street": "Whitney Drive",
+   "building": "industrial"
+  }
+ },
+ {
+  "name": "Glenn-Kildoo Funeral Home & Cremation Services",
+  "lat": 40.7976523,
+  "lon": -80.134999,
+  "tags": {
+   "addr:housenumber": "219",
+   "addr:street": "East Grandview Avenue",
+   "building": "service"
+  }
+ },
+ {
+  "name": "Park United Presbyterian Church",
+  "lat": 40.7974072,
+  "lon": -80.1366499,
+  "tags": {
+   "addr:housenumber": "115",
+   "addr:street": "East Grandview Avenue",
+   "amenity": "place_of_worship",
+   "building": "yes",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Hearth & Home Furnishings",
+  "lat": 40.798459,
+  "lon": -80.1367031,
+  "tags": {
+   "addr:housenumber": "300",
+   "addr:street": "North Main Street",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "St. Paul's Lutheran Church",
+  "lat": 40.7977506,
+  "lon": -80.1376378,
+  "tags": {
+   "amenity": "place_of_worship",
+   "building": "yes",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Jeremiah Bondra DMD",
+  "lat": 40.7966972,
+  "lon": -80.1393501,
+  "tags": {
+   "addr:housenumber": "214",
+   "addr:street": "West Grandview Avenue",
+   "amenity": "dentist",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Lutheran SeniorLife, Newhaven Court",
+  "lat": 40.7906809,
+  "lon": -80.1366993,
+  "tags": {
+   "addr:housenumber": "100",
+   "addr:street": "Burgess Drive",
+   "amenity": "social_facility",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "TSI Transit Solutions",
+  "lat": 40.7968239,
+  "lon": -80.1382144,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Polished",
+  "lat": 40.7957964,
+  "lon": -80.1382598,
+  "tags": {
+   "addr:housenumber": "121",
+   "addr:street": "West New Castle Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Police Department",
+  "lat": 40.7958225,
+  "lon": -80.1378774,
+  "tags": {
+   "amenity": "police",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Vocelli Pizza",
+  "lat": 40.7958608,
+  "lon": -80.1376657,
+  "tags": {
+   "amenity": "fast_food",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Herbe's Z Town Cafe",
+  "lat": 40.7959633,
+  "lon": -80.1373243,
+  "tags": {
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Mini Mart",
+  "lat": 40.7964734,
+  "lon": -80.1377352,
+  "tags": {
+   "addr:street": "North Main Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Sunoco",
+  "lat": 40.796509,
+  "lon": -80.1374191,
+  "tags": {
+   "amenity": "fuel",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Goodfello's Pizza and Pasta",
+  "lat": 40.7966834,
+  "lon": -80.1368394,
+  "tags": {
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Mathew Jewelers",
+  "lat": 40.7964852,
+  "lon": -80.1369041,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Strand Theater Initiative",
+  "lat": 40.7962482,
+  "lon": -80.1374072,
+  "tags": {
+   "addr:housenumber": "119",
+   "addr:street": "North Main Street",
+   "amenity": "cinema",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Green Barn",
+  "lat": 40.7963319,
+  "lon": -80.1373592,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Edward Jones",
+  "lat": 40.796109,
+  "lon": -80.1368738,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Andrea's Country Shop",
+  "lat": 40.7960257,
+  "lon": -80.1367332,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Mussig Flower Shop",
+  "lat": 40.7959402,
+  "lon": -80.1368351,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Citizens Bank",
+  "lat": 40.7958495,
+  "lon": -80.136814,
+  "tags": {
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Grandview Dental",
+  "lat": 40.7970292,
+  "lon": -80.1362227,
+  "tags": {
+   "amenity": "dentist",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Kaufman Hotel & Restaurant",
+  "lat": 40.7955639,
+  "lon": -80.1373491,
+  "tags": {
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Maddalon Jewelers",
+  "lat": 40.7954177,
+  "lon": -80.1372694,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Lolev Zelienople",
+  "lat": 40.7952856,
+  "lon": -80.1374744,
+  "tags": {
+   "addr:housenumber": "111",
+   "addr:street": "South Main Street",
+   "amenity": "bar",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "Sarah II Nails",
+  "lat": 40.7950534,
+  "lon": -80.1371878,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Fisher's Bar & Restaurant",
+  "lat": 40.7949556,
+  "lon": -80.1371018,
+  "tags": {
+   "addr:housenumber": "131",
+   "addr:street": "South Main Street",
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Whitey's General Store",
+  "lat": 40.7947604,
+  "lon": -80.1370823,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "C.T. McCormick Hardware",
+  "lat": 40.7945622,
+  "lon": -80.1371245,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "One Enchanted Evening",
+  "lat": 40.794208,
+  "lon": -80.1371347,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Newstand",
+  "lat": 40.7941277,
+  "lon": -80.1370616,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Griffin Insurance Group",
+  "lat": 40.7940584,
+  "lon": -80.137098,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Kesco, Inc",
+  "lat": 40.7939944,
+  "lon": -80.1368987,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Dapper Bicycle",
+  "lat": 40.7938656,
+  "lon": -80.1369108,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Buhl House",
+  "lat": 40.7937963,
+  "lon": -80.1368592,
+  "tags": {
+   "addr:housenumber": "221",
+   "addr:street": "South Main Street",
+   "building": "yes",
+   "historic": "building"
+  }
+ },
+ {
+  "name": "The Murray Agency",
+  "lat": 40.7936773,
+  "lon": -80.1368468,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Valero Zelienople",
+  "lat": 40.793378,
+  "lon": -80.1368147,
+  "tags": {
+   "amenity": "fuel",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Historical Society",
+  "lat": 40.7929801,
+  "lon": -80.1367097,
+  "tags": {
+   "building": "yes",
+   "tourism": "museum"
+  }
+ },
+ {
+  "name": "Zelienople Post Office",
+  "lat": 40.7928546,
+  "lon": -80.1368118,
+  "tags": {
+   "amenity": "post_office",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "WesBanco",
+  "lat": 40.792654,
+  "lon": -80.1367271,
+  "tags": {
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "WesBanco",
+  "lat": 40.7925629,
+  "lon": -80.1376216,
+  "tags": {
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Carol's Pastry Shop",
+  "lat": 40.7947757,
+  "lon": -80.1365011,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Room to Grow",
+  "lat": 40.7946987,
+  "lon": -80.1364407,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Stylin' Sherri",
+  "lat": 40.7947032,
+  "lon": -80.1370906,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Parents in Toto",
+  "lat": 40.7946409,
+  "lon": -80.1370795,
+  "tags": {
+   "amenity": "community_centre",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Boney Joe Tattoos",
+  "lat": 40.7948549,
+  "lon": -80.1370813,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Ooh & Aah",
+  "lat": 40.7949045,
+  "lon": -80.1370919,
+  "tags": {
+   "amenity": "arts_centre",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Stocking Stuffers Plus",
+  "lat": 40.7951449,
+  "lon": -80.1371247,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Salon Dannielle",
+  "lat": 40.7951983,
+  "lon": -80.1371385,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Kountry Kitchen",
+  "lat": 40.7953536,
+  "lon": -80.1371768,
+  "tags": {
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Eva Brynn Shoetique",
+  "lat": 40.7953029,
+  "lon": -80.1371629,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "A-1 PC Computer Shop",
+  "lat": 40.7959015,
+  "lon": -80.1373129,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Jack Bonus & Assoc. Insurance",
+  "lat": 40.7958371,
+  "lon": -80.1373014,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Spring Main Cafe",
+  "lat": 40.7960349,
+  "lon": -80.1374127,
+  "tags": {
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Integrative Staffing Group, LLC",
+  "lat": 40.7962212,
+  "lon": -80.1369281,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Temporary Personnel Services, Inc",
+  "lat": 40.796174,
+  "lon": -80.1369165,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Northwest Consumer Loans",
+  "lat": 40.7954473,
+  "lon": -80.1366594,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Health Naturale",
+  "lat": 40.7953895,
+  "lon": -80.136594,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Dan's Barber",
+  "lat": 40.7950741,
+  "lon": -80.1366784,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Kennedy-Meeder Insurance, Inc",
+  "lat": 40.7950118,
+  "lon": -80.1366657,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Kash Mortgage Group, Inc",
+  "lat": 40.7949398,
+  "lon": -80.1365541,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Presbytery Center",
+  "lat": 40.7948902,
+  "lon": -80.1365438,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Complete Travel Service",
+  "lat": 40.7948398,
+  "lon": -80.1365313,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Roach & Ziegler",
+  "lat": 40.794274,
+  "lon": -80.1365159,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Shu Brew",
+  "lat": 40.7941099,
+  "lon": -80.136429,
+  "tags": {
+   "amenity": "bar",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Rich's Barber Shop",
+  "lat": 40.7940291,
+  "lon": -80.1365092,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Allstate Insurance",
+  "lat": 40.7938409,
+  "lon": -80.1364723,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "NexTier Bank",
+  "lat": 40.7936148,
+  "lon": -80.1363112,
+  "tags": {
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Walgreens",
+  "lat": 40.7933649,
+  "lon": -80.1358289,
+  "tags": {
+   "amenity": "pharmacy",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Hovis Auto & Truck Supply",
+  "lat": 40.7931289,
+  "lon": -80.1361078,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Public Library",
+  "lat": 40.7933876,
+  "lon": -80.1354374,
+  "tags": {
+   "amenity": "library",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Huntington Bank",
+  "lat": 40.8015965,
+  "lon": -80.1369416,
+  "tags": {
+   "addr:housenumber": "1",
+   "addr:street": "Northgate Plaza",
+   "amenity": "bank",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Hindman Moving & Storage",
+  "lat": 40.7986195,
+  "lon": -80.1394495,
+  "tags": {
+   "addr:housenumber": "64",
+   "addr:street": "Halstead Boulevard",
+   "building": "warehouse"
+  }
+ },
+ {
+  "name": "Carlson's Bait & Tackle",
+  "lat": 40.8031431,
+  "lon": -80.1377107,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Pizza Hut",
+  "lat": 40.8026632,
+  "lon": -80.1380725,
+  "tags": {
+   "addr:housenumber": "112",
+   "addr:street": "Perry Highway",
+   "amenity": "restaurant",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Beer Distributor",
+  "lat": 40.8030906,
+  "lon": -80.1381516,
+  "tags": {
+   "addr:housenumber": "114",
+   "addr:street": "Perry Highway",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Enchanted Olive",
+  "lat": 40.8036839,
+  "lon": -80.1375142,
+  "tags": {
+   "addr:housenumber": "120",
+   "addr:street": "Perry Highway",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Apex Surfaces",
+  "lat": 40.804358,
+  "lon": -80.1369858,
+  "tags": {
+   "addr:housenumber": "132",
+   "addr:street": "Perry Highway",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "T & M Hardware",
+  "lat": 40.8050978,
+  "lon": -80.1361999,
+  "tags": {
+   "addr:housenumber": "134",
+   "addr:street": "Perry Highway",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Burger King",
+  "lat": 40.8047089,
+  "lon": -80.1351514,
+  "tags": {
+   "addr:housenumber": "155",
+   "addr:street": "Perry Highway",
+   "amenity": "fast_food",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "DQ Grill & Chill",
+  "lat": 40.8044099,
+  "lon": -80.1357863,
+  "tags": {
+   "addr:housenumber": "145",
+   "addr:street": "Perry Highway",
+   "amenity": "fast_food",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "7-Eleven",
+  "lat": 40.7922487,
+  "lon": -80.1367061,
+  "tags": {
+   "amenity": "fuel",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Three B's Lounge",
+  "lat": 40.792029,
+  "lon": -80.1366003,
+  "tags": {
+   "amenity": "bar",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Market",
+  "lat": 40.7916153,
+  "lon": -80.1370969,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "State Farm - Jim Hinkle",
+  "lat": 40.7918741,
+  "lon": -80.1364702,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Lutheran Senior Life Home Health Care",
+  "lat": 40.7917569,
+  "lon": -80.1364408,
+  "tags": {
+   "amenity": "social_facility",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Camelot Coal Company",
+  "lat": 40.7915653,
+  "lon": -80.1364273,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Ronin Advertising",
+  "lat": 40.7922821,
+  "lon": -80.1361112,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "R. Douglas Falk, CFP",
+  "lat": 40.7920998,
+  "lon": -80.1360775,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "National Charter Education Foundation",
+  "lat": 40.7919384,
+  "lon": -80.135978,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Avaya Hearing Care Centers",
+  "lat": 40.7917505,
+  "lon": -80.1359379,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Butler Health System Outpatient Services",
+  "lat": 40.7916249,
+  "lon": -80.1359279,
+  "tags": {
+   "building": "hospital"
+  }
+ },
+ {
+  "name": "Northern States Mortgage, LLC",
+  "lat": 40.7916506,
+  "lon": -80.1357515,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Meyer's Tire Services",
+  "lat": 40.7910403,
+  "lon": -80.1353005,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Laundry",
+  "lat": 40.7908965,
+  "lon": -80.1353888,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "T-Shirt Loft",
+  "lat": 40.7906581,
+  "lon": -80.1356351,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Jack Hockenberger Motors",
+  "lat": 40.7904578,
+  "lon": -80.1354672,
+  "tags": {
+   "addr:housenumber": "424",
+   "addr:street": "South Main Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "A W Miller Technical Sales",
+  "lat": 40.8016925,
+  "lon": -80.1199875,
+  "tags": {
+   "addr:housenumber": "3",
+   "addr:street": "Tara Drive",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Robinson Fans",
+  "lat": 40.7992353,
+  "lon": -80.1301225,
+  "tags": {
+   "addr:housenumber": "400",
+   "addr:street": "Robinson Drive",
+   "building": "industrial"
+  }
+ },
+ {
+  "name": "United Methodist Church",
+  "lat": 40.8012929,
+  "lon": -80.128251,
+  "tags": {
+   "addr:housenumber": "317",
+   "addr:street": "German Street",
+   "amenity": "place_of_worship",
+   "building": "yes",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Harmony Mennonite Meeting House",
+  "lat": 40.8091774,
+  "lon": -80.127582,
+  "tags": {
+   "historic": "heritage_building"
+  }
+ },
+ {
+  "name": "Harmony EMS",
+  "lat": 40.8084125,
+  "lon": -80.1299897,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Harmony Borough Office",
+  "lat": 40.8026312,
+  "lon": -80.1289209,
+  "tags": {
+   "addr:housenumber": "217",
+   "addr:street": "Mercer Street",
+   "amenity": "townhall",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Lagerhaus Bakery",
+  "lat": 40.8028104,
+  "lon": -80.1282729,
+  "tags": {
+   "addr:housenumber": "534",
+   "addr:street": "Main Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "McPharlin Music Shop",
+  "lat": 40.8029905,
+  "lon": -80.1283077,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Algone Corporation",
+  "lat": 40.8033132,
+  "lon": -80.1284404,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Harmony Weaver's Cabin",
+  "lat": 40.8034429,
+  "lon": -80.1263855,
+  "tags": {
+   "tourism": "attraction"
+  }
+ },
+ {
+  "name": "Historic Harmony Rope Maker Shop",
+  "lat": 40.8035873,
+  "lon": -80.1258974,
+  "tags": {
+   "addr:housenumber": "251",
+   "addr:street": "Mercer Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Wunderbar Coffe & Crepes",
+  "lat": 40.8036993,
+  "lon": -80.1257951,
+  "tags": {
+   "amenity": "cafe",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Darn Yarn Needles & Thread",
+  "lat": 40.8038656,
+  "lon": -80.1257792,
+  "tags": {
+   "addr:housenumber": "253",
+   "addr:street": "Mercer Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Healing House",
+  "lat": 40.803741,
+  "lon": -80.1253626,
+  "tags": {
+   "addr:housenumber": "257",
+   "addr:street": "Mercer Street",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "Grace Church of Harmony",
+  "lat": 40.8024618,
+  "lon": -80.12834,
+  "tags": {
+   "addr:housenumber": "538",
+   "addr:street": "Main Street",
+   "amenity": "place_of_worship",
+   "building": "church",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Harmony Museum",
+  "lat": 40.8027019,
+  "lon": -80.1276967,
+  "tags": {
+   "addr:housenumber": "218",
+   "addr:street": "Mercer Street",
+   "building": "yes",
+   "tourism": "museum"
+  }
+ },
+ {
+  "name": "Bottlebrush Gallery & Shop",
+  "lat": 40.8025354,
+  "lon": -80.1276611,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Harmony Fire District",
+  "lat": 40.8022794,
+  "lon": -80.1273212,
+  "tags": {
+   "addr:housenumber": "543",
+   "addr:street": "Main Street",
+   "amenity": "fire_station",
+   "building": "service"
+  }
+ },
+ {
+  "name": "Sapienza's Service Station",
+  "lat": 40.8027004,
+  "lon": -80.1269856,
+  "tags": {
+   "addr:housenumber": "226",
+   "addr:street": "Mercer Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "United States Post Office",
+  "lat": 40.8028943,
+  "lon": -80.1273246,
+  "tags": {
+   "addr:housenumber": "222",
+   "addr:street": "Mercer Street",
+   "amenity": "post_office",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "The Harmony Inn",
+  "lat": 40.8029512,
+  "lon": -80.1265139,
+  "tags": {
+   "addr:housenumber": "230",
+   "addr:street": "Mercer Street",
+   "amenity": "restaurant",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "Harmony Emproium",
+  "lat": 40.8033164,
+  "lon": -80.1255192,
+  "tags": {
+   "addr:housenumber": "250",
+   "addr:street": "Mercer Street",
+   "building": "retail"
+  }
+ },
+ {
+  "name": "Rambo Welding",
+  "lat": 40.8030045,
+  "lon": -80.1250344,
+  "tags": {
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "Small Parts Machine, Inc",
+  "lat": 40.8031989,
+  "lon": -80.1249405,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Harmony Moose Lodge",
+  "lat": 40.8029621,
+  "lon": -80.1239634,
+  "tags": {
+   "addr:housenumber": "270",
+   "addr:street": "Mercer Road",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "George Riggin Specialty Auto",
+  "lat": 40.8011992,
+  "lon": -80.1267957,
+  "tags": {
+   "addr:housenumber": "430",
+   "addr:street": "Harmony Way",
+   "building": "commercial"
+  }
+ },
+ {
+  "name": "Dambach Lumber & Supply",
+  "lat": 40.8017548,
+  "lon": -80.1252113,
+  "tags": {
+   "addr:housenumber": "328",
+   "addr:street": "German Street",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Buy 'N' Fly",
+  "lat": 40.8025397,
+  "lon": -80.1208905,
+  "tags": {
+   "addr:housenumber": "2576",
+   "addr:street": "Evans City Road",
+   "amenity": "fuel",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Historic Harmony Barn",
+  "lat": 40.8057478,
+  "lon": -80.1239358,
+  "tags": {
+   "amenity": "events_venue",
+   "building": "barn"
+  }
+ },
+ {
+  "name": "Lutheran SeniorLife",
+  "lat": 40.7895403,
+  "lon": -80.1384186,
+  "tags": {
+   "addr:street": "Burgess Drive",
+   "amenity": "social_facility",
+   "building": "residential"
+  }
+ },
+ {
+  "name": "Union Brothers Brewing",
+  "lat": 40.8114197,
+  "lon": -80.1240567,
+  "tags": {
+   "addr:housenumber": "365",
+   "addr:street": "Mercer Road",
+   "amenity": "pub",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Harmony Castings LLC",
+  "lat": 40.8123585,
+  "lon": -80.1247227,
+  "tags": {
+   "addr:housenumber": "251",
+   "addr:street": "Perry Highway",
+   "building": "industrial"
+  }
+ },
+ {
+  "name": "Bi-Lo Gas n' Go",
+  "lat": 40.8108389,
+  "lon": -80.1279085,
+  "tags": {
+   "amenity": "fuel",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Bi-Lo gas pumps",
+  "lat": 40.8110868,
+  "lon": -80.1276125,
+  "tags": {
+   "amenity": "fuel",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Zelienople Community Park Amphitheater",
+  "lat": 40.7911292,
+  "lon": -80.1296298,
+  "tags": {
+   "amenity": "theatre",
+   "building": "roof"
+  }
+ },
+ {
+  "name": "Hufnagel & Majors Inc RV Sales",
+  "lat": 40.8134441,
+  "lon": -80.1244576,
+  "tags": {
+   "addr:housenumber": "265",
+   "addr:street": "Perry Highway",
+   "building": "commercial",
+   "tourism": "caravan_site"
+  }
+ },
+ {
+  "name": "Park Pavillion",
+  "lat": 40.7999854,
+  "lon": -80.1227204,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Steamfitters Technology Center",
+  "lat": 40.8106421,
+  "lon": -80.1248604,
+  "tags": {
+   "building": "college"
+  }
+ },
+ {
+  "name": "Zelienople Water Tower",
+  "lat": 40.7920168,
+  "lon": -80.1255597,
+  "tags": {
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Harmony Mennonite Cemetery",
+  "lat": 40.8085731,
+  "lon": -80.1284549,
+  "tags": {
+   "landuse": "cemetery",
+   "religion": "christian"
+  }
+ },
+ {
+  "name": "Groff Tractor & Equipment Co. (fka Murphy Tractor)",
+  "lat": 40.8059898,
+  "lon": -80.1314629,
+  "tags": {
+   "addr:housenumber": "179",
+   "addr:street": "Perry Highway",
+   "building": "yes"
+  }
+ },
+ {
+  "name": "Indian Brave Campground",
+  "lat": 40.8016401,
+  "lon": -80.1332923,
+  "tags": {
+   "addr:housenumber": "159",
+   "addr:street": "Perry Highway",
+   "tourism": "camp_site"
+  }
+ },
+ {
+  "name": "Harmony Welcome Cabin",
+  "lat": 40.801789,
+  "lon": -80.1273331,
+  "tags": {
+   "building": "yes",
+   "tourism": "information"
+  }
+ },
+ {
+  "name": "ALDI",
+  "lat": 40.8125282,
+  "lon": -80.1274631,
+  "tags": {
+   "building": "retail"
+  }
+ },
+ {
+  "name": "Sysco Pittsburgh LLC",
+  "lat": 40.7997527,
+  "lon": -80.1205317,
+  "tags": {
+   "addr:housenumber": "1",
+   "addr:street": "Whitney Drive",
+   "building": "warehouse"
+  }
+ },
+ {
+  "name": "Connoquenessing Valley School",
+  "lat": 40.7928716,
+  "lon": -80.1263511,
+  "tags": {
+   "building": "school"
+  }
+ },
+ {
+  "name": "Seneca Valley Intermediate High School",
+  "lat": 40.8083392,
+  "lon": -80.1092569,
+  "tags": {
+   "building": "school"
+  }
+ }
+]
