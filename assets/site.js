@@ -22,12 +22,28 @@
     banner.classList.add("show");
   }
 
-  /* Utility-bar hours — an active closure overrides the weekly schedule */
-  var hrs = document.getElementById("hrs");
-  if (hrs) {
-    hrs.textContent = active.length ? "— closed today"
-      : S.hours.closedDays.indexOf(today.getDay()) >= 0
-        ? "— closed Sun & Mon" : S.hours.hoursShort;
+  /* Utility-bar open/closed line — an active closure overrides the weekly schedule */
+  var line = document.getElementById("openLine");
+  if (line) {
+    var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    function openDay(d) { return S.hours.closedDays.indexOf(d.getDay()) < 0; }
+    if (active.length) {
+      line.textContent = "Closed today — see notice above";
+    } else if (!openDay(today)) {
+      var n = new Date(today);
+      do { n.setDate(n.getDate() + 1); } while (!openDay(n));
+      line.textContent = "Closed today · reopens " + NAMES[n.getDay()] + " " + S.hours.hoursShort;
+    } else {
+      line.textContent = "Open today " + S.hours.hoursShort;
+    }
+  }
+
+  /* Mobile menu toggle */
+  var mb = document.getElementById("menuBtn"), nav = document.getElementById("mainNav");
+  if (mb && nav) {
+    mb.addEventListener("click", function () {
+      mb.setAttribute("aria-expanded", String(nav.classList.toggle("open")));
+    });
   }
 
   /* Newsletter — stub until the form is pointed at Kit */
