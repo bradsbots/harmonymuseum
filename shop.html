@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gift shop — Harmony Museum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141A24;--indigo:#1F2E48;--paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--gold-lit:#D8B87C;--sage:#6C7A5C;--rule:rgba(20,26,36,.14);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.55;font-weight:300}
+h1,h2,h3{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.12}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+header{background:var(--ink);color:var(--paper);padding:12px 18px;display:flex;align-items:center;gap:16px}
+header .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+header .back:hover{opacity:1}
+header h1{font-size:20px;flex:1}
+.cartBtn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;font-weight:600;background:transparent;color:var(--paper);border:1px solid rgba(233,227,212,.45);padding:8px 14px;cursor:pointer}
+.cartBtn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.wrap{max-width:1080px;margin:0 auto;padding:34px 20px 90px}
+.stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:14.5px;margin:18px 0 30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 4px}
+.chip{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;font-weight:600;border:1px solid var(--rule);background:transparent;padding:7px 13px;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px;margin-top:22px}
+.card{border:1px solid var(--rule);display:flex;flex-direction:column;background:#FBF9F2}
+.ph{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--paper);background:var(--indigo)}
+.ph .glyph{font-family:"Bodoni Moda",serif;font-size:40px;color:var(--gold-lit)}
+.ph .lbl{opacity:.55}
+.card .body{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:17.5px;margin-bottom:5px}
+.card .blurb{font-size:14px;opacity:.7;margin:0 0 10px;flex:1}
+.meta{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px}
+.price{font-family:"Bodoni Moda",serif;font-weight:600;font-size:19px}
+.stock{font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--sage)}
+.stock.low{color:var(--madder)} .stock.out{color:rgba(20,26,36,.4)}
+.badge{font-family:"Archivo Narrow",sans-serif;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;background:rgba(108,122,92,.16);color:#49543E;padding:3px 7px;align-self:flex-start;margin-bottom:8px}
+.btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:11px 16px;cursor:pointer}
+.btn:hover{background:#A2453A}
+.btn[disabled]{background:var(--paper-deep);color:rgba(20,26,36,.4);cursor:not-allowed}
+/* cart drawer */
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(380px,92vw);background:var(--white);box-shadow:-8px 0 34px rgba(20,26,36,.3);transform:translateX(105%);transition:transform .22s;z-index:50;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer .dHead{background:var(--ink);color:var(--paper);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.drawer .dHead h2{font-size:19px}
+.drawer .dHead button{background:none;border:0;color:var(--paper);font-size:20px;cursor:pointer}
+.dBody{flex:1;overflow:auto;padding:14px 18px}
+.line{display:flex;gap:10px;align-items:baseline;border-bottom:1px solid var(--rule);padding:11px 0}
+.line .nm{flex:1;font-size:15px}
+.line .qbtn{border:1px solid var(--rule);background:none;width:24px;height:24px;cursor:pointer;font-family:"Archivo Narrow",sans-serif}
+.line .amt{font-variant-numeric:tabular-nums}
+.dFoot{border-top:2px solid var(--ink);padding:16px 18px 20px}
+.total{display:flex;justify-content:space-between;font-family:"Bodoni Moda",serif;font-weight:600;font-size:20px;margin-bottom:12px}
+.dFoot .fine{font-size:12.5px;opacity:.6;margin-top:10px;line-height:1.5}
+.confirm{display:none;background:var(--sage);color:var(--white);padding:12px 14px;margin-top:12px;font-size:14px}
+.confirm.show{display:block}
+@media(prefers-reduced-motion:reduce){.drawer{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Gift shop</h1>
+  <button class="cartBtn" id="openCart" aria-label="Open cart">Cart · <span id="cartN">0</span></button>
+</header>
+
+<div class="wrap">
+  <span class="lbl" style="color:var(--madder)">Every purchase supports Historic Harmony, Inc.</span>
+  <h2 style="font-size:34px;margin-top:8px">From the museum shop</h2>
+
+  <div class="stubNote">
+    <b>Prototype — every item below is a SAMPLE.</b> No payment happens here. At launch,
+    inventory lives in <b>Square</b>: the register in the shop and this page share one
+    catalog, so a book sold over the counter shows sold out online automatically.
+    Checkout hands off to Square's hosted payment page. Items marked
+    <i>in-store only</i> are the fragile and heavy things nobody wants to ship.
+  </div>
+
+  <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="dHead"><h2>Your cart</h2><button id="closeCart" aria-label="Close cart">&times;</button></div>
+  <div class="dBody" id="cartLines"></div>
+  <div class="dFoot">
+    <div class="total"><span>Subtotal</span><span id="cartTotal">$0.00</span></div>
+    <button class="btn" id="checkout" style="width:100%">Checkout</button>
+    <div class="confirm" id="checkoutMsg"></div>
+    <div class="fine">Prototype cart (saved in your browser only). Shipping, PA sales tax
+    and payment are handled by Square's checkout at launch.</div>
+  </div>
+</aside>
+
+<script src="data/shop.js"></script>
+<script>
+(function(){
+  var ITEMS = window.SHOP.items, byId = {};
+  ITEMS.forEach(function(i){ byId[i.id] = i; });
+  var GLYPH = { Books: "&#182;", Prints: "&#10087;", Home: "&#8962;", Pantry: "&#10047;" };
+  var cart = {};
+  try { cart = JSON.parse(localStorage.getItem("hm-cart") || "{}"); } catch (e) {}
+
+  var cats = ["All"].concat(ITEMS.map(function(i){ return i.cat; })
+    .filter(function(c, k, a){ return a.indexOf(c) === k; }));
+  var activeCat = "All";
+
+  function money(n){ return "$" + n.toFixed(2); }
+
+  function renderChips(){
+    document.getElementById("chips").innerHTML = cats.map(function(c){
+      return '<button class="chip" data-cat="' + c + '" aria-pressed="' + (c === activeCat) + '">' + c + "</button>";
+    }).join("");
+  }
+  function renderGrid(){
+    document.getElementById("grid").innerHTML = ITEMS
+      .filter(function(i){ return activeCat === "All" || i.cat === activeCat; })
+      .map(function(i){
+        var out = i.stock === 0, low = i.stock > 0 && i.stock <= 3;
+        return '<div class="card"><div class="ph"><span class="glyph">' + (GLYPH[i.cat] || "&#10047;") +
+          '</span><span class="lbl">' + i.cat + " · photo to come</span></div><div class=\"body\">" +
+          (!i.shipping ? '<span class="badge">In-store only</span>' : "") +
+          "<h3>" + i.name + '</h3><p class="blurb">' + i.blurb + '</p>' +
+          '<div class="meta"><span class="price">' + money(i.price) + '</span>' +
+          '<span class="stock' + (out ? " out" : low ? " low" : "") + '">' +
+          (out ? "Sold out" : i.stock + " in stock (sample)") + "</span></div>" +
+          '<button class="btn" data-add="' + i.id + '"' + (out ? " disabled" : "") + ">" +
+          (out ? "Sold out" : i.shipping ? "Add to cart" : "Add — pickup at shop") + "</button></div></div>";
+      }).join("");
+  }
+  function cartCount(){
+    return Object.keys(cart).reduce(function(n, k){ return n + cart[k]; }, 0);
+  }
+  function renderCart(){
+    document.getElementById("cartN").textContent = cartCount();
+    var lines = Object.keys(cart).map(function(k){
+      var i = byId[k]; if (!i) return "";
+      return '<div class="line"><span class="nm">' + i.name +
+        (!i.shipping ? ' <span class="lbl" style="color:#49543E">· pickup</span>' : "") + "</span>" +
+        '<button class="qbtn" data-dec="' + k + '" aria-label="Remove one">&minus;</button>' +
+        "<span>" + cart[k] + "</span>" +
+        '<button class="qbtn" data-inc="' + k + '" aria-label="Add one">+</button>' +
+        '<span class="amt">' + money(i.price * cart[k]) + "</span></div>";
+    }).join("");
+    document.getElementById("cartLines").innerHTML = lines || '<p style="opacity:.6">Nothing in the cart yet.</p>';
+    var total = Object.keys(cart).reduce(function(n, k){ return n + (byId[k] ? byId[k].price * cart[k] : 0); }, 0);
+    document.getElementById("cartTotal").textContent = money(total);
+    try { localStorage.setItem("hm-cart", JSON.stringify(cart)); } catch (e) {}
+  }
+
+  document.getElementById("chips").addEventListener("click", function(e){
+    var b = e.target.closest("[data-cat]"); if (!b) return;
+    activeCat = b.dataset.cat; renderChips(); renderGrid();
+  });
+  document.getElementById("grid").addEventListener("click", function(e){
+    var b = e.target.closest("[data-add]"); if (!b) return;
+    var i = byId[b.dataset.add];
+    cart[i.id] = Math.min((cart[i.id] || 0) + 1, i.stock);
+    renderCart(); openDrawer(true);
+  });
+  document.getElementById("cartLines").addEventListener("click", function(e){
+    var inc = e.target.closest("[data-inc]"), dec = e.target.closest("[data-dec]");
+    if (inc) { var i = byId[inc.dataset.inc]; cart[i.id] = Math.min(cart[i.id] + 1, i.stock); }
+    if (dec) { var k = dec.dataset.dec; cart[k]--; if (cart[k] <= 0) delete cart[k]; }
+    if (inc || dec) renderCart();
+  });
+  function openDrawer(on){ document.getElementById("drawer").classList.toggle("open", on); }
+  document.getElementById("openCart").onclick = function(){ openDrawer(true); };
+  document.getElementById("closeCart").onclick = function(){ openDrawer(false); };
+  document.getElementById("checkout").onclick = function(){
+    var m = document.getElementById("checkoutMsg");
+    m.textContent = cartCount()
+      ? "Prototype — nothing was charged. At launch this cart hands off to Square's hosted checkout (card, Apple/Google Pay, PA sales tax, shipping or shop pickup)."
+      : "The cart is empty — add a sample item first.";
+    m.classList.add("show");
+  };
+
+  renderChips(); renderGrid(); renderCart();
+})();
+</script>
+</body>
+</html>

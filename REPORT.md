@@ -192,6 +192,21 @@ in `data/site.js` (a volunteer adds a line when a contract signs) and appear on 
 the rental page and the shared calendar. ⚠ The published rate card is dated Oct 2020
 — flagged as a TODO on the page rather than invented.
 
+**Gift shop (priority 7, added 2026-08-16) — Square, in two stages.**
+Stage 1, regardless of any website plans: free Square POS in the shop (phone/iPad +
+~$60 reader, ~2.6%+10¢ in person — verify rates at signup) gives the volunteers item
+catalog, stock counts, low-stock alerts and sales reporting with nothing to maintain.
+Stage 2, when a named human commits to packing boxes: Square Online's free tier reads
+the SAME catalog and stock as the register — a book sold over the counter shows sold
+out online with no double entry. The static site's Shop page links/hands off to
+Square's hosted checkout; inventory truth never lives in this repo. Rejected:
+WooCommerce (already rotting on their current site — audit #12), Shopify ($39/mo is
+wrong-sized), Etsy (supplemental channel at best; separate stock = double entry).
+Honest constraints: shipping is a volunteer commitment, not a feature; and nonprofit
+status does not exempt collecting PA sales tax on shop goods (books taxable, clothing
+exempt — their accountant should rule before launch). `shop.html` prototypes the UX
+with a working sample cart; `data/shop.js` is placeholder catalog only.
+
 **Calendar/events — a data file, not a service.** The museum's actual volume (a
 handful of events a year, two blog posts since 2025) doesn't justify calendar
 infrastructure. `data/site.js` has an `events` array that renders on the booking
