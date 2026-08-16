@@ -23,7 +23,8 @@
   }
 
   /* Utility-bar open/closed line — an active closure overrides the weekly schedule */
-  var line = document.getElementById("openLine");
+  /* fall back to the class selector so a stale cached index.html still updates */
+  var line = document.getElementById("openLine") || document.querySelector(".util .open");
   if (line) {
     var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     function openDay(d) { return S.hours.closedDays.indexOf(d.getDay()) < 0; }
