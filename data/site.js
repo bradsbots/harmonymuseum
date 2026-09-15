@@ -119,7 +119,7 @@ window.SITE = {
     { key: "stewart", name: "Stewart Hall",          cap: "120 dining · full kitchen · wine cellar add-on",
       fee: "$350", deposit: "$350", window: "8 a.m. to 11 p.m.",
       size: "30 × 46 ft main floor + 22 × 15 ft stage · 2 accessible restrooms · full kitchen",
-      extra: "The 1809 wine cellar (42 × 18 ft) is reached through Stewart Hall and can be added to a Stewart Hall rental only, for an additional $100 security deposit." },
+      extra: "The 1809 wine cellar (42 × 18 ft) is reached through Stewart Hall and can be added to a Stewart Hall rental only, for an additional $100 rental fee." },
     { key: "church",  name: "1825 Mennonite Meetinghouse", cap: "130–150 on original benches",
       fee: "$200", deposit: "$200", window: "8 a.m. to 8 p.m.",
       size: "30 × 28 ft main room + 11 × 16 ft annex · pulpit platform · restroom facility provided by you" }

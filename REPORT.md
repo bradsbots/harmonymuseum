@@ -34,13 +34,14 @@ The repo should move to a GitHub org owned by the museum.
   Double House · "Stohr" stands · Wagner-Bentel is in town · 19/22 era undecided.
 - Rentals: fees confirmed; security deposit made prominent (required, = fee);
   Stewart Hall 8–11; Meetinghouse 8 a.m.–8 p.m.; wine cellar only with Stewart Hall,
-  +$100 security deposit.
+  +$100 rental fee.
 - Membership: Sustaining $100–499, Advocate $500+, Business $50+. Payments via
   **Zeffy**, account under hmuseum@zoominternet.net (not yet created).
 - Newsletter: members-only, by post — public signup removed.
 - Replies within 3 business days; phone/email unchanged.
 - Ziegler Log House is 546 Main. Kathy Luek removed from the board; Katina Koontz's
   credentials (B.A., M.A.) kept — required for the historical-society designation.
+  ⚠ The old site never said what the degrees are in or from where — asked the museum.
 - Instagram reel stays.
 
 **Still to pull from the old host:** Form 990 PDFs (2019–22), photographer permission
