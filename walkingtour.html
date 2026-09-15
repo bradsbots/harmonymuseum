@@ -84,6 +84,7 @@ header h1{font-size:20px;flex:1;min-width:200px}
 .sectionHead{margin:26px 0 6px}
 .leaflet-container{font-family:"Archivo Narrow",sans-serif}
 .note{background:#0E141C;color:rgba(233,227,212,.6);font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;text-align:center}
+html.live .proto{display:none!important}
 </style>
 </head>
 <body>
@@ -131,9 +132,11 @@ header h1{font-size:20px;flex:1;min-width:200px}
   </aside>
 </div>
 
-<div class="note">Prototype · stop names pending museum confirmation are marked · map data © OpenStreetMap contributors</div>
+<div class="note"><span class="proto">Preview · stop names pending museum confirmation are marked · </span>map data © OpenStreetMap contributors</div>
 
 <script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
 <script src="data/walking-tour.js"></script>
 <script>
 (function(){

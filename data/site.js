@@ -1,6 +1,17 @@
 /* Site content — the file a volunteer edits. No code below this folder needs touching.
    Dates are YYYY-MM-DD. A closure banner shows ONLY between start and end, inclusive. */
 window.SITE = {
+  /* true while this is a preview: shows the "concept" footer and prototype notes.
+     Set to false on launch day — nothing else needs to change. */
+  prototype: true,
+
+  /* How tours are reserved. "phone": every Book button becomes a call link.
+     "online": buttons open the hosted booking service at onlineUrl (FareHarbor/Bookeo). */
+  booking: {
+    mode: "phone",
+    onlineUrl: ""
+  },
+
   hours: {
     hoursShort: "1–4 p.m.",
     days: "Tuesday – Saturday",
@@ -25,13 +36,13 @@ window.SITE = {
     }
   ],
 
-  /* Door prices — ⚠ PROPOSED +$1 over today's published prices so booking online
-     (at today's prices) is the cheaper path. Pending museum sign-off. */
+  /* Door prices. ⚠ The board approved an increase on 2026-09-15 but the amounts are
+     not confirmed yet — these are the CURRENT published prices until they are. */
   admission: [
     ["Ages 5 and under", "Free"],
-    ["Ages 6–17", "$3.50"],
-    ["Ages 18–59", "$8"],
-    ["Ages 60 and up", "$7"],
+    ["Ages 6–17", "$3"],
+    ["Ages 18–59", "$7"],
+    ["Ages 60 and up", "$6"],
     ["Members", "Free"]
   ],
 
@@ -43,9 +54,8 @@ window.SITE = {
     directions: "I-79 exits 87–88 · 30 miles north of Pittsburgh"
   },
 
-  /* Online prices — today's published prices, kept LOWER than the door so online
-     is the obviously better deal. The booking-service fee is absorbed (~42¢ on $7);
-     the $1 door premium more than covers it. ⚠ pending museum sign-off. */
+  /* Online prices — only shown when booking.mode is "online". Proposal: keep these
+     LOWER than the door so booking ahead is the better deal. ⚠ pending museum sign-off. */
   onlinePricing: [
     ["Adults (18–59)", "$7"],
     ["Seniors (60+)", "$6"],

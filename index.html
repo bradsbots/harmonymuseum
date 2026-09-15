@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Harmony Museum — concept with real assets</title>
+<title>Harmony Museum · Harmony, Pennsylvania</title>
+<meta name="description" content="The Harmony Museum in the 1809 Harmony Society warehouse at 218 Mercer Street, Harmony, PA. Guided tours, a 28-stop walking tour, and three historic venues for hire — Historic Harmony, Inc.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
@@ -37,6 +38,8 @@ img{display:block;max-width:100%}
 .frame{position:relative;overflow:hidden;background:var(--indigo)}
 .frame img{width:100%;height:100%;object-fit:cover}
 .tone img{filter:saturate(.82) contrast(1.04)}
+
+html.live .proto{display:none!important}
 
 /* dated closure banner — hidden unless a closure window is active */
 .closure{display:none;background:var(--madder);color:var(--paper);text-align:center;padding:11px 18px;font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
@@ -217,21 +220,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
 <section class="today" id="today">
   <div class="wrap">
     <div class="head">
-      <div><span class="lbl">Saturday, 15 August</span><h2>Tours today</h2></div>
+      <div><span class="lbl" id="todayLabel">Tuesday – Saturday</span><h2 id="todayHead">Tours</h2></div>
       <a class="btn ghost" href="calendar.html">Full calendar</a>
     </div>
     <div class="ledger">
-      <div class="row hdr"><span class="lbl">Time</span><span class="lbl">Tour</span><span class="lbl">Places left</span><span></span></div>
-      <div class="row">
-        <span class="when">1:00</span>
-        <span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>
-        <span class="seats">6 of 12</span><span class="act"><a class="btn" href="booking.html">Book</a></span>
-      </div>
-      <div class="row">
-        <span class="when">2:30</span>
-        <span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>
-        <span class="seats none">Full</span><span class="act"><a class="btn ghost" href="#">Waitlist</a></span>
-      </div>
+      <div class="row hdr"><span class="lbl">Time</span><span class="lbl">Tour</span><span class="lbl">Places</span><span></span></div>
+      <div id="tourRows"></div>
       <div class="row">
         <span class="when">Any</span>
         <span class="what">Walking tour of historic Harmony<small>Self-guided · 28 stops · free · ¼ mile or 3 miles, your call</small></span>
@@ -334,18 +328,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
   <div class="wrap cols">
     <div>
       <h3>Hours</h3>
-      <p>Tuesday – Saturday, 1–4 p.m.</p>
-      <p>Guided tours only, at 1:00 and 2:30.</p>
+      <p id="hoursDays">Tuesday – Saturday, 1–4 p.m.</p>
+      <p id="hoursNote">Guided tours only, at 1:00 and 2:30.</p>
       <p style="margin-top:14px;opacity:.55">Closed Sunday and Monday.</p>
     </div>
     <div>
-      <h3>Admission at the door</h3>
-      <div class="price"><span>Ages 5 and under</span><span>Free</span></div>
-      <div class="price"><span>Ages 6–17</span><span>$3.50</span></div>
-      <div class="price"><span>Ages 18–59</span><span>$8</span></div>
-      <div class="price"><span>Ages 60 and up</span><span>$7</span></div>
-      <div class="price"><span>Members</span><span>Free</span></div>
-      <p style="margin-top:12px;font-size:15px"><a href="booking.html" style="color:var(--gold)">Book online and save $1</a> — adults $7, seniors $6, ages 6–17 $3.</p>
+      <h3>Admission</h3>
+      <div id="admission"></div>
+      <p style="margin-top:12px;font-size:15px" id="onlineNote"></p>
     </div>
     <div>
       <h3>Find us</h3>
@@ -357,14 +347,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
   </div>
 </section>
 
-<footer><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc.</span><span>Concept — not the live site</span></div></footer>
+<footer><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc.</span><span class="proto">Preview — not the live site</span></div></footer>
 
-<div class="note">
+<div class="note proto">
   All photography served locally from assets/originals (downloaded from harmonymuseum.org) — these are the museum's own files.<br>
   Most were uploaded in 2019 and are 1024px wide; they hold up at these crop sizes but not full-bleed on a large display.
 </div>
 
-<script src="data/site.js?v=2"></script>
-<script src="assets/site.js?v=2"></script>
+<script src="data/site.js?v=3"></script>
+<script src="assets/site.js?v=3"></script>
 </body>
 </html>

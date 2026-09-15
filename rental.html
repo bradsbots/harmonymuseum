@@ -25,6 +25,7 @@ header h1{font-size:20px}
 .wrap{max-width:960px;margin:0 auto;padding:38px 22px 80px;display:grid;grid-template-columns:1fr 1fr;gap:44px}
 @media(max-width:800px){.wrap{grid-template-columns:1fr}}
 .stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:14.5px;margin-top:20px}
+html.live .proto{display:none!important}
 label{display:block;margin:16px 0 5px}
 label .lbl{color:rgba(20,26,36,.6)}
 input,select,textarea{width:100%;border:1px solid rgba(20,26,36,.3);background:#fff;padding:11px 12px;font-family:"Newsreader",serif;font-size:16.5px;color:var(--ink)}
@@ -86,8 +87,8 @@ textarea{min-height:110px;resize:vertical}
       <button class="btn" type="submit">Send enquiry</button>
       <div class="confirm" id="confirm"></div>
     </form>
-    <div class="stubNote">
-      <b>Prototype.</b> Nothing is sent yet. At launch this form posts to the host's
+    <div class="stubNote proto">
+      <b>Preview.</b> Nothing is sent yet. At launch this form posts to the host's
       built-in form handler (e.g. Netlify Forms) which emails the museum — no server,
       no plugin, nothing to maintain. Booked and held dates shown at left come from
       <code>data/site.js</code>; entries marked SAMPLE are demo data.

@@ -11,6 +11,23 @@
   }
   var today = now();
 
+  /* Prototype flag: once data/site.js says prototype:false, anything marked .proto disappears */
+  if (!S.prototype) document.documentElement.classList.add("live");
+
+  /* Booking mode — "phone" until a hosted service is chosen, then "online" */
+  var B = S.booking || { mode: "phone" };
+  var online = B.mode === "online" && !!B.onlineUrl;
+  var bookHref = online ? B.onlineUrl : S.contact.phoneHref;
+  window.SITE_BOOK = { online: online, href: bookHref, label: online ? "Book" : "Call to reserve" };
+
+  function inClosure(d) {
+    return (S.closures || []).some(function (c) {
+      return new Date(c.start + "T00:00:00") <= d && d <= new Date(c.end + "T23:59:59");
+    });
+  }
+  function openDay(d) { return S.hours.closedDays.indexOf(d.getDay()) < 0; }
+  window.SITE_IS_OPEN = function (d) { return openDay(d) && !inClosure(d); };
+
   /* Closure banner — renders only inside a closure's window */
   var active = (S.closures || []).filter(function (c) {
     return new Date(c.start + "T00:00:00") <= today &&
@@ -27,7 +44,6 @@
   var line = document.getElementById("openLine") || document.querySelector(".util .open");
   if (line) {
     var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    function openDay(d) { return S.hours.closedDays.indexOf(d.getDay()) < 0; }
     if (active.length) {
       line.textContent = "Closed today — see notice above";
     } else if (!openDay(today)) {
@@ -37,6 +53,43 @@
     } else {
       line.textContent = "Open today " + S.hours.hoursShort;
     }
+  }
+
+  /* Homepage "Tours today" ledger — today's tour times, or the next open day's */
+  var tourRows = document.getElementById("tourRows");
+  if (tourRows) {
+    var day = new Date(today), isToday = true, guard = 0;
+    while (!(openDay(day) && !inClosure(day)) && guard++ < 400) { day.setDate(day.getDate() + 1); isToday = false; }
+    var dayFmt = new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric" });
+    var lbl = document.getElementById("todayLabel"), head = document.getElementById("todayHead");
+    if (lbl) lbl.textContent = dayFmt.format(day);
+    if (head) head.textContent = isToday ? "Tours today" : "Next tours";
+    var cta = online
+      ? '<span class="seats">Book ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Book</a></span>'
+      : '<span class="seats">By phone</span><span class="act"><a class="btn" href="' + bookHref + '">Call</a></span>';
+    tourRows.innerHTML = S.hours.tourTimes.map(function (t) {
+      return '<div class="row"><span class="when">' + t + '</span>' +
+        '<span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>' +
+        cta + "</div>";
+    }).join("");
+  }
+
+  /* Hours + admission blocks read from data, so prices live in exactly one place */
+  var hd = document.getElementById("hoursDays"), hn = document.getElementById("hoursNote");
+  if (hd) hd.textContent = S.hours.days + ", " + S.hours.hoursShort;
+  if (hn) hn.textContent = S.hours.note;
+  var adm = document.getElementById("admission");
+  if (adm) {
+    adm.innerHTML = S.admission.map(function (p) {
+      return '<div class="price"><span>' + p[0] + "</span><span>" + p[1] + "</span></div>";
+    }).join("");
+  }
+  var on = document.getElementById("onlineNote");
+  if (on) {
+    on.innerHTML = online
+      ? '<a href="' + bookHref + '" style="color:var(--gold)">Book online</a> — ' +
+        S.onlinePricing.map(function (p) { return p[0] + " " + p[1]; }).join(" · ") + "."
+      : 'Reserve a place by phone: <a href="' + S.contact.phoneHref + '" style="color:var(--gold)">' + S.contact.phone + "</a>.";
   }
 
   /* Mobile menu toggle */

@@ -47,6 +47,7 @@ a.tag.tour:hover{background:var(--gold);color:var(--ink)}
 .tag.venue{background:rgba(108,122,92,.16);color:#49543E}
 .tag.closedTag{color:rgba(20,26,36,.55);padding-left:0;background:none}
 .stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:15px;margin:26px 0 0}
+html.live .proto{display:none!important}
 @media(max-width:720px){
   .grid{grid-template-columns:1fr;border-left:0}
   .dow{display:none}
@@ -79,7 +80,7 @@ a.tag.tour:hover{background:var(--gold);color:var(--ink)}
   </div>
   <div class="grid" id="grid"></div>
 
-  <div class="stubNote">
+  <div class="stubNote proto">
     <b>How this stays true:</b> tour days come from the weekly pattern and dated closures in
     <code>data/site.js</code>; events and venue holds are one-line entries in the same file.
     Seat-level availability lives in the hosted booking service — clicking a tour day hands
