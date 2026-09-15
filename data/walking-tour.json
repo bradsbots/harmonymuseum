@@ -4,53 +4,62 @@
       "pdf": "assets/originals/Walking-Tour-Map.pdf (scanned brochure, 2 pages: map+legend, 'Site Historic Facts'). No text layer; transcribed from page images.",
       "website": "https://harmonymuseum.org/harmony-walking-tour/ fetched 2026-08-15 (two unnumbered 14-item lists, in stop order)"
     },
-    "namePolicy": "The `name` field carries the PDF brochure facts-page name only as a working label. Where sources disagree, `nameVariants` holds every spelling and `needsConfirmation` is true. No spelling has been chosen \u2014 the museum decides; stop URLs must not be minted from disputed names until then.",
+    "namePolicy": "Names were ruled on by the museum on 2026-09-15 (stops 2, 7, 13, 17, 23, Stohr). `nameVariants` keeps the historical spellings from the brochure and the old website for reference. Stops 19 and 22 remain era-undetermined.",
     "eraNote": "The requested era enum was harmonist|mennonite. It cannot honestly cover post-1850 buildings (1856 Pearce Home, 1887 Opera House, ca.1900 Shontz School, 1882 school building), so the enum here is harmonist|mennonite|later|undetermined. Harmonist = Harmony Society period 1804-1814 (plus their surviving buildings); mennonite = Abraham Ziegler / Mennonite period from 1815; later = post-Mennonite 19th-20th century; undetermined = the brochure itself says the history is unknown.",
-    "inTownNote": "inTown reflects the PDF map geometry. The website footnote-1 ('located outside downtown Harmony') agrees except: it flags #14 Wagner-Bentel Haus as outlying (contradicts its 222 Mercer St address \u2014 almost certainly a site error) and does NOT flag #26 Shontz School (which the map places outside the grid).",
-    "geocoding": "Anchors: OSM named POIs and house-number geocodes (Nominatim), fetched 2026-08-15. Approximate stops are placed along real OSM street geometry at the block positions shown on the brochure map; every one carries geo.approximate=true and needs a street address from the museum to firm up. Note: OSM labels the building at 222 Mercer St 'United States Post Office' while the museum lists it as the Wagner-Bentel Haus, and the brochure says the post office is in the old public school (Borough building, 217 Mercer) \u2014 possibly the post office moved; ask the museum."
+    "inTownNote": "inTown reflects the PDF map geometry. The website footnote-1 ('located outside downtown Harmony') agrees except: it flags #14 Wagner-Bentel Haus as outlying (contradicts its 222 Mercer St address — almost certainly a site error) and does NOT flag #26 Shontz School (which the map places outside the grid).",
+    "geocoding": "Anchors: OSM named POIs and house-number geocodes (Nominatim), fetched 2026-08-15. Approximate stops are placed along real OSM street geometry at the block positions shown on the brochure map; every one carries geo.approximate=true and needs a street address from the museum to firm up. Note: OSM labels the building at 222 Mercer St 'United States Post Office' while the museum lists it as the Wagner-Bentel Haus, and the brochure says the post office is in the old public school (Borough building, 217 Mercer) — possibly the post office moved; ask the museum."
   },
   "conflicts": [
     {
       "stop": 2,
-      "issue": "PDF facts page: 'Langenbacher/Ziegler Haus'; PDF map legend: 'Langenbacher or Ziegler Haus'; website: 'Langenbacher Haus' (drops Ziegler entirely)."
+      "issue": "PDF facts page: 'Langenbacher/Ziegler Haus'; PDF map legend: 'Langenbacher or Ziegler Haus'; website: 'Langenbacher Haus' (drops Ziegler entirely).",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 7,
-      "issue": "PDF (both pages): 'Post Office (Harmony Public School)'; website: 'Harmony Borough Building (Harmony Public School)'. Description says the building houses Borough offices AND the Post Office \u2014 which is the lead name?"
+      "issue": "PDF (both pages): 'Post Office (Harmony Public School)'; website: 'Harmony Borough Building (Harmony Public School)'. Description says the building houses Borough offices AND the Post Office — which is the lead name?",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 8,
-      "issue": "Both PDF and website say 'Harmonist Stohr' \u2014 the predicted 'Store' spelling appears nowhere in either source. The brochure's own description calls it 'the 1807 Harmonist store' and uses 'The Stohr' as a noun, so 'Stohr' looks deliberate (period spelling), but confirm with the museum."
+      "issue": "Both PDF and website say 'Harmonist Stohr' — the predicted 'Store' spelling appears nowhere in either source. The brochure's own description calls it 'the 1807 Harmonist store' and uses 'The Stohr' as a noun, so 'Stohr' looks deliberate (period spelling), but confirm with the museum.",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 13,
-      "issue": "PDF: 'Beahm Hotel (Site of Harmonite Inn)'; website: 'Beam Hotel'. Beahm vs Beam is a surname spelling \u2014 museum must rule."
+      "issue": "PDF: 'Beahm Hotel (Site of Harmonite Inn)'; website: 'Beam Hotel'. Beahm vs Beam is a surname spelling — museum must rule.",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 14,
-      "issue": "Location flag, not name: website marks Wagner-Bentel Haus as outside downtown; its address is 222 Mercer St, in-town, and the PDF map places it in-town. Website flag looks erroneous."
+      "issue": "Location flag, not name: website marks Wagner-Bentel Haus as outside downtown; its address is 222 Mercer St, in-town, and the PDF map places it in-town. Website flag looks erroneous.",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 17,
-      "issue": "The PDF disagrees with itself: facts page says 'Bank of Harmony', map legend says 'Harmony National Bank'. Website says 'Harmony National Bank'."
+      "issue": "The PDF disagrees with itself: facts page says 'Bank of Harmony', map legend says 'Harmony National Bank'. Website says 'Harmony National Bank'.",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 23,
-      "issue": "The PDF disagrees with itself: facts page says 'Otto House', map legend says 'Mennonite Double House'. Website says 'Mennonite Double House'."
+      "issue": "The PDF disagrees with itself: facts page says 'Otto House', map legend says 'Mennonite Double House'. Website says 'Mennonite Double House'.",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 26,
-      "issue": "All three sources say 'Shontz School'. The predicted variant 'Stromtz' appears nowhere on the walking-tour page \u2014 its origin is unverified (possibly another page of the site). Also: map places it outside the town grid but the website does not flag it as outlying."
+      "issue": "All three sources say 'Shontz School'. The predicted variant 'Stromtz' appears nowhere on the walking-tour page — its origin is unverified (possibly another page of the site). Also: map places it outside the town grid but the website does not flag it as outlying.",
+      "resolved": "2026-09-15"
     },
     {
       "stop": 1,
-      "issue": "Brochure says museum tours 'Tues-Sun 1-4 p.m.'; the website and brief say Tue-Sat. Brochure is stale on hours \u2014 do not source hours from it."
+      "issue": "Brochure says museum tours 'Tues-Sun 1-4 p.m.'; the website and brief say Tue-Sat. Brochure is stale on hours — do not source hours from it.",
+      "resolved": "2026-09-15"
     }
   ],
   "stops": [
     {
       "number": 1,
-      "name": "Great House / Warehouse \u2014 Museum",
+      "name": "Great House / Warehouse — Museum",
       "nameVariants": {
         "pdfFacts": "Great House/Warehouse-Museum",
         "pdfLegend": "Great House (Museum) Warehouse",
@@ -80,14 +89,15 @@
       "era": "harmonist",
       "eraNote": "Original Harmonist structure; Abraham Ziegler added the two-story Mennonite-style addition after 1815.",
       "inTown": true,
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "The original structure ended at the door frame, showing Harmonist architecture at half today's size. When Abraham Ziegler bought Harmony he moved into this house and built the two-story addition to center the door in the Mennonite fashion.",
       "lat": 40.802512,
       "lng": -80.127779,
       "geo": {
         "source": "interpolated",
         "approximate": true
-      }
+      },
+      "museumRuling": "Name confirmed by the museum 2026-09-15."
     },
     {
       "number": 3,
@@ -171,7 +181,7 @@
     },
     {
       "number": 7,
-      "name": "Post Office (Harmony Public School)",
+      "name": "Harmony Borough Building (Harmony Public School)",
       "nameVariants": {
         "pdfFacts": "Post Office (Harmony Public School)",
         "pdfLegend": "Post Office (Harmony Public School)",
@@ -180,14 +190,15 @@
       "era": "later",
       "eraNote": "Built as Harmony's public school, 1882-1958.",
       "inTown": true,
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "Harmony's public school from 1882 to 1958; now houses Borough offices as well as the Post Office. The exterior was restored in the late 20th century.",
       "lat": 40.802631,
       "lng": -80.128921,
       "geo": {
         "source": "osm-poi",
         "approximate": false
-      }
+      },
+      "museumRuling": "Name confirmed by the museum 2026-09-15."
     },
     {
       "number": 8,
@@ -199,14 +210,15 @@
       },
       "era": "harmonist",
       "inTown": true,
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "The 1807 Harmonist store, where Society members obtained the goods they needed in daily life. It also has a wine cellar, and its attic was a granary.",
       "lat": 40.802719,
       "lng": -80.128566,
       "geo": {
         "source": "interpolated",
         "approximate": true
-      }
+      },
+      "museumRuling": "'Stohr' spelling confirmed by the museum 2026-09-15."
     },
     {
       "number": 9,
@@ -286,7 +298,7 @@
     },
     {
       "number": 13,
-      "name": "Beahm Hotel (Site of Harmonite Inn)",
+      "name": "Beam Hotel (Site of Harmonite Inn)",
       "nameVariants": {
         "pdfFacts": "Beahm Hotel (Site of Harmonite Inn)",
         "pdfLegend": "Beahm Hotel",
@@ -295,14 +307,15 @@
       "era": "later",
       "eraNote": "Original brick-and-frame structure burned in the 1850s; rebuilt as the two-story Beahm Hotel, third story and Victorian addition added ca. 1890s.",
       "inTown": true,
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "A brick and frame structure that burned in the 1850s, rebuilt as the two-story Beahm Hotel. The third story and Victorian addition were added around the 1890s.",
       "lat": 40.803026,
       "lng": -80.128,
       "geo": {
         "source": "interpolated",
         "approximate": true
-      }
+      },
+      "museumRuling": "Name confirmed by the museum 2026-09-15."
     },
     {
       "number": 14,
@@ -315,7 +328,7 @@
       "era": "harmonist",
       "inTown": true,
       "locationNote": "Website footnote marks this as outside downtown; its address is 222 Mercer St and the PDF map places it in-town. The website flag appears to be an error.",
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "ownedByMuseum": true,
       "address": "222 Mercer St",
       "description": "This Harmonist duplex was built for two sisters and their families. The garden features a beehive bake oven relocated from a nearby farm, and millstones from the Harmonist oil mill on the Little Connoquenessing Creek.",
@@ -324,7 +337,8 @@
       "geo": {
         "source": "nominatim-house",
         "approximate": false
-      }
+      },
+      "museumRuling": "In-town placement confirmed by the museum 2026-09-15; the old website's 'outlying' footnote was an error."
     },
     {
       "number": 15,
@@ -337,7 +351,7 @@
       "era": "harmonist",
       "inTown": true,
       "needsConfirmation": false,
-      "description": "Harmony Society home of Johannes Christoph Muller \u2014 doctor, schoolteacher, music director, composer, printer, archivist and museum curator. Note the angled corner on the Wood Street side, built so wagons turning toward the original bridge would not hit the wall.",
+      "description": "Harmony Society home of Johannes Christoph Muller — doctor, schoolteacher, music director, composer, printer, archivist and museum curator. Note the angled corner on the Wood Street side, built so wagons turning toward the original bridge would not hit the wall.",
       "lat": 40.80319,
       "lng": -80.127179,
       "geo": {
@@ -366,7 +380,7 @@
     },
     {
       "number": 17,
-      "name": "Bank of Harmony",
+      "name": "Bank of Harmony / Harmony National Bank",
       "nameVariants": {
         "pdfFacts": "Bank of Harmony",
         "pdfLegend": "Harmony National Bank",
@@ -375,14 +389,15 @@
       "era": "later",
       "eraNote": "Built in the 19th century as one of Harmony's two banks.",
       "inTown": true,
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "Built in the 19th century as one of Harmony's two banks; now apartments.",
       "lat": 40.803287,
       "lng": -80.126783,
       "geo": {
         "source": "interpolated",
         "approximate": true
-      }
+      },
+      "museumRuling": "Name confirmed by the museum 2026-09-15."
     },
     {
       "number": 18,
@@ -412,7 +427,7 @@
         "website": "Log House"
       },
       "era": "undetermined",
-      "eraNote": "Early 19th-century structure; the brochure says its early history is undetermined.",
+      "eraNote": "Early 19th-century structure; the brochure says its early history is undetermined. Era still undetermined as of 2026-09-15.",
       "inTown": true,
       "needsConfirmation": false,
       "description": "Early 19th-century structure relocated from the western end of German Street in 1999. Its early history is undetermined.",
@@ -471,7 +486,7 @@
         "website": "Franz Log House"
       },
       "era": "undetermined",
-      "eraNote": "Log construction, era not stated in either source; relocated from Zelienople in the 1990s. TODO: ask the museum.",
+      "eraNote": "Log construction, era not stated in either source; relocated from Zelienople in the 1990s. Era still undetermined as of 2026-09-15.",
       "inTown": true,
       "needsConfirmation": false,
       "description": "Relocated from Zelienople in the 1990s.",
@@ -484,7 +499,7 @@
     },
     {
       "number": 23,
-      "name": "Otto House",
+      "name": "Otto House / Mennonite Double House",
       "nameVariants": {
         "pdfFacts": "Otto House",
         "pdfLegend": "Mennonite Double House",
@@ -493,14 +508,15 @@
       "era": "mennonite",
       "eraNote": "Constructed post-1815.",
       "inTown": true,
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "Mennonite duplex constructed after 1815.",
       "lat": 40.803389,
       "lng": -80.125639,
       "geo": {
         "source": "interpolated",
         "approximate": true
-      }
+      },
+      "museumRuling": "Name confirmed by the museum 2026-09-15."
     },
     {
       "number": 24,
@@ -511,7 +527,7 @@
         "website": "Harmonist / Mennonite Barn"
       },
       "era": "harmonist",
-      "eraNote": "Built 1805 by the Harmonists to shelter sheep; modified ca. 1850 by David Ziegler, later part of the Wise Farm \u2014 genuinely both eras.",
+      "eraNote": "Built 1805 by the Harmonists to shelter sheep; modified ca. 1850 by David Ziegler, later part of the Wise Farm — genuinely both eras.",
       "inTown": false,
       "needsConfirmation": false,
       "ownedByMuseum": true,
@@ -557,14 +573,15 @@
       "eraNote": "ca. 1900.",
       "inTown": false,
       "locationNote": "PDF map places it outside the town grid; the website does not flag it as outlying. Following the map.",
-      "needsConfirmation": true,
+      "needsConfirmation": false,
       "description": "One-room schoolhouse from around 1900, closed in 1931 and adapted as a private home in 1999.",
       "lat": 40.809388,
       "lng": -80.122943,
       "geo": {
         "source": "interpolated",
         "approximate": true
-      }
+      },
+      "museumRuling": "All sources agree on 'Shontz'; no ruling needed (cleared 2026-09-15)."
     },
     {
       "number": 27,
@@ -600,7 +617,7 @@
       "needsConfirmation": false,
       "ownedByMuseum": true,
       "address": "Rt 68 & Edmund St",
-      "description": "Members of the Harmony Society who died between 1804 and 1814 were buried here in unmarked graves. The revolving stone gate \u2014 symbolic of leaving one world for the next \u2014 and the wall were built in 1869.",
+      "description": "Members of the Harmony Society who died between 1804 and 1814 were buried here in unmarked graves. The revolving stone gate — symbolic of leaving one world for the next — and the wall were built in 1869.",
       "lat": 40.800418,
       "lng": -80.123588,
       "geo": {

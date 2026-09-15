@@ -75,7 +75,7 @@
     if (head) head.textContent = isToday ? "Tours today" : "Next tours";
     var cta = online
       ? '<span class="seats">Book ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Book</a></span>'
-      : '<span class="seats">By phone</span><span class="act"><a class="btn" href="' + bookHref + '">Call</a></span>';
+      : '<span class="seats">Reserve by phone</span><span class="act"><a class="btn" href="' + bookHref + '">Call</a></span>';
     tourRows.innerHTML = S.hours.tourTimes.map(function (t) {
       return '<div class="row"><span class="when">' + t + '</span>' +
         '<span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>' +
@@ -133,17 +133,25 @@
     });
   }
 
-  /* Newsletter — posts to Kit once newsletter.formAction is filled in; a stub until then */
-  var nl = document.getElementById("newsletter");
-  if (nl) {
-    var action = (S.newsletter || {}).formAction || "";
-    if (action) nl.action = action;
-    nl.addEventListener("submit", function (e) {
-      if (action) return;
-      e.preventDefault();
-      var fine = document.querySelector(".band .fine");
-      if (fine) fine.textContent = "Signup isn't connected yet — email the museum to be added to the list.";
-    });
+  /* Newsletter band — shown only if the museum turns public signup on (it's a members' perk for now) */
+  var band = document.getElementById("newsletterBand"), NL = S.newsletter || {};
+  if (band) {
+    if (!NL.publicSignup) { band.hidden = true; }
+    else {
+      var nl = document.getElementById("newsletter");
+      if (NL.formAction) nl.action = NL.formAction;
+      nl.addEventListener("submit", function (e) {
+        if (NL.formAction) return;
+        e.preventDefault();
+        var fine = document.querySelector(".band .fine");
+        if (fine) fine.textContent = "Signup isn't connected yet — email the museum to be added to the list.";
+      });
+    }
+  }
+
+  /* Shop nav links disappear while the shop page is on hold */
+  if (!S.shop || S.shop.mode === "off") {
+    document.querySelectorAll('a[href="shop.html"]').forEach(function (a) { a.hidden = true; });
   }
 
   window.SITE_TODAY = today; /* booking page reuses the same date override */

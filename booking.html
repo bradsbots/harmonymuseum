@@ -51,7 +51,7 @@ html.live .proto{display:none!important}
 </header>
 
 <div class="wrap">
-  <span class="lbl" style="color:var(--madder)" id="tagline">Tuesday – Saturday · tours at 1:00 &amp; 2:30 · 12 places per tour</span>
+  <span class="lbl" style="color:var(--madder)" id="tagline">Tuesday – Saturday · tours at 1:00 &amp; 2:30</span>
   <h2 style="font-size:34px;margin-top:8px">The next two weeks</h2>
   <p id="pricing" style="margin:10px 0 0;font-size:15.5px;opacity:.75"></p>
   <p id="howto" style="margin:8px 0 0;font-size:15.5px"></p>
@@ -67,26 +67,27 @@ html.live .proto{display:none!important}
   <div class="ledger" id="slots"></div>
 </div>
 
-<script src="data/site.js"></script>
-<script src="assets/site.js"></script>
+<script src="data/site.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
 <script>
 (function(){
   var S = window.SITE, K = window.SITE_BOOK, start = window.SITE_TODAY || new Date();
+  var cap = S.hours.capacityPerTour;
   document.getElementById("tagline").textContent =
-    S.hours.days + " · tours at " + S.hours.tourTimes.join(" & ") + " · " + S.hours.capacityPerTour + " places per tour";
+    S.hours.days + " · tours at " + S.hours.tourTimes.join(" & ") + (cap ? " · " + cap + " places per tour" : "");
   document.getElementById("pricing").innerHTML = K.online
     ? "<b>Online:</b> " + S.onlinePricing.map(function(p){ return p[0] + " " + p[1]; }).join(" · ") + " — all fees included."
     : "<b>Admission:</b> " + S.admission.map(function(p){ return p[0] + " " + p[1]; }).join(" · ") + ".";
   document.getElementById("howto").innerHTML = K.online
     ? "Choose a tour below to book."
-    : "Tours are " + S.hours.capacityPerTour + " people. To reserve a place, call <a href=\"" + S.contact.phoneHref + "\">" + S.contact.phone +
-      "</a> during opening hours, or just come along — there is usually room.";
+    : "To reserve a place, call <a href=\"" + S.contact.phoneHref + "\">" + S.contact.phone +
+      "</a> during opening hours, or just come along — there is usually room. Groups and school tours: call to arrange a time.";
 
   var out = ['<div class="row hdr"><span class="lbl">Date</span><span class="lbl">Time</span><span class="lbl">Tour</span><span class="lbl">Places</span><span></span></div>'];
   var fmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric" });
   var act = K.online
     ? '<span class="seats">Book ahead</span><span><a class="btn" href="' + K.href + '">Book</a></span>'
-    : '<span class="seats">' + S.hours.capacityPerTour + ' places</span><span><a class="btn" href="' + K.href + '">Call</a></span>';
+    : '<span class="seats">By phone</span><span><a class="btn" href="' + K.href + '">Call</a></span>';
 
   for (var i = 0; i < 14; i++) {
     var d = new Date(start); d.setDate(d.getDate() + i); d.setHours(12, 0, 0, 0);

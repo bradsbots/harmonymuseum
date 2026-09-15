@@ -44,16 +44,16 @@
 <main class="page">
   <span class="lbl eyebrow">Historic Harmony, Inc. · a 501(c)(3) organization</span>
   <h2 class="title">Become a member</h2>
-  <p class="lede">Members keep the lights on in nine buildings that are older than the county. In return: free admission, discounts on events, the shop and the rental halls, and the monthly newsletter.</p>
+  <p class="lede">Members keep the lights on in nine buildings that are older than the county. In return: free admission, discounts on events, the shop and the rental halls, and the members' newsletter in the post.</p>
 
   <div class="tiers">
     <div class="tier"><span class="lbl">Individual</span><div class="amt">$25<small>a year</small></div><p>One person.</p></div>
     <div class="tier"><span class="lbl">Household</span><div class="amt">$35<small>a year</small></div><p>Everyone at one address.</p></div>
-    <div class="tier"><span class="lbl">Sustaining</span><div class="amt">$100<small>a year</small></div><p>For those who can give a little more.</p></div>
-    <div class="tier"><span class="lbl">Advocate</span><div class="amt">$500<small>a year</small></div><p>The museum's most committed supporters.</p></div>
+    <div class="tier"><span class="lbl">Sustaining</span><div class="amt">$100<small>to $499</small></div><p>For those who can give a little more.</p></div>
+    <div class="tier"><span class="lbl">Advocate</span><div class="amt">$500<small>and up</small></div><p>The museum's most committed supporters.</p></div>
   </div>
-  <p style="margin:14px 0 0"><span class="lbl" style="color:var(--madder)">Business memberships</span></p>
-  <div class="biz"><span>Basic <b>$50</b></span><span>Museum Friend <b>$100</b></span><span>Museum Benefactor <b>$500</b></span></div>
+  <p style="margin:14px 0 0"><span class="lbl" style="color:var(--madder)">Business membership</span></p>
+  <div class="biz"><span>From <b>$50</b> a year</span></div>
 
   <div class="join" id="join"></div>
 
@@ -63,7 +63,7 @@
     <li>Discounted event rates</li>
     <li>Discounted museum shop purchases</li>
     <li>Discounted rental rates on Stewart Hall, the 1805 Barn and the Mennonite Meetinghouse</li>
-    <li>The monthly newsletter</li>
+    <li>The members' newsletter, by post</li>
     <li>Gatherings and special programs</li>
     <li>First call to volunteer for events, or to train as a docent and share the town's history with visitors</li>
     <li>For high-school and college students: volunteering here is a real addition to a résumé or college application</li>
@@ -104,16 +104,16 @@
 </main>
 
 <footer class="site"><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc. · 218 Mercer Street, Harmony, PA 16037</span><span class="proto">Preview — not the live site</span></div></footer>
-<script src="data/site.js"></script>
-<script src="assets/site.js"></script>
+<script src="data/site.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
 <script>
 (function(){
   var S = window.SITE, G = S.giving || {}, j = document.getElementById("join");
   j.innerHTML = G.membershipUrl
-    ? '<h3>Join online</h3><p>Pay by card in a minute; your membership starts today.</p><a class="btn" href="' + G.membershipUrl + '">Join now</a>'
+    ? '<h3>Join online</h3><p>Pay by card in a minute through ' + (G.provider || 'our payment partner') + '; your membership starts today.</p><a class="btn" href="' + G.membershipUrl + '">Join now</a>'
     : '<h3>How to join</h3><p>Call the office on <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> (' + S.hours.days + ', ' + S.hours.hoursShort +
       ') or stop by the museum, or post a cheque with your name, address and the membership level to:</p><p><b>' + G.chequesTo + '</b></p>' +
-      '<p class="proto" style="font-size:14px;opacity:.7">Online signup appears here automatically once <code>giving.membershipUrl</code> is set in data/site.js.</p>';
+      '<p class="proto" style="font-size:14px;opacity:.7">Online signup (Zeffy) appears here automatically once <code>giving.membershipUrl</code> is set in data/site.js — the museum needs to create the Zeffy account first.</p>';
 })();
 </script>
 </body>

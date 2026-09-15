@@ -9,10 +9,10 @@ either the currently published value or a visible TODO; nothing is invented.
 | Flag in `data/site.js` | Now | At launch |
 |---|---|---|
 | `prototype` | `true` — preview notes shown, `noindex` injected, `?live=1` previews launch | `false` |
-| `booking.mode` | `"phone"` — every Book button is a call link | `"online"` + `onlineUrl` once FareHarbor/Bookeo exists |
-| `shop.mode` | `"list"` — what's in the shop, buy in person | `"cart"` only if someone commits to shipping (needs Square) |
-| `newsletter.formAction` | empty — signup shows "not connected yet" | Kit form URL |
-| `giving.membershipUrl` / `donateUrl` | empty — pages show phone + cheque address | hosted checkout links (Zeffy recommended) |
+| `booking.mode` | `"phone"` — every Book button is a call link (museum decision) | `"online"` + `onlineUrl` if/when they pick a service |
+| `shop.mode` | `"off"` — shop on hold; page says where/when, not in nav | `"list"` or `"cart"` in phase 2 |
+| `newsletter.publicSignup` | `false` — members' perk by post, no public form | leave false |
+| `giving.membershipUrl` / `donateUrl` | empty — pages show phone + cheque address | Zeffy form links once the museum creates the account |
 | `featured[]` | @412onthemove's Sept 2026 tour reel (Instagram embed on click) | swap URL for a newer post |
 
 Done for launch: self-hosted fonts (`tools/fetch_fonts.py`), `_redirects` for all 34
@@ -24,19 +24,24 @@ when `prototype:false`), admission/hours/events/venue fees all read from `data/s
 harmonymuseum.org via the museum's registrar. GitHub Pages stays as the preview.
 The repo should move to a GitHub org owned by the museum.
 
-**Facts taken from the museum's current site (content/live-site/) — confirm:**
-- Rental fees: Barn $600 + $600 deposit (Fri–Mon); Stewart Hall $350 + $350
-  (8 a.m.–11 p.m.); Meetinghouse $200 + $200 (9 a.m.–midnight). All dated Oct 1, 2020.
-- Closures: Dec 24–26; Dec 31 – Jan 3; "closed January and February, reopening in
-  March – date TBD". Encoded as Dec 24–26 and Dec 31 – Feb 28 (2026-27).
-- Admission $3 / $7 / $6, under 5 free, members free. **Board approved an increase
-  on 2026-09-15 — amounts pending.**
-- "12 places per tour" is in the brief but appears **nowhere** on the museum's site.
-- Ziegler Log House: listing page says 538 Main St, properties page says 546. Used 546.
-- Board of directors: the live site shows two conflicting lists; used the newer text list.
-- Membership tiers $25/$35/$100/$500; business $50/$100/$500. Currently sold via
-  WooCommerce checkout on the old site — that path dies with it.
-- Donate page on the old site is broken (renders a raw `[gravityform]` shortcode).
+**Museum's answers, 2026-09-15 (all applied):**
+- Admission: 6–17 $5 · 18–64 $10 · 65+ and veterans $8 · under 5 and members free.
+- Hours Tue–Sat 1–4; tours 1:00/2:30. Closed Dec 24–26 only; no winter closure
+  scheduled (they may run January tours). People-per-tour: undecided → not shown.
+- Booking: phone only; online later. Shop: on hold (`shop.mode:"off"`) — phase 2.
+- Stop names: 2 Langenbacher/Ziegler Haus · 7 Harmony Borough Building · 13 Beam
+  Hotel · 17 Bank of Harmony / Harmony National Bank · 23 Otto House / Mennonite
+  Double House · "Stohr" stands · Wagner-Bentel is in town · 19/22 era undecided.
+- Rentals: fees confirmed; security deposit made prominent (required, = fee);
+  Stewart Hall 8–11; Meetinghouse 8 a.m.–8 p.m.; wine cellar only with Stewart Hall,
+  +$100 security deposit.
+- Membership: Sustaining $100–499, Advocate $500+, Business $50+. Payments via
+  **Zeffy**, account under hmuseum@zoominternet.net (not yet created).
+- Newsletter: members-only, by post — public signup removed.
+- Replies within 3 business days; phone/email unchanged.
+- Ziegler Log House is 546 Main. Kathy Luek removed from the board; Katina Koontz's
+  credentials (B.A., M.A.) kept — required for the historical-society designation.
+- Instagram reel stays.
 
 **Still to pull from the old host:** Form 990 PDFs (2019–22), photographer permission
 form PDF, the 16 Harmony Line period photos, the Weihnachtsmarkt flyer images.

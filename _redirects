@@ -35,7 +35,7 @@
 /donate/                      donate.html                 301
 /volunteer/                   get-involved.html           301
 /get-involved/                get-involved.html           301
-/shop/                        shop.html                   301
+/shop/                        visit.html                  301
 
 # Old event one-offs — no equivalent page; send to the calendar
 /harmoniefest-2024/           calendar.html               301

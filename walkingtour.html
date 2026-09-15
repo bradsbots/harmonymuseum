@@ -125,7 +125,7 @@ html.live .proto{display:none!important}
       <div class="chips" id="panelChips"></div>
       <h2 id="panelName"></h2>
       <div class="addr" id="panelAddr"></div>
-      <div class="variants proto" id="panelVariants" hidden></div>
+      <div class="variants" id="panelVariants" hidden></div>
       <div class="approxNote" id="panelApprox" hidden>Location is approximate — placed from the printed brochure map<span class="proto">, pending a confirmed address from the museum</span>.</div>
       <p id="panelDesc"></p>
       <a class="go" id="panelNav" target="_blank" rel="noopener">Open in your maps app</a>
@@ -136,9 +136,9 @@ html.live .proto{display:none!important}
 <div class="note"><span class="proto">Preview · stop names pending museum confirmation are marked · </span>map data © OpenStreetMap contributors</div>
 
 <script src="assets/vendor/leaflet/leaflet.js"></script>
-<script src="data/site.js"></script>
-<script src="assets/site.js"></script>
-<script src="data/walking-tour.js"></script>
+<script src="data/site.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
+<script src="data/walking-tour.js?v=2"></script>
 <script>
 (function(){
   var DATA = window.WALKING_TOUR, STOPS = DATA.stops;
@@ -207,13 +207,18 @@ html.live .proto{display:none!important}
     document.getElementById("panelAddr").textContent = s.address || "";
 
     var v = document.getElementById("panelVariants");
-    var vs = s.nameVariants, uniq = {};
-    [vs.pdfFacts, vs.pdfLegend, vs.website].forEach(function(x){ uniq[x] = 1; });
-    if (Object.keys(uniq).length > 1) {
+    var vs = s.nameVariants, others = {};
+    [vs.pdfFacts, vs.pdfLegend, vs.website].forEach(function(x){ if (x !== s.name) others[x] = 1; });
+    var aka = Object.keys(others);
+    if (s.needsConfirmation) {
       v.hidden = false;
       v.innerHTML = "<b>The sources disagree on this name</b><br>Brochure: &ldquo;" + vs.pdfFacts +
         (vs.pdfLegend !== vs.pdfFacts ? "&rdquo; / &ldquo;" + vs.pdfLegend : "") +
         "&rdquo;<br>Website: &ldquo;" + vs.website + "&rdquo; &mdash; awaiting the museum's ruling.";
+    } else if (aka.length) {
+      /* ruled on — show the older spellings as plain "also known as", visible on the live site too */
+      v.hidden = false; v.classList.remove("proto");
+      v.innerHTML = "<b>Also known as</b><br>" + aka.map(function(x){ return "&ldquo;" + x + "&rdquo;"; }).join(" · ");
     } else { v.hidden = true; }
 
     document.getElementById("panelApprox").hidden = !s.geo.approximate;

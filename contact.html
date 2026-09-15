@@ -35,7 +35,7 @@ textarea{min-height:130px;resize:vertical}
     <div>
       <span class="lbl eyebrow">Historic Harmony, Inc.</span>
       <h2 class="title">Ask us anything</h2>
-      <p class="lede">The office is staffed by volunteers during opening hours, so a message is often quicker than a call. Renting a hall? Use the <a href="rental.html">rental enquiry</a> instead — it asks the right questions.</p>
+      <p class="lede">The office is staffed by volunteers during opening hours, so a message is often quicker than a call — expect a reply within three business days. Renting a hall? Use the <a href="rental.html">rental enquiry</a> instead; it asks the right questions.</p>
 
       <form id="contactForm" name="contact" method="POST" action="contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact">
@@ -70,13 +70,13 @@ textarea{min-height:130px;resize:vertical}
 </main>
 
 <footer class="site"><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc. · 218 Mercer Street, Harmony, PA 16037</span><span class="proto">Preview — not the live site</span></div></footer>
-<script src="data/site.js"></script>
-<script src="assets/site.js"></script>
+<script src="data/site.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
 <script>
 (function(){
   var c = document.getElementById("confirm");
   if (/[?&]sent=1/.test(location.search)) {
-    c.textContent = "Thank you — your message is in the museum's inbox. Someone will reply, usually within a few days.";
+    c.textContent = "Thank you — your message is in the museum's inbox. Someone will reply within 3 business days.";
     c.classList.add("show");
   }
   document.getElementById("contactForm").addEventListener("submit", function(e){

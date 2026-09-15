@@ -43,7 +43,9 @@ textarea{min-height:110px;resize:vertical}
 .fees b{font-family:"Bodoni Moda",serif;font-size:19px;font-weight:600}
 .holds{font-size:14.5px;opacity:.75}
 .holds b{font-weight:600}
-.deposit{font-size:14.5px;opacity:.7;margin-top:16px}
+.depositBox{background:var(--paper);border-left:3px solid var(--madder);padding:14px 18px;margin-top:22px;font-size:15px}
+.depositBox .lbl{color:var(--madder);display:block;margin-bottom:6px}
+.depositBox p{margin:0 0 8px}
 </style>
 </head>
 <body>
@@ -60,9 +62,13 @@ textarea{min-height:110px;resize:vertical}
     <span class="lbl" style="color:var(--madder)">Weddings · receptions · concerts · meetings</span>
     <h2 style="font-size:32px;margin:8px 0 18px">Three historic venues</h2>
     <div id="venueList"></div>
-    <p class="deposit">The deposit is charged when the contract is signed and returned after the event if
-    clean-up is satisfactory, nothing is damaged and the key comes back. An insurance form is required.
-    Members get discounted rates. <span class="proto lbl" style="color:var(--madder)">Rates shown are the museum's published card (Oct 2020) — confirm before launch</span></p>
+    <div class="depositBox">
+      <span class="lbl">Security deposit — required for every rental</span>
+      <p>A refundable security deposit, equal to the rental fee, is charged when the contract is signed.
+      It is returned after the event if clean-up is satisfactory, nothing is damaged and the key comes back.
+      An insurance form is also required.</p>
+      <p style="margin-bottom:0">Members get discounted rates.</p>
+    </div>
   </div>
 
   <div>
@@ -103,8 +109,8 @@ textarea{min-height:110px;resize:vertical}
   </div>
 </div>
 
-<script src="data/site.js"></script>
-<script src="assets/site.js"></script>
+<script src="data/site.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
 <script>
 (function(){
   var S = window.SITE;
@@ -117,7 +123,7 @@ textarea{min-height:110px;resize:vertical}
         return "<b>" + fmt.format(new Date(h.date + "T12:00:00")) + "</b> — " +
                (h.status === "booked" ? "booked" : "on hold") + (h.label ? " " + h.label : "");
       });
-    var fees = v.fee ? '<div class="fees"><span><b>' + v.fee + '</b> rental</span><span><b>' + v.deposit + '</b> deposit, refundable</span>' +
+    var fees = v.fee ? '<div class="fees"><span><b>' + v.fee + '</b> rental</span><span><b>' + v.deposit + '</b> security deposit, required</span>' +
       (v.window ? '<span>' + v.window + '</span>' : '') + '</div>' : '';
     return '<div class="venueCard"><h3>' + v.name + '</h3><div class="cap">' + v.cap + "</div>" +
       (v.size ? '<div class="size">' + v.size + '</div>' : '') + fees +
@@ -132,7 +138,7 @@ textarea{min-height:110px;resize:vertical}
 
   var c = document.getElementById("confirm");
   if (/[?&]sent=1/.test(location.search)) {
-    c.textContent = "Thank you — your enquiry is in the museum's inbox. Someone will be in touch, usually within a few days.";
+    c.textContent = "Thank you — your enquiry is in the museum's inbox. Someone will be in touch within 3 business days.";
     c.classList.add("show");
     c.scrollIntoView({ block: "center" });
   }
