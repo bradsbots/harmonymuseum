@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Host an event — Harmony Museum</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 :root{
@@ -60,7 +63,9 @@ textarea{min-height:110px;resize:vertical}
 
   <div>
     <h2 style="font-size:26px">Check a date</h2>
-    <form id="enq">
+    <form id="enq" name="rental-enquiry" method="POST" action="rental.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="rental-enquiry">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <label><span class="lbl">Venue</span>
         <select id="fVenue" name="venue"></select>
       </label>
@@ -86,10 +91,10 @@ textarea{min-height:110px;resize:vertical}
       <div class="confirm" id="confirm"></div>
     </form>
     <div class="stubNote proto">
-      <b>Preview.</b> Nothing is sent yet. At launch this form posts to the host's
-      built-in form handler (e.g. Netlify Forms) which emails the museum — no server,
-      no plugin, nothing to maintain. Booked and held dates shown at left come from
-      <code>data/site.js</code>; entries marked SAMPLE are demo data.
+      <b>Preview.</b> Nothing is sent while <code>prototype</code> is on. The form is
+      already wired for Netlify Forms (which emails the museum — no server, no plugin);
+      it goes live the day the site moves to Netlify. Booked and held dates at left come
+      from <code>data/site.js</code>; entries marked SAMPLE are demo data.
     </div>
   </div>
 </div>
@@ -117,10 +122,16 @@ textarea{min-height:110px;resize:vertical}
     return '<option value="' + v.key + '"' + (v.key === pre ? " selected" : "") + ">" + v.name + "</option>";
   }).join("");
 
+  var c = document.getElementById("confirm");
+  if (/[?&]sent=1/.test(location.search)) {
+    c.textContent = "Thank you — your enquiry is in the museum's inbox. Someone will be in touch, usually within a few days.";
+    c.classList.add("show");
+    c.scrollIntoView({ block: "center" });
+  }
   document.getElementById("enq").addEventListener("submit", function(e){
+    if (!S.prototype) return;                      /* live: let Netlify Forms take it */
     e.preventDefault();
-    var c = document.getElementById("confirm");
-    c.textContent = "Prototype — nothing was sent. At launch this enquiry goes straight to the museum's inbox, typically answered within a few days.";
+    c.textContent = "Preview — nothing was sent. On the live site this goes straight to the museum's inbox.";
     c.classList.add("show");
   });
 })();

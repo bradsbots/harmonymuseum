@@ -100,12 +100,16 @@
     });
   }
 
-  /* Newsletter — stub until the form is pointed at Kit */
-  var nlBtn = document.querySelector(".band .form button");
-  if (nlBtn) {
-    nlBtn.addEventListener("click", function () {
+  /* Newsletter — posts to Kit once newsletter.formAction is filled in; a stub until then */
+  var nl = document.getElementById("newsletter");
+  if (nl) {
+    var action = (S.newsletter || {}).formAction || "";
+    if (action) nl.action = action;
+    nl.addEventListener("submit", function (e) {
+      if (action) return;
+      e.preventDefault();
       var fine = document.querySelector(".band .fine");
-      if (fine) fine.textContent = "Prototype — this form connects to Kit at launch. Nothing was sent.";
+      if (fine) fine.textContent = "Signup isn't connected yet — email the museum to be added to the list.";
     });
   }
 

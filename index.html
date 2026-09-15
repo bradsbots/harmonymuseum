@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Harmony Museum · Harmony, Pennsylvania</title>
 <meta name="description" content="The Harmony Museum in the 1809 Harmony Society warehouse at 218 Mercer Street, Harmony, PA. Guided tours, a 28-stop walking tour, and three historic venues for hire — Historic Harmony, Inc.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 :root{
@@ -313,10 +316,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
       <p>One email a month — what's open, what's coming up, and one object out of the collection.</p>
     </div>
     <div>
-      <div class="form">
-        <input type="email" placeholder="your@email.com" aria-label="Email address">
-        <button class="btn">Subscribe</button>
-      </div>
+      <form class="form" id="newsletter" method="post" target="_blank">
+        <input type="email" name="email_address" id="nlEmail" placeholder="your@email.com" aria-label="Email address" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
       <div class="fine">Free · roughly monthly · unsubscribe anytime</div>
     </div>
   </div>

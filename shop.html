@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gift shop — Harmony Museum</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 :root{
@@ -60,6 +63,8 @@ header h1{font-size:20px;flex:1}
 .confirm{display:none;background:var(--sage);color:var(--white);padding:12px 14px;margin-top:12px;font-size:14px}
 .confirm.show{display:block}
 @media(prefers-reduced-motion:reduce){.drawer{transition:none}}
+html.live .proto{display:none!important}
+body.listMode .cartBtn,body.listMode .drawer,body.listMode .card .btn,body.listMode .stock{display:none}
 </style>
 </head>
 <body>
@@ -74,12 +79,11 @@ header h1{font-size:20px;flex:1}
   <span class="lbl" style="color:var(--madder)">Every purchase supports Historic Harmony, Inc.</span>
   <h2 style="font-size:34px;margin-top:8px">From the museum shop</h2>
 
-  <div class="stubNote">
-    <b>Prototype — every item below is a SAMPLE.</b> No payment happens here. At launch,
-    inventory lives in <b>Square</b>: the register in the shop and this page share one
-    catalog, so a book sold over the counter shows sold out online automatically.
-    Checkout hands off to Square's hosted payment page. Items marked
-    <i>in-store only</i> are the fragile and heavy things nobody wants to ship.
+  <p id="shopIntro" style="margin:10px 0 0;max-width:60ch"></p>
+
+  <div class="stubNote proto">
+    <b>Preview — every item below is a SAMPLE</b> until the museum sends the real list.
+    <span id="modeNote"></span>
   </div>
 
   <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
@@ -98,9 +102,21 @@ header h1{font-size:20px;flex:1}
   </div>
 </aside>
 
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
 <script src="data/shop.js"></script>
 <script>
 (function(){
+  var S = window.SITE, LIST = !S.shop || S.shop.mode !== "cart";
+  document.body.classList.toggle("listMode", LIST);
+  document.getElementById("shopIntro").textContent = LIST
+    ? "Books on the Harmony Society and the town, prints, and a few things made nearby. The shop is inside the museum at " +
+      S.contact.address.split(",")[0] + ", open " + S.hours.days + ", " + S.hours.hoursShort + " Members get a discount."
+    : "Order online for shipping or pickup at the museum. Members get a discount.";
+  document.getElementById("modeNote").textContent = LIST
+    ? "Shop is in \"list\" mode — no online ordering. Set shop.mode to \"cart\" in data/site.js to turn on the cart (needs Square)."
+    : "Cart is a demo: no payment happens here. At launch, checkout hands off to Square's hosted payment page and stock comes from the Square catalog.";
+
   var ITEMS = window.SHOP.items, byId = {};
   ITEMS.forEach(function(i){ byId[i.id] = i; });
   var GLYPH = { Books: "&#182;", Prints: "&#10087;", Home: "&#8962;", Pantry: "&#10047;" };
@@ -130,8 +146,8 @@ header h1{font-size:20px;flex:1}
           '<div class="meta"><span class="price">' + money(i.price) + '</span>' +
           '<span class="stock' + (out ? " out" : low ? " low" : "") + '">' +
           (out ? "Sold out" : i.stock + " in stock (sample)") + "</span></div>" +
-          '<button class="btn" data-add="' + i.id + '"' + (out ? " disabled" : "") + ">" +
-          (out ? "Sold out" : i.shipping ? "Add to cart" : "Add — pickup at shop") + "</button></div></div>";
+          (LIST ? "" : '<button class="btn" data-add="' + i.id + '"' + (out ? " disabled" : "") + ">" +
+          (out ? "Sold out" : i.shipping ? "Add to cart" : "Add — pickup at shop") + "</button>") + "</div></div>";
       }).join("");
   }
   function cartCount(){

@@ -12,6 +12,14 @@ window.SITE = {
     onlineUrl: ""
   },
 
+  /* Gift shop page. "list": show what's in the shop, buy in person.
+     "cart": online ordering (needs Square and a volunteer who ships). */
+  shop: { mode: "list" },
+
+  /* Newsletter. Paste the Kit form's action URL here once the account exists,
+     e.g. "https://app.kit.com/forms/1234567/subscriptions". Empty = signup disabled. */
+  newsletter: { formAction: "" },
+
   hours: {
     hoursShort: "1–4 p.m.",
     days: "Tuesday – Saturday",
