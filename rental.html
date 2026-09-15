@@ -4,138 +4,269 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Host an event — Harmony Museum</title>
+<meta name="description" content="Hire an 1805 Harmonist barn, a hall with an 1809 stone wine cellar, or an 1825 Mennonite meetinghouse in Harmony, PA — weddings, receptions, concerts and meetings. Rates, capacities and an enquiry form.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/inner.css">
 <style>
-:root{
-  --ink:#141A24;--paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
-  --madder:#8C3A2E;--gold:#B08D52;--sage:#6C7A5C;--rule:rgba(20,26,36,.14);
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* hero — the barn, mid-reception */
+.hero{position:relative;min-height:min(62vh,560px);display:flex;align-items:flex-end;color:var(--paper);background:var(--indigo-deep)}
+.hero .frame{position:absolute;inset:0}
+.hero .frame img{filter:saturate(.9) contrast(1.02)}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,26,36,.92),rgba(20,26,36,.45) 50%,rgba(20,26,36,.15))}
+.hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:42px;width:100%}
+.hero .lbl.eyebrow{color:var(--gold-lit)!important;display:block;margin-bottom:14px}
+.hero h2{font-size:clamp(36px,5.6vw,66px);max-width:16ch;color:var(--paper);letter-spacing:-.01em}
+.hero p{font-size:18.5px;max-width:54ch;opacity:.88;margin:16px 0 26px}
+.hero .credit{position:absolute;right:16px;bottom:10px;z-index:3;font-family:"Archivo Narrow",sans-serif;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,227,212,.45)}
+.jump{display:flex;gap:10px;flex-wrap:wrap}
+.btn.onphoto{background:transparent;color:var(--paper);border:1px solid rgba(233,227,212,.55)}
+.btn.onphoto:hover{background:rgba(233,227,212,.15)}
+
+/* venue bands */
+.venue{padding:72px 0;border-top:1px solid var(--rule);scroll-margin-top:12px}
+.venue:nth-of-type(even){background:var(--paper)}
+.venue .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
+.venue.flip .wrap{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.venue.flip .wrap>.gallery{order:2}
+.gallery{display:grid;grid-template-columns:2fr 1fr;gap:6px;margin:0}
+.gallery .frame{background:var(--indigo);min-height:0}
+.gallery .main{grid-row:1/3}
+.gallery .side{aspect-ratio:4/3}
+.gallery .frame img{transition:transform .5s}
+.gallery .frame:hover img{transform:scale(1.03)}
+.gallery figcaption{grid-column:1/3;font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.55;margin-top:4px}
+.copy .lbl{color:var(--madder);display:block;margin-bottom:10px}
+.copy h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:12px}
+.copy .lede{font-size:18px;margin:0 0 20px;max-width:46ch}
+.copy p{max-width:50ch}
+
+.facts{border-top:2px solid var(--ink);margin:22px 0 0}
+.facts .row{display:grid;grid-template-columns:118px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15.5px;align-items:baseline}
+.facts .row .k{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;font-weight:600;opacity:.6}
+.facts .row .amt{font-family:"Bodoni Moda",serif;font-size:21px;font-weight:600;font-variant-numeric:tabular-nums}
+.facts .row .amt small{font-family:"Newsreader",serif;font-size:15px;font-weight:300;margin-left:6px}
+.facts .row.fees .v{display:flex;flex-wrap:wrap;gap:4px 22px}
+.copy .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.holds{font-size:14.5px;opacity:.7;margin-top:12px}
+.holds b{font-weight:500}
+.addon{margin-top:22px;border-left:3px solid var(--gold);padding:12px 16px;background:rgba(176,141,82,.10);font-size:15.5px}
+.addon b{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;color:var(--madder);display:block;margin-bottom:4px}
+
+@media(max-width:900px){
+  .venue .wrap{grid-template-columns:1fr;gap:28px}
+  .venue.flip .wrap>.gallery{order:0}
+  .venue{padding:52px 0}
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.6;font-weight:300}
-h1,h2,h3{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.15}
-.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-header{background:var(--ink);color:var(--paper);padding:12px 18px;display:flex;align-items:center;gap:16px}
-header .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-header .back:hover{opacity:1}
-header h1{font-size:20px}
-.wrap{max-width:960px;margin:0 auto;padding:38px 22px 80px;display:grid;grid-template-columns:1fr 1fr;gap:44px}
-@media(max-width:800px){.wrap{grid-template-columns:1fr}}
-.stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:14.5px;margin-top:20px}
-html.live .proto{display:none!important}
+@media(max-width:520px){.gallery{grid-template-columns:1fr 1fr}.gallery .main{grid-column:1/3;grid-row:auto;aspect-ratio:4/3}}
+
+/* how it works */
+.how{background:var(--ink);color:var(--paper);padding:64px 0}
+.how .lbl{color:var(--gold);display:block;margin-bottom:10px}
+.how h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:28px;color:var(--paper)}
+.how .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-top:1px solid rgba(233,227,212,.35)}
+.how .cols>div{padding:20px 22px 22px 0;border-right:1px solid rgba(233,227,212,.16)}
+.how .cols>div:last-child{border-right:0}
+.how h3{font-size:19px;margin-bottom:8px;color:var(--paper)}
+.how p{margin:0;font-size:15.5px;opacity:.8}
+.how .big{font-family:"Bodoni Moda",serif;font-size:40px;font-weight:600;line-height:1;color:var(--gold-lit);display:block;margin-bottom:10px}
+@media(max-width:860px){.how .cols{grid-template-columns:1fr 1fr}.how .cols>div{border-bottom:1px solid rgba(233,227,212,.16)}}
+@media(max-width:520px){.how .cols{grid-template-columns:1fr}}
+
+/* enquiry */
+.enquire{padding:72px 0 90px;scroll-margin-top:12px}
+.enquire .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:56px;align-items:start}
+@media(max-width:860px){.enquire .wrap{grid-template-columns:1fr;gap:34px}}
+.enquire .lbl{color:var(--madder);display:block;margin-bottom:10px}
+.enquire h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:8px}
+.enquire .lede{margin:0 0 10px;max-width:52ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}}
 label{display:block;margin:16px 0 5px}
-label .lbl{color:rgba(20,26,36,.6)}
+label .lbl{color:rgba(20,26,36,.6);margin-bottom:5px}
 input,select,textarea{width:100%;border:1px solid rgba(20,26,36,.3);background:#fff;padding:11px 12px;font-family:"Newsreader",serif;font-size:16.5px;color:var(--ink)}
-textarea{min-height:110px;resize:vertical}
-.btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:13px 22px;cursor:pointer;margin-top:20px}
-.btn:hover{background:#A2453A}
+textarea{min-height:120px;resize:vertical}
 .confirm{display:none;background:var(--sage);color:var(--white);padding:14px 18px;margin-top:18px;font-size:15.5px}
 .confirm.show{display:block}
-.venueCard{border-top:2px solid var(--ink);padding:16px 0 18px;border-bottom:1px solid var(--rule)}
-.venueCard h3{font-size:22px}
-.venueCard .cap{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;color:var(--madder);font-weight:600;margin:4px 0 8px}
-.size{font-size:14.5px;opacity:.7;margin-bottom:8px}
-.fees{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;margin:4px 0 10px;font-variant-numeric:tabular-nums}
-.fees b{font-family:"Bodoni Moda",serif;font-size:19px;font-weight:600}
-.holds{font-size:14.5px;opacity:.75}
-.holds b{font-weight:600}
-.depositBox{background:var(--paper);border-left:3px solid var(--madder);padding:14px 18px;margin-top:22px;font-size:15px}
-.depositBox .lbl{color:var(--madder);display:block;margin-bottom:6px}
-.depositBox p{margin:0 0 8px}
+.aside{background:var(--paper);padding:26px 28px}
+.aside h3{font-size:14px;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;color:var(--madder);margin-bottom:12px;font-weight:600}
+.aside p{margin:0 0 8px;font-size:15.5px}
+.aside .photo{margin:-26px -28px 20px;aspect-ratio:16/9}
 </style>
 </head>
 <body>
-
-<div class="closure" id="closureBanner" role="status" style="display:none"></div>
-
-<header>
+<div class="closure" id="closureBanner" role="status"></div>
+<header class="bar">
   <a class="back" href="index.html">&larr; Museum</a>
   <h1>Host an event</h1>
+  <nav><a href="#barn">Barn</a><a href="#stewart">Stewart Hall</a><a href="#church">Meetinghouse</a><a href="#enquire">Enquire</a><a href="visit.html">Visit</a><a href="contact.html">Contact</a></nav>
 </header>
 
-<div class="wrap">
-  <div>
-    <span class="lbl" style="color:var(--madder)">Weddings · receptions · concerts · meetings</span>
-    <h2 style="font-size:32px;margin:8px 0 18px">Three historic venues</h2>
-    <div id="venueList"></div>
-    <div class="depositBox">
-      <span class="lbl">Security deposit — required for every rental</span>
-      <p>A refundable security deposit, equal to the rental fee, is charged when the contract is signed.
-      It is returned after the event if clean-up is satisfactory, nothing is damaged and the key comes back.
-      An insurance form is also required.</p>
-      <p style="margin-bottom:0">Members get discounted rates.</p>
+<section class="hero">
+  <div class="frame"><img src="assets/originals/venues/barn-6.jpg" alt="A wedding reception under strings of lights inside the 1805 Harmonist Barn, the doors open to the trees"></div>
+  <div class="veil"></div>
+  <span class="credit">A reception in the barn · museum's own photo</span>
+  <div class="wrap">
+    <span class="eyebrow lbl">Weddings · receptions · concerts · meetings</span>
+    <h2>Three rooms older than the county</h2>
+    <p>An 1805 barn strung with lights, a hall with a vaulted stone wine cellar underneath, and a brick meetinghouse where music carries. All three belong to the museum; every rental keeps them standing.</p>
+    <div class="jump">
+      <a class="btn" href="#enquire">Check a date</a>
+      <a class="btn onphoto" href="#barn">The barn</a>
+      <a class="btn onphoto" href="#stewart">Stewart Hall &amp; wine cellar</a>
+      <a class="btn onphoto" href="#church">The meetinghouse</a>
     </div>
   </div>
+</section>
 
-  <div>
-    <h2 style="font-size:26px">Check a date</h2>
-    <form id="enq" name="rental-enquiry" method="POST" action="rental.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="rental-enquiry">
-      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
-      <label><span class="lbl">Venue</span>
-        <select id="fVenue" name="venue"></select>
-      </label>
-      <label><span class="lbl">Preferred date</span>
-        <input type="date" name="date" required>
-      </label>
-      <label><span class="lbl">Type of event</span>
-        <select name="type"><option>Wedding / reception</option><option>Concert or performance</option><option>Meeting or banquet</option><option>Other</option></select>
-      </label>
-      <label><span class="lbl">Rough guest count</span>
-        <input type="number" name="guests" min="1" max="300" placeholder="e.g. 120">
-      </label>
-      <label><span class="lbl">Your name</span>
-        <input type="text" name="name" required>
-      </label>
-      <label><span class="lbl">Email or phone</span>
-        <input type="text" name="contact" required>
-      </label>
-      <label><span class="lbl">Anything else</span>
-        <textarea name="notes" placeholder="Interested in adding the 1809 wine cellar to Stewart Hall?"></textarea>
-      </label>
-      <button class="btn" type="submit">Send enquiry</button>
-      <div class="confirm" id="confirm"></div>
-    </form>
-    <div class="stubNote proto">
-      <b>Preview.</b> Nothing is sent while <code>prototype</code> is on. The form is
-      already wired for Netlify Forms (which emails the museum — no server, no plugin);
-      it goes live the day the site moves to Netlify. Booked and held dates at left come
-      from <code>data/site.js</code>; entries marked SAMPLE are demo data.
+<section class="venue" id="barn" data-venue="barn">
+  <div class="wrap">
+    <figure class="gallery">
+      <div class="frame main"><img src="assets/originals/venues/barn-9.jpg" alt="Inside the 1805 Harmonist Barn: hand-hewn posts and beams, four bays, icicle lights along the rafters"></div>
+      <div class="frame side"><img src="assets/originals/venues/barn-7.jpg" alt="The red Harmonist Barn and its brick silo on Mercer Road"></div>
+      <div class="frame side"><img src="assets/originals/venues/barn-10.jpg" alt="Nineteenth-century farm tools hung on the barn's plank walls"></div>
+      <figcaption>303 Mercer Road · one of the oldest barns west of the Alleghenies</figcaption>
+    </figure>
+    <div class="copy">
+      <span class="lbl">The largest room · 1805</span>
+      <h2>The Harmonist Barn</h2>
+      <p class="lede">Built by the Harmony Society for sheep, raised by the Mennonites for hay, and now the best-lit barn in Butler County.</p>
+      <p>Four bays of hand-hewn timber, 42 by 64 feet, with room for a ceremony at one end and dancing at the other. The lights stay up. Rentals run Friday to Monday, so you decorate on Friday, celebrate on Saturday and clear up at leisure.</p>
+      <div class="facts" id="facts-barn"></div>
+      <div class="acts"><a class="btn" href="#enquire" data-pick="barn">Enquire about the barn</a><a class="btn ghost" href="properties.html#barn">Its history</a></div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="venue flip" id="stewart" data-venue="stewart">
+  <div class="wrap">
+    <figure class="gallery">
+      <div class="frame main"><img src="assets/originals/venues/Wine-Cellar.jpg" alt="The 1809 wine cellar beneath the museum: a vaulted stone ceiling, flagstone floor, barrels and a chandelier"></div>
+      <div class="frame side"><img src="assets/originals/venues/Wine-Cellar-Steps.jpg" alt="The stone stair down into the wine cellar from Stewart Hall"></div>
+      <div class="frame side"><img src="assets/originals/venues/Stewart-Hall-looking-at-stage.jpg" alt="Stewart Hall's main floor looking toward the raised stage"></div>
+      <figcaption>218 Mercer Street · attached to the museum</figcaption>
+    </figure>
+    <div class="copy">
+      <span class="lbl">Dining, dancing &amp; a cellar · 1809</span>
+      <h2>Stewart Hall and the wine cellar</h2>
+      <p class="lede">The practical room — kitchen, bar, stage, accessible restrooms — with the Harmony Society's stone wine cellar directly below.</p>
+      <p>The hall seats 120 at tables, with a raised stage-and-bar area for a band or a head table. Down a stone stair is the vaulted cellar the Harmonists dug in 1809: 42 by 18 feet of flagstone and candlelight, for a toast, a tasting or the photographs.</p>
+      <div class="facts" id="facts-stewart"></div>
+      <div class="addon"><b>Add the wine cellar</b>Available only with a Stewart Hall rental, for an additional <span id="cellarFee">$100</span> rental fee.</div>
+      <div class="acts"><a class="btn" href="#enquire" data-pick="stewart">Enquire about Stewart Hall</a><a class="btn ghost" href="properties.html#museum">The building</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="venue" id="church" data-venue="church">
+  <div class="wrap">
+    <figure class="gallery">
+      <div class="frame main"><img src="assets/originals/venues/Mennonite-Meetinghouse-Side.jpg" alt="The 1825 Mennonite Meetinghouse, brick and stone under a big sky, with the old cemetery in front"></div>
+      <div class="frame side"><img src="assets/originals/Meetinghouse-Pulpit-1024x768.jpg" alt="Inside the meetinghouse: original wooden benches facing the pulpit platform"></div>
+      <div class="frame side"><img src="assets/originals/venues/Mennonite-window.jpg" alt="A deep-set window in the meetinghouse with an oil lamp on the sill and the cemetery beyond"></div>
+      <figcaption>114 Wise Road · National Register of Historic Places</figcaption>
+    </figure>
+    <div class="copy">
+      <span class="lbl">Ceremonies &amp; concerts · 1825</span>
+      <h2>The Mennonite Meetinghouse</h2>
+      <p class="lede">A small, reverent room on the National Register, kept exactly as the Mennonite community built it.</p>
+      <p>Original bleacher-style benches for 130 to 150, a pulpit platform for the ceremony, and acoustics that flatter a string quartet or a single voice. Bring your own restroom facility; the museum will tell you who to call.</p>
+      <div class="facts" id="facts-church"></div>
+      <div class="acts"><a class="btn" href="#enquire" data-pick="church">Enquire about the meetinghouse</a><a class="btn ghost" href="properties.html#meetinghouse">Its history</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <span class="lbl">How renting works</span>
+    <h2>Four things to know before you ask</h2>
+    <div class="cols">
+      <div><span class="big">1</span><h3>A security deposit is required</h3><p>Equal to the rental fee, charged when the contract is signed, and returned after the event if the room is clean, nothing is damaged and the key comes back.</p></div>
+      <div><span class="big">2</span><h3>An insurance form</h3><p>Every rental needs an event-insurance form on file. Most homeowner's policies or a one-day event policy will do; the office will send you the form.</p></div>
+      <div><span class="big">3</span><h3>Members pay less</h3><p>Museum members get discounted rental rates on all three venues. <a href="membership.html" style="color:var(--gold-lit)">Membership starts at $25.</a></p></div>
+      <div><span class="big">4</span><h3>A person replies</h3><p>Enquiries go to the museum office, staffed by volunteers. Expect an answer within three business days; call <a href="tel:+17244527341" style="color:var(--gold-lit)">(724) 452-7341</a> if it's urgent.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="enquire" id="enquire">
+  <div class="wrap">
+    <div>
+      <span class="lbl">Check a date</span>
+      <h2>Tell us what you're planning</h2>
+      <p class="lede">No commitment — this just starts the conversation. The office will confirm the date is free and send the contract and insurance form.</p>
+      <form id="enq" name="rental-enquiry" method="POST" action="rental.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rental-enquiry">
+        <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+        <div class="grid2">
+          <label><span class="lbl">Venue</span><select id="fVenue" name="venue"></select></label>
+          <label><span class="lbl">Preferred date</span><input type="date" id="fDate" name="date" required></label>
+          <label><span class="lbl">Type of event</span>
+            <select id="fType" name="type"><option>Wedding / reception</option><option>Concert or performance</option><option>Meeting or banquet</option><option>Party or shower</option><option>Other</option></select>
+          </label>
+          <label><span class="lbl">Rough guest count</span><input type="number" id="fGuests" name="guests" min="1" max="300" placeholder="e.g. 120"></label>
+          <label><span class="lbl">Your name</span><input type="text" id="fName" name="name" required autocomplete="name"></label>
+          <label><span class="lbl">Email or phone</span><input type="text" id="fContact" name="contact" required></label>
+        </div>
+        <label><span class="lbl">Anything else</span><textarea id="fNotes" name="notes" placeholder="Interested in adding the wine cellar? Need the barn for a whole weekend?"></textarea></label>
+        <button class="btn" type="submit" style="margin-top:18px">Send enquiry</button>
+        <div class="confirm" id="confirm"></div>
+      </form>
+      <div class="stubNote proto">
+        <b>Preview.</b> Nothing is sent while <code>prototype</code> is on. The form is wired for Netlify Forms and goes live the day the site moves to Netlify. Booked dates come from <code>venueHolds</code> in <code>data/site.js</code>.
+      </div>
+    </div>
+    <aside class="aside">
+      <div class="frame photo"><img src="assets/originals/venues/aa-mmh.jpg" alt="The Mennonite Meetinghouse with its red shutters"></div>
+      <h3>Rather talk to someone?</h3>
+      <p>Harmony Museum office<br>218 Mercer Street, Harmony, PA 16037</p>
+      <p><a href="tel:+17244527341">(724) 452-7341</a><br><a href="mailto:hmuseum@zoominternet.net">hmuseum@zoominternet.net</a></p>
+      <p style="opacity:.7">Tuesday – Saturday, 1–4 p.m.</p>
+      <h3 style="margin-top:22px">Photographers</h3>
+      <p style="font-size:15px">Using the barn, the meetinghouse or the gardens for client photographs? That's by appointment, with insurance and a small fee — <a href="get-involved.html#photographers">details here</a>.</p>
+    </aside>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc. · 218 Mercer Street, Harmony, PA 16037</span><span class="proto">Preview — not the live site</span></div></footer>
 
 <script src="data/site.js?v=4"></script>
 <script src="assets/site.js?v=4"></script>
 <script>
 (function(){
-  var S = window.SITE;
+  var S = window.SITE, V = S.venues || [];
   var pre = (location.search.match(/[?&]venue=([a-z]+)/) || [])[1];
-
   var fmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" });
-  document.getElementById("venueList").innerHTML = (S.venues || []).map(function(v){
+
+  /* facts ledgers — fees, capacity, hours and booked dates come from data/site.js */
+  V.forEach(function(v){
+    var el = document.getElementById("facts-" + v.key); if (!el) return;
     var holds = (S.venueHolds || []).filter(function(h){ return h.venue === v.key; })
-      .map(function(h){
-        return "<b>" + fmt.format(new Date(h.date + "T12:00:00")) + "</b> — " +
-               (h.status === "booked" ? "booked" : "on hold") + (h.label ? " " + h.label : "");
-      });
-    var fees = v.fee ? '<div class="fees"><span><b>' + v.fee + '</b> rental</span><span><b>' + v.deposit + '</b> security deposit, required</span>' +
-      (v.window ? '<span>' + v.window + '</span>' : '') + '</div>' : '';
-    return '<div class="venueCard"><h3>' + v.name + '</h3><div class="cap">' + v.cap + "</div>" +
-      (v.size ? '<div class="size">' + v.size + '</div>' : '') + fees +
-      (v.extra ? '<div class="size">' + v.extra + '</div>' : '') +
-      '<div class="holds">' + (holds.length ? "Unavailable: " + holds.join(" · ") : "No dates currently held.") + "</div></div>";
-  }).join("");
+      .map(function(h){ return "<b>" + fmt.format(new Date(h.date + "T12:00:00")) + "</b> — " + (h.status === "booked" ? "booked" : "on hold"); });
+    el.innerHTML =
+      '<div class="row"><span class="k">Holds</span><span class="v">' + v.cap + '</span></div>' +
+      (v.size ? '<div class="row"><span class="k">Room</span><span class="v">' + v.size + '</span></div>' : '') +
+      (v.window ? '<div class="row"><span class="k">Hours</span><span class="v">' + v.window + '</span></div>' : '') +
+      '<div class="row fees"><span class="k">Fees</span><span class="v"><span class="amt">' + v.fee + '<small>rental</small></span>' +
+      '<span class="amt">' + v.deposit + '<small>security deposit</small></span></span></div>' +
+      '<div class="holds">' + (holds.length ? "Already taken: " + holds.join(" · ") : "No dates currently held — ask about yours.") + '</div>';
+  });
+  var stewart = V.filter(function(v){ return v.key === "stewart"; })[0];
+  if (stewart && stewart.extra) { var m = stewart.extra.match(/\$\d+/); if (m) document.getElementById("cellarFee").textContent = m[0]; }
 
+  /* form */
   var sel = document.getElementById("fVenue");
-  sel.innerHTML = (S.venues || []).map(function(v){
-    return '<option value="' + v.key + '"' + (v.key === pre ? " selected" : "") + ">" + v.name + "</option>";
-  }).join("");
-
+  sel.innerHTML = V.map(function(v){ return '<option value="' + v.key + '"' + (v.key === pre ? " selected" : "") + ">" + v.name + "</option>"; }).join("");
+  document.querySelectorAll("[data-pick]").forEach(function(a){
+    a.addEventListener("click", function(){ sel.value = a.dataset.pick; });
+  });
   var c = document.getElementById("confirm");
   if (/[?&]sent=1/.test(location.search)) {
     c.textContent = "Thank you — your enquiry is in the museum's inbox. Someone will be in touch within 3 business days.";
