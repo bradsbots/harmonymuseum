@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Harmony Museum</title>
+<meta name="description" content="Contact the Harmony Museum: 218 Mercer Street, Harmony, PA 16037 · (724) 452-7341 · questions about tours, rentals, genealogy research and volunteering.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/inner.css">
+<style>
+label{display:block;margin:16px 0 5px}
+label .lbl{color:rgba(20,26,36,.6)}
+input,select,textarea{width:100%;border:1px solid rgba(20,26,36,.3);background:#fff;padding:11px 12px;font-family:"Newsreader",serif;font-size:16.5px;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+.confirm{display:none;background:var(--sage);color:var(--white);padding:14px 18px;margin-top:18px;font-size:15.5px}
+.confirm.show{display:block}
+.card{border-top:2px solid var(--ink);padding:16px 0 18px;border-bottom:1px solid var(--rule)}
+.card h3{font-size:14px;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;color:var(--madder);margin-bottom:8px;font-weight:600}
+.card p{margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="closure" id="closureBanner" role="status"></div>
+<header class="bar">
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Contact</h1>
+  <nav><a href="visit.html">Visit</a><a href="booking.html">Tours</a><a href="rental.html">Rentals</a><a href="history.html">History</a><a href="membership.html">Membership</a><a href="get-involved.html">Volunteer</a></nav>
+</header>
+
+<main class="page">
+  <div class="split">
+    <div>
+      <span class="lbl eyebrow">Historic Harmony, Inc.</span>
+      <h2 class="title">Ask us anything</h2>
+      <p class="lede">The office is staffed by volunteers during opening hours, so a message is often quicker than a call. Renting a hall? Use the <a href="rental.html">rental enquiry</a> instead — it asks the right questions.</p>
+
+      <form id="contactForm" name="contact" method="POST" action="contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+        <label><span class="lbl">Your name</span><input type="text" id="cName" name="name" required autocomplete="name"></label>
+        <label><span class="lbl">Email</span><input type="email" id="cEmail" name="email" required autocomplete="email"></label>
+        <label><span class="lbl">Phone (optional)</span><input type="tel" id="cPhone" name="phone" autocomplete="tel"></label>
+        <label><span class="lbl">What is it about?</span>
+          <select id="cTopic" name="topic">
+            <option>General question</option>
+            <option>Tour information</option>
+            <option>Group or school tour</option>
+            <option>Genealogy research</option>
+            <option>Volunteering</option>
+            <option>Donating an artifact</option>
+            <option>Photography on the properties</option>
+          </select>
+        </label>
+        <label><span class="lbl">Message</span><textarea id="cMsg" name="message" required></textarea></label>
+        <button class="btn" type="submit" style="margin-top:18px">Send</button>
+        <div class="confirm" id="confirm"></div>
+      </form>
+    </div>
+
+    <aside>
+      <div class="card"><h3>Visit or write</h3><p>Harmony Museum<br>218 Mercer Street<br>Harmony, PA 16037</p></div>
+      <div class="card"><h3>Hours</h3><p id="hoursDays">Tuesday – Saturday, 1–4 p.m.</p><p id="hoursNote">Guided tours at 1:00 and 2:30.</p></div>
+      <div class="card"><h3>Phone &amp; email</h3><p><a href="tel:+17244527341">(724) 452-7341</a></p><p><a href="mailto:hmuseum@zoominternet.net">hmuseum@zoominternet.net</a></p><p><a href="https://www.instagram.com/historicharmonymuseum/" rel="noopener">Instagram @historicharmonymuseum</a></p></div>
+      <div class="card"><h3>Genealogy library</h3><p>By appointment with the museum administrator — if you drop in there may be no one free. Call ahead or use the form.</p></div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site"><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc. · 218 Mercer Street, Harmony, PA 16037</span><span class="proto">Preview — not the live site</span></div></footer>
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var c = document.getElementById("confirm");
+  if (/[?&]sent=1/.test(location.search)) {
+    c.textContent = "Thank you — your message is in the museum's inbox. Someone will reply, usually within a few days.";
+    c.classList.add("show");
+  }
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    if (document.documentElement.classList.contains("live")) return;
+    e.preventDefault();
+    c.textContent = "Preview — nothing was sent. On the live site this goes straight to the museum's inbox.";
+    c.classList.add("show");
+  });
+})();
+</script>
+</body>
+</html>

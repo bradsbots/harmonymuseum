@@ -101,6 +101,30 @@
       : 'Reserve a place by phone: <a href="' + S.contact.phoneHref + '" style="color:var(--gold)">' + S.contact.phone + "</a>.";
   }
 
+  /* Featured Instagram post — official embed, loaded only when the visitor clicks */
+  var feat = document.getElementById("featured"), post = (S.featured || [])[0];
+  if (feat && post && post.url) {
+    feat.hidden = false;
+    var when = new Date(post.date + "T12:00:00");
+    document.getElementById("featLbl").textContent = "Seen on Instagram · " +
+      new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(when);
+    document.getElementById("featTitle").textContent = post.title;
+    document.getElementById("featBlurb").textContent = post.blurb;
+    document.getElementById("featBy").textContent = "Filmed by " + post.by;
+    document.getElementById("featLink").href = post.url;
+    document.getElementById("reelPlay").addEventListener("click", function () {
+      var reel = document.getElementById("reel");
+      reel.insertAdjacentHTML("beforeend",
+        '<blockquote class="instagram-media" data-instgrm-permalink="' + post.url +
+        '" data-instgrm-version="14" style="width:100%"><a href="' + post.url + '">View this post on Instagram</a></blockquote>');
+      reel.classList.add("loaded");
+      if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+      var sc = document.createElement("script");
+      sc.async = true; sc.src = "https://www.instagram.com/embed.js";
+      document.body.appendChild(sc);
+    });
+  }
+
   /* Mobile menu toggle */
   var mb = document.getElementById("menuBtn"), nav = document.getElementById("mainNav");
   if (mb && nav) {

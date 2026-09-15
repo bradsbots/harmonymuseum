@@ -45,6 +45,7 @@ header h1{font-size:20px}
 .tag.tour{background:rgba(176,141,82,.16);color:#7A5E2F}
 a.tag.tour:hover{background:var(--gold);color:var(--ink)}
 .tag.event{background:rgba(140,58,46,.12);color:var(--madder)}
+a.tag.event:hover{background:var(--madder);color:var(--paper)}
 .tag.venue{background:rgba(108,122,92,.16);color:#49543E}
 .tag.closedTag{color:rgba(20,26,36,.55);padding-left:0;background:none}
 .stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:15px;margin:26px 0 0}
@@ -123,7 +124,9 @@ html.live .proto{display:none!important}
       if (closed) cell += '<span class="tag closedTag">Closed</span>';
       else if (open) cell += '<a class="tag tour" href="booking.html">Tours 1:00 &amp; 2:30</a>';
       (S.events || []).forEach(function(e){
-        if (e.date === key) cell += '<span class="tag event">' + e.time + " · " + e.title + "</span>";
+        if (e.date !== key) return;
+        var txt = (e.time ? e.time + " · " : "") + e.title;
+        cell += e.link ? '<a class="tag event" href="' + e.link + '">' + txt + "</a>" : '<span class="tag event">' + txt + "</span>";
       });
       (S.venueHolds || []).forEach(function(h){
         if (h.date === key) cell += '<a class="tag venue" href="rental.html?venue=' + h.venue + '">' +

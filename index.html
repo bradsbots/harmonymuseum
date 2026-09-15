@@ -91,6 +91,25 @@ html.live .proto{display:none!important}
 .door:hover .go{color:var(--ink);border-color:var(--ink)}
 @media(max-width:880px){.doors{grid-template-columns:1fr;gap:36px}}
 
+/* featured post (Instagram, click-to-load) */
+.feat{background:var(--paper);border-top:1px solid var(--rule)}
+.feat .wrap{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}
+.feat .lbl{color:var(--madder);display:block;margin-bottom:12px}
+.feat h2{font-size:clamp(28px,3.8vw,42px);margin-bottom:14px}
+.feat p{margin:0 0 20px;max-width:48ch;opacity:.85}
+.feat .by{font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-bottom:22px}
+.feat .acts{display:flex;gap:12px;flex-wrap:wrap}
+.reel{position:relative;background:var(--indigo-deep);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.reel button{position:absolute;inset:0;width:100%;height:100%;background:linear-gradient(to top,rgba(20,26,36,.75),rgba(20,26,36,.2));border:0;color:var(--paper);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;font-weight:600}
+.reel button .play{width:68px;height:68px;border-radius:50%;border:2px solid var(--gold-lit);display:flex;align-items:center;justify-content:center;transition:background .18s}
+.reel button .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent var(--gold-lit);margin-left:4px}
+.reel button:hover .play{background:rgba(216,184,124,.18)}
+.reel button .mark{font-family:"Bodoni Moda",serif;font-size:64px;color:var(--gold-lit);line-height:1;text-transform:none;letter-spacing:0;font-weight:400}
+.reel .instagram-media{margin:0!important;max-width:100%!important;min-width:0!important}
+.reel.loaded{aspect-ratio:auto;background:transparent}
+.reel.loaded button{display:none}
+@media(max-width:880px){.feat .wrap{grid-template-columns:1fr;gap:28px}.reel{max-width:400px}}
+
 /* ledger */
 .today{background:var(--paper)}
 .head{display:flex;align-items:baseline;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:32px}
@@ -160,7 +179,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
 <div class="util">
   <div class="wrap">
     <span class="open" id="openLine">Tuesday – Saturday, 1–4 p.m.</span>
-    <span class="right"><a href="booking.html">Tickets</a><a href="#">Become a member</a><a href="#">Donate</a><a href="rental.html">Host an event</a></span>
+    <span class="right"><a href="booking.html">Tickets</a><a href="membership.html">Become a member</a><a href="donate.html">Donate</a><a href="rental.html">Host an event</a></span>
   </div>
 </div>
 
@@ -168,8 +187,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
   <div class="wrap">
     <a href="#"><img class="logo" src="assets/originals/aa-logo.png" alt="Harmony Museum"></a>
     <nav id="mainNav">
-      <a href="#today">Visit</a><a href="#properties">Properties</a><a href="walkingtour.html">Walking tour</a>
-      <a href="#venues">Rentals</a><a href="shop.html">Shop</a><a href="#">History</a><a href="#">Get involved</a>
+      <a href="visit.html">Visit</a><a href="properties.html">Properties</a><a href="walkingtour.html">Walking tour</a>
+      <a href="rental.html">Rentals</a><a href="shop.html">Shop</a><a href="history.html">History</a><a href="get-involved.html">Get involved</a>
     </nav>
     <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
     <a class="btn" href="booking.html">Book a tour</a>
@@ -218,6 +237,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
   </div>
 </section>
 
+<section class="feat" id="featured" hidden>
+  <div class="wrap">
+    <div>
+      <span class="lbl" id="featLbl">Seen on Instagram</span>
+      <h2 id="featTitle"></h2>
+      <p id="featBlurb"></p>
+      <div class="by" id="featBy"></div>
+      <div class="acts">
+        <a class="btn" href="booking.html">Book the tour</a>
+        <a class="btn ghost" id="featLink" href="#" target="_blank" rel="noopener">Open on Instagram</a>
+      </div>
+    </div>
+    <div class="reel" id="reel">
+      <button type="button" id="reelPlay" aria-label="Watch the reel on Instagram"><span class="mark">1809</span><span class="play"></span>Watch the reel</button>
+    </div>
+  </div>
+</section>
+
 <section class="today" id="today">
   <div class="wrap">
     <div class="head">
@@ -245,30 +282,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
   <div class="wrap">
     <div class="head">
       <div><span class="lbl">Historic Harmony, Inc. owns and preserves nine</span><h2>The properties</h2></div>
-      <a class="btn onphoto" href="walkingtour.html">See them all on the map</a>
+      <a class="btn onphoto" href="properties.html">All nine properties</a>
     </div>
     <div class="pgrid">
-      <a class="p wide" href="#">
+      <a class="p wide" href="properties.html#meetinghouse">
         <div class="frame tone"><img src="assets/originals/Properties-meeting-house-sm.jpg" alt="1825 Mennonite Meetinghouse on Wise Road"></div>
         <div class="lay"><h4>Mennonite Meetinghouse</h4><span>1825 · 114 Wise Rd · National Register</span></div>
       </a>
-      <a class="p" href="#">
+      <a class="p" href="properties.html#wagner-bentel-haus">
         <div class="frame tone"><img src="assets/originals/Properties-Wagner-1024x768.jpg" alt="Wagner/Bentel Haus at 222 Mercer Street"></div>
         <div class="lay"><h4>Wagner/Bentel Haus</h4><span>Early 1800s · 222 Mercer St</span></div>
       </a>
-      <a class="p" href="#">
+      <a class="p" href="properties.html#weavers-cabin">
         <div class="frame tone"><img src="assets/originals/Properties-Weavers-Cabin-1024x768.jpg" alt="Weavers Cabin at 245 Mercer Street"></div>
         <div class="lay"><h4>Weavers Cabin</h4><span>245 Mercer St · demonstrations</span></div>
       </a>
-      <a class="p" href="#">
+      <a class="p" href="properties.html#rapps-seat">
         <div class="frame tone"><img src="assets/originals/Properties-Rapps-Seat-1024x768.jpg" alt="Rapp's Seat, a stone outcrop above the town"></div>
         <div class="lay"><h4>Rapp's Seat</h4><span>Evergreen Mill Rd · a steep climb</span></div>
       </a>
-      <a class="p" href="#">
+      <a class="p" href="properties.html#barn">
         <div class="frame tone"><img src="assets/originals/Properties-Harmonist-Barn-1024x682.jpg" alt="The Harmonist/Ziegler Barn on Mercer Road"></div>
         <div class="lay"><h4>Harmonist/Ziegler Barn</h4><span>1805 · 303 Mercer Rd</span></div>
       </a>
-      <a class="p wide" href="#">
+      <a class="p wide" href="properties.html#washington-cabin">
         <div class="frame tone"><img src="assets/originals/Properties-Visitors-Cabin.jpg" alt="The Washington 1753 Cabin on Main Street"></div>
         <div class="lay"><h4>Washington 1753 Cabin</h4><span>Where the future president was nearly shot</span></div>
       </a>
@@ -344,6 +381,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
       <p style="margin-top:10px;opacity:.6">I-79 exits 87–88 · 30 miles north of Pittsburgh</p>
       <p style="margin-top:10px"><a href="tel:+17244527341">(724) 452-7341</a></p>
       <p><a href="mailto:hmuseum@zoominternet.net">hmuseum@zoominternet.net</a></p>
+      <p><a href="https://www.instagram.com/historicharmonymuseum/" rel="noopener">Instagram @historicharmonymuseum</a></p>
     </div>
   </div>
 </section>

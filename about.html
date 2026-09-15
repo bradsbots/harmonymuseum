@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Historic Harmony — Harmony Museum</title>
+<meta name="description" content="Historic Harmony, Inc. — the volunteer-run 501(c)(3) that operates the Harmony Museum and preserves nine properties in Harmony, PA. Mission, board, and what the organization does.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/inner.css">
+<style>
+.mission{counter-reset:m;list-style:none;padding:0;margin:14px 0 0;border-top:2px solid var(--ink)}
+.mission li{counter-increment:m;display:grid;grid-template-columns:48px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:17px}
+.mission li::before{content:counter(m);font-family:"Bodoni Moda",serif;font-size:26px;font-weight:600;color:var(--madder);line-height:1}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-top:2px solid var(--ink);margin:20px 0 0}
+.work div{padding:18px 18px 20px 0;border-right:1px solid var(--rule)}
+.work div:last-child{border-right:0}
+.work h3{font-size:21px;margin-bottom:8px}
+.work p{font-size:15.5px;opacity:.8;margin:0 0 8px}
+@media(max-width:760px){.work{grid-template-columns:1fr}.work div{border-right:0;border-bottom:1px solid var(--rule)}}
+.board{columns:2;column-gap:36px;list-style:none;padding:0;margin:10px 0 0;font-size:16.5px}
+.board li{break-inside:avoid;padding:6px 0;border-bottom:1px solid var(--rule)}
+.board li span{display:block;font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+@media(max-width:560px){.board{columns:1}}
+.docs a{display:inline-block;margin:0 18px 8px 0;font-size:15.5px}
+</style>
+</head>
+<body>
+<div class="closure" id="closureBanner" role="status"></div>
+<header class="bar">
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>About Historic Harmony</h1>
+  <nav><a href="visit.html">Visit</a><a href="properties.html">Properties</a><a href="history.html">History</a><a href="membership.html">Membership</a><a href="get-involved.html">Volunteer</a><a href="contact.html">Contact</a></nav>
+</header>
+
+<main class="page">
+  <span class="lbl eyebrow">Who we are</span>
+  <h2 class="title">A volunteer-run museum, organized in 1943</h2>
+  <p class="lede">We are Historic Harmony, Inc., a 501(c)(3) organization. We own and preserve nine properties — seven historic buildings, the Harmony Society Cemetery and the Mennonite Meetinghouse Cemetery — and through projects, activities and concerts we showcase the German culture of the settlers who came here more than 200 years ago. Our heritage crafts and music events draw some 25,000 visitors a year.</p>
+
+  <div class="split">
+    <div>
+      <h3 style="font-size:24px">Our mission</h3>
+      <ol class="mission">
+        <li>To preserve and promote knowledge of the Harmony area's history and heritage through museum collections and outreach activities.</li>
+        <li>To foster tourism in southwestern Butler County.</li>
+        <li>To encourage preservation of historical resources in support of educational quality of life, economic development and associated community objectives.</li>
+        <li>To support students of history and museum management through paid internships.</li>
+        <li>To encourage other property owners to preserve and beautify their historic buildings through our Heritage Awards Program.</li>
+      </ol>
+
+      <h3 style="font-size:24px;margin-top:44px">What we do</h3>
+      <div class="work">
+        <div><h3>Restoration</h3><p>Seven of our buildings are more than 200 years old, and restoring them never ends. The most recent project replaced more than 40 windows in the 1812 Wagner/Bentel Haus, at a cost of $150,000.</p></div>
+        <div><h3>Preservation</h3><p>We accept donations of artifacts important to the history of Harmony and the surrounding region — many are on display in the museum — and we collect the memories and stories that bring local history to life.</p></div>
+        <div><h3>Education</h3><p>Through events, classes, <a href="booking.html">guided tours</a>, the <a href="walkingtour.html">walking tour</a>, the <a href="properties.html#weavers-cabin">Weavers Cabin</a> and our archives, we share the town's history with anyone who wants it.</p></div>
+      </div>
+    </div>
+
+    <aside class="aside">
+      <h3>The office</h3>
+      <p>Historic Harmony, Inc.<br>218 Mercer Street<br>Harmony, PA 16037</p>
+      <p>Tuesday – Saturday, 1–4 p.m.<br><a href="tel:+17244527341">(724) 452-7341</a><br><a href="mailto:hmuseum@zoominternet.net">hmuseum@zoominternet.net</a></p>
+      <h3 style="margin-top:22px">How we're funded</h3>
+      <p>Members and volunteers make the museum possible. Money comes from fundraisers, membership and tour fees, gift-shop sales, donations, and a grant from the Pennsylvania Historical and Museum Commission, a state agency funded by the Commonwealth of Pennsylvania.</p>
+      <p><a href="membership.html">Join</a> · <a href="donate.html">Give</a> · <a href="get-involved.html">Volunteer</a></p>
+    </aside>
+  </div>
+
+  <h3 style="font-size:24px;margin-top:48px">Board of directors</h3>
+  <p style="margin:6px 0 0;opacity:.75;max-width:66ch">Four officers and six non-officer directors. Officers are elected by the membership every two years; directors every three years, with two seats expiring each year.</p>
+  <!-- TODO: the live site shows two different board lists (a 2026 text list and an older photo table). This is the newer text list; confirm with the museum. -->
+  <ul class="board">
+    <li>Denise Rodgers<span>President</span></li>
+    <li>Tim Richart<span>Vice President</span></li>
+    <li>Ev Aronsohn<span>Secretary</span></li>
+    <li>Lin St. Clair<span>Treasurer</span></li>
+    <li>Kathy Luek<span>Past President</span></li>
+    <li>Barb Etter<span>Director</span></li>
+    <li>Laura Reid Riggin<span>Director</span></li>
+    <li>Lauren Rodriguez<span>Director</span></li>
+    <li>Mitch Sienkiewicz, CFP<span>Director</span></li>
+    <li>Bob Spirk<span>Director</span></li>
+    <li>Nancy Wilson<span>Director</span></li>
+    <li>Katina Koontz, B.A., M.A.<span>Executive Director (staff)</span></li>
+  </ul>
+
+  <h3 style="font-size:24px;margin-top:44px">Disclosures</h3>
+  <p style="margin:6px 0 12px;opacity:.75;max-width:66ch">The official registration and financial information of Historic Harmony, Inc. may be obtained from the Pennsylvania Department of State by calling toll-free, within Pennsylvania, <a href="tel:+18007320099">(800) 732-0099</a>. Registration does not imply endorsement. Copies of the Return of Organization Exempt From Income Tax (Form 990) are available at the museum office.</p>
+  <p class="proto todo">TODO: host the 2019–2022 Form 990 PDFs in this repo (they currently live on the old host) and link them here.</p>
+</main>
+
+<footer class="site"><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc. · 218 Mercer Street, Harmony, PA 16037</span><span class="proto">Preview — not the live site</span></div></footer>
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* Shared styles for the inner (non-homepage) pages: tokens, type, header bar, prose.
+   Page-specific rules stay in each page's own <style>. */
+:root{
+  --ink:#141A24;--indigo:#1F2E48;--indigo-deep:#182338;
+  --paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
+  --madder:#8C3A2E;--gold:#B08D52;--gold-lit:#D8B87C;--sage:#6C7A5C;
+  --rule:rgba(20,26,36,.14);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17.5px;line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.12;text-wrap:balance}
+.lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+img{display:block;max-width:100%}
+html.live .proto{display:none!important}
+
+/* closure banner (shared with the homepage) */
+.closure{display:none;background:var(--madder);color:var(--paper);text-align:center;padding:11px 18px;font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.closure.show{display:block}
+
+/* slim header used by every inner page */
+.bar{background:var(--ink);color:var(--paper);padding:12px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.bar .back{text-decoration:none;opacity:.75;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.bar .back:hover{opacity:1}
+.bar h1{font-size:20px;flex:1;min-width:160px}
+.bar nav{display:flex;gap:16px;flex-wrap:wrap}
+.bar nav a{text-decoration:none;opacity:.7;font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:600}
+.bar nav a:hover,.bar nav a[aria-current]{opacity:1}
+@media(max-width:640px){.bar nav{display:none}}
+
+/* buttons */
+.btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:#A2453A}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn.ghost:hover{background:var(--paper-deep)}
+
+/* article layout */
+.page{max-width:1080px;margin:0 auto;padding:40px 22px 90px}
+.page.narrow{max-width:760px}
+.eyebrow{color:var(--madder);display:block;margin-bottom:10px}
+.page>h2,.page .title{font-size:clamp(30px,4.5vw,44px);margin-bottom:12px}
+.lede{font-size:20px;max-width:60ch;margin:0 0 30px;opacity:.85}
+.prose{max-width:66ch}
+.prose p{margin:0 0 18px}
+.prose h3{font-size:24px;margin:34px 0 10px}
+.prose h4{font-size:19px;margin:24px 0 6px}
+.prose ul,.prose ol{padding-left:22px;margin:0 0 18px}
+.prose li{margin-bottom:6px}
+.prose blockquote{margin:0 0 18px;padding:4px 0 4px 18px;border-left:3px solid var(--gold);font-style:italic}
+.prose figure{margin:24px 0}
+.prose figcaption{font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.55;margin-top:8px}
+.frame{position:relative;overflow:hidden;background:var(--indigo)}
+.frame img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.03)}
+
+/* two-column split (text + aside) */
+.split{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.aside{background:var(--paper);padding:22px 24px}
+.aside h3{font-size:14px;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;color:var(--madder);margin-bottom:12px;font-weight:600}
+.aside p{margin:0 0 8px;font-size:15.5px}
+
+/* ledger table (memberships, rates, price lists) */
+.ledger{border-top:2px solid var(--ink);margin:6px 0 22px}
+.ledger .row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--rule)}
+.ledger .row .amt{font-family:"Bodoni Moda",serif;font-weight:600;font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ledger .row small{display:block;font-size:14.5px;opacity:.65;margin-top:2px}
+
+/* callouts */
+.stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:14.5px;margin:22px 0}
+.todo{color:var(--madder);font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;font-weight:600}
+
+/* footer */
+footer.site{background:var(--indigo-deep);color:var(--paper);padding:34px 22px;font-size:15px}
+footer.site .wrap{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;opacity:.7}

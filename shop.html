@@ -110,8 +110,8 @@ body.listMode .cartBtn,body.listMode .drawer,body.listMode .card .btn,body.listM
   var S = window.SITE, LIST = !S.shop || S.shop.mode !== "cart";
   document.body.classList.toggle("listMode", LIST);
   document.getElementById("shopIntro").textContent = LIST
-    ? "Books on the Harmony Society and the town, prints, and a few things made nearby. The shop is inside the museum at " +
-      S.contact.address.split(",")[0] + ", open " + S.hours.days + ", " + S.hours.hoursShort + " Members get a discount."
+    ? "Books on the Harmony Society and the town, prints, and a few things made nearby. The shop is in the Wagner/Bentel Haus " +
+      "at 222 Mercer Street, across the parking lot from the museum, open " + S.hours.days + ", " + S.hours.hoursShort + " Members get a discount."
     : "Order online for shipping or pickup at the museum. Members get a discount.";
   document.getElementById("modeNote").textContent = LIST
     ? "Shop is in \"list\" mode — no online ordering. Set shop.mode to \"cart\" in data/site.js to turn on the cart (needs Square)."

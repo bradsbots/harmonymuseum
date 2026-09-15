@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donate — Harmony Museum</title>
+<meta name="description" content="Support Historic Harmony, Inc. — a one-time or recurring gift, a memorial or honor gift, or a grant from a donor-advised fund keeps nine historic buildings standing.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/inner.css">
+<style>
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-top:2px solid var(--ink);margin:30px 0}
+.way{padding:20px 20px 22px 0;border-right:1px solid var(--rule)}
+.way:last-child{border-right:0}
+.way h3{font-size:21px;margin-bottom:8px}
+.way p{font-size:15.5px;opacity:.8;margin:0 0 8px}
+@media(max-width:760px){.ways{grid-template-columns:1fr}.way{border-right:0;border-bottom:1px solid var(--rule)}}
+.give{background:var(--paper);padding:24px 26px;margin:0 0 30px}
+.give h3{font-size:22px;margin-bottom:8px}
+.give p{margin:0 0 10px}
+</style>
+</head>
+<body>
+<div class="closure" id="closureBanner" role="status"></div>
+<header class="bar">
+  <a class="back" href="index.html">&larr; Museum</a>
+  <h1>Donate</h1>
+  <nav><a href="visit.html">Visit</a><a href="properties.html">Properties</a><a href="history.html">History</a><a href="membership.html">Membership</a><a href="get-involved.html">Volunteer</a><a href="contact.html">Contact</a></nav>
+</header>
+
+<main class="page narrow">
+  <span class="lbl eyebrow">Historic Harmony, Inc. · gifts are tax-deductible</span>
+  <h2 class="title">Preserving history doesn't come cheap</h2>
+  <p class="lede">Great old buildings cost money to maintain, to heat and to cool. Great events take money to organize and promote. Your gift keeps the lights on — not only in nine historic buildings, but in the minds of everyone who comes to find out what happened here.</p>
+
+  <div class="give" id="give"></div>
+
+  <div class="ways">
+    <div class="way"><h3>A one-time gift</h3><p>Any amount, general funds. This is what pays for the next set of windows.</p></div>
+    <div class="way"><h3>In honor or in memory</h3><p>Honor a loved one, or set up a recurring memorial gift. Tell us who, and we'll acknowledge it.</p></div>
+    <div class="way"><h3>From a donor-advised fund</h3><p>Grants from a DAF are welcome. We'd prefer they be designated as general funds, but you are always free to direct them as you wish.</p></div>
+  </div>
+
+  <div class="prose">
+    <p>Historic Harmony, Inc. is a 501(c)(3) organization. Its work is made possible by members and volunteers, and funded through fundraisers, membership and tour fees, gift-shop sales, donations, and a grant from the Pennsylvania Historical and Museum Commission, a state agency funded by the Commonwealth of Pennsylvania.</p>
+    <p>The official registration and financial information of Historic Harmony, Inc. may be obtained from the Pennsylvania Department of State by calling toll-free, within Pennsylvania, <a href="tel:+18007320099">(800) 732-0099</a>. Registration does not imply endorsement. The organization's Form 990 can be obtained from the office at 218 Mercer Street.</p>
+    <p>Prefer to give your time? See <a href="get-involved.html">volunteering</a>. Prefer to give every year? <a href="membership.html">Membership</a> starts at $25.</p>
+  </div>
+</main>
+
+<footer class="site"><div class="wrap"><span>Harmony Museum · Historic Harmony, Inc. · 218 Mercer Street, Harmony, PA 16037</span><span class="proto">Preview — not the live site</span></div></footer>
+<script src="data/site.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var S = window.SITE, G = S.giving || {}, g = document.getElementById("give");
+  g.innerHTML = G.donateUrl
+    ? '<h3>Give online</h3><p>Card, one-time or monthly. You\'ll get a receipt by email.</p><a class="btn" href="' + G.donateUrl + '">Donate now</a>'
+    : '<h3>How to give</h3><p>Cheques, payable to Historic Harmony, Inc., to:</p><p><b>' + G.chequesTo + '</b></p>' +
+      '<p>To talk about a memorial gift, a bequest or a donor-advised fund, call <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> or write to <a href="mailto:' + S.contact.email + '">' + S.contact.email + '</a>.</p>' +
+      '<p class="proto" style="font-size:14px;opacity:.7">An online Donate button appears here automatically once <code>giving.donateUrl</code> is set in data/site.js.</p>';
+})();
+</script>
+</body>
+</html>
