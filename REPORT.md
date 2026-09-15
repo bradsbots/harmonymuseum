@@ -11,8 +11,8 @@ either the currently published value or a visible TODO; nothing is invented.
 | `prototype` | `true` — preview notes shown, `noindex` injected, `?live=1` previews launch | `false` |
 | `booking.mode` | `"phone"` — every Book button is a call link (museum decision) | `"online"` + `onlineUrl` if/when they pick a service |
 | `shop.mode` | `"off"` — shop on hold; page says where/when, not in nav | `"list"` or `"cart"` in phase 2 |
-| `newsletter.publicSignup` | `false` — members' perk by post, no public form | leave false |
-| `giving.membershipUrl` / `donateUrl` | empty — pages show phone + cheque address | Zeffy form links once the museum creates the account |
+| `newsletter.publicSignup` | `false` — members' perk by mail, no public form | leave false |
+| `giving.membershipUrl` / `donateUrl` | empty — pages show phone + check address | Zeffy form links once the museum creates the account |
 | `featured[]` | @412onthemove's Sept 2026 tour reel (Instagram embed on click) | swap URL for a newer post |
 
 Done for launch: self-hosted fonts (`tools/fetch_fonts.py`), `_redirects` for all 34
@@ -37,7 +37,7 @@ The repo should move to a GitHub org owned by the museum.
   +$100 rental fee.
 - Membership: Sustaining $100–499, Advocate $500+, Business $50+. Payments via
   **Zeffy**, account under hmuseum@zoominternet.net (not yet created).
-- Newsletter: members-only, by post — public signup removed.
+- Newsletter: members-only, by mail — public signup removed.
 - Replies within 3 business days; phone/email unchanged.
 - Ziegler Log House is 546 Main. Kathy Luek removed from the board; Katina Koontz's
   credentials (B.A., M.A.) kept — required for the historical-society designation.
@@ -234,7 +234,7 @@ booking ahead, and the $1 door premium more than covers the ~42¢ absorbed fee.
 ⚠ Both sides of this are proposals in `data/site.js` pending museum sign-off —
 the door increase especially is a board decision.
 
-**Venue booking (`rental.html`):** enquiry-based by design — weddings need a human,
+**Venue booking (`rental.html`):** request-based by design — weddings need a human,
 a contract, and the $350 deposit; instant online checkout is wrong for this. The
 form posts to the host's built-in form handler (Netlify Forms or equivalent) which
 emails the museum: no server, no plugin. Booked/held dates come from `venueHolds`

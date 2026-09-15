@@ -73,7 +73,7 @@ window.SITE = {
     provider: "Zeffy",
     membershipUrl: "",
     donateUrl: "",
-    chequesTo: "Historic Harmony, Inc., 218 Mercer Street, Harmony, PA 16037",
+    checksTo: "Historic Harmony, Inc., 218 Mercer Street, Harmony, PA 16037",
     replyDays: "3 business days"
   },
 

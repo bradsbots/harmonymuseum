@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Host an event — Harmony Museum</title>
-<meta name="description" content="Hire an 1805 Harmonist barn, a hall with an 1809 stone wine cellar, or an 1825 Mennonite meetinghouse in Harmony, PA — weddings, receptions, concerts and meetings. Rates, capacities and an enquiry form.">
+<meta name="description" content="Rent an 1805 Harmonist barn, a hall with an 1809 stone wine cellar, or an 1825 Mennonite meetinghouse in Harmony, PA — weddings, receptions, concerts and meetings. Rates, capacities and a request form.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -80,13 +80,13 @@ html{scroll-behavior:smooth}
 @media(max-width:860px){.how .cols{grid-template-columns:1fr 1fr}.how .cols>div{border-bottom:1px solid rgba(233,227,212,.16)}}
 @media(max-width:520px){.how .cols{grid-template-columns:1fr}}
 
-/* enquiry */
-.enquire{padding:72px 0 90px;scroll-margin-top:12px}
-.enquire .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:56px;align-items:start}
-@media(max-width:860px){.enquire .wrap{grid-template-columns:1fr;gap:34px}}
-.enquire .lbl{color:var(--madder);display:block;margin-bottom:10px}
-.enquire h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:8px}
-.enquire .lede{margin:0 0 10px;max-width:52ch}
+/* request */
+.request{padding:72px 0 90px;scroll-margin-top:12px}
+.request .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:56px;align-items:start}
+@media(max-width:860px){.request .wrap{grid-template-columns:1fr;gap:34px}}
+.request .lbl{color:var(--madder);display:block;margin-bottom:10px}
+.request h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:8px}
+.request .lede{margin:0 0 10px;max-width:52ch}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
 @media(max-width:560px){.grid2{grid-template-columns:1fr}}
 label{display:block;margin:16px 0 5px}
@@ -106,7 +106,7 @@ textarea{min-height:120px;resize:vertical}
 <header class="bar">
   <a class="back" href="index.html">&larr; Museum</a>
   <h1>Host an event</h1>
-  <nav><a href="#barn">Barn</a><a href="#stewart">Stewart Hall</a><a href="#church">Meetinghouse</a><a href="#enquire">Enquire</a><a href="visit.html">Visit</a><a href="contact.html">Contact</a></nav>
+  <nav><a href="#barn">Barn</a><a href="#stewart">Stewart Hall</a><a href="#church">Meetinghouse</a><a href="#request">Ask</a><a href="visit.html">Visit</a><a href="contact.html">Contact</a></nav>
 </header>
 
 <section class="hero">
@@ -118,7 +118,7 @@ textarea{min-height:120px;resize:vertical}
     <h2>Three rooms older than the county</h2>
     <p>An 1805 barn strung with lights, a hall with a vaulted stone wine cellar underneath, and a brick meetinghouse where music carries. All three belong to the museum; every rental keeps them standing.</p>
     <div class="jump">
-      <a class="btn" href="#enquire">Check a date</a>
+      <a class="btn" href="#request">Check a date</a>
       <a class="btn onphoto" href="#barn">The barn</a>
       <a class="btn onphoto" href="#stewart">Stewart Hall &amp; wine cellar</a>
       <a class="btn onphoto" href="#church">The meetinghouse</a>
@@ -138,9 +138,9 @@ textarea{min-height:120px;resize:vertical}
       <span class="lbl">The largest room · 1805</span>
       <h2>The Harmonist Barn</h2>
       <p class="lede">Built by the Harmony Society for sheep, raised by the Mennonites for hay, and now the best-lit barn in Butler County.</p>
-      <p>Four bays of hand-hewn timber, 42 by 64 feet, with room for a ceremony at one end and dancing at the other. The lights stay up. Rentals run Friday to Monday, so you decorate on Friday, celebrate on Saturday and clear up at leisure.</p>
+      <p>Four bays of hand-hewn timber, 42 by 64 feet, with room for a ceremony at one end and dancing at the other. The lights stay up. Rentals run Friday to Monday, so you decorate on Friday, celebrate on Saturday and clean up on Sunday.</p>
       <div class="facts" id="facts-barn"></div>
-      <div class="acts"><a class="btn" href="#enquire" data-pick="barn">Enquire about the barn</a><a class="btn ghost" href="properties.html#barn">Its history</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="barn">Ask about the barn</a><a class="btn ghost" href="properties.html#barn">Its history</a></div>
     </div>
   </div>
 </section>
@@ -160,7 +160,7 @@ textarea{min-height:120px;resize:vertical}
       <p>The hall seats 120 at tables, with a raised stage-and-bar area for a band or a head table. Down a stone stair is the vaulted cellar the Harmonists dug in 1809: 42 by 18 feet of flagstone and candlelight, for a toast, a tasting or the photographs.</p>
       <div class="facts" id="facts-stewart"></div>
       <div class="addon"><b>Add the wine cellar</b>Available only with a Stewart Hall rental, for an additional <span id="cellarFee">$100</span> rental fee.</div>
-      <div class="acts"><a class="btn" href="#enquire" data-pick="stewart">Enquire about Stewart Hall</a><a class="btn ghost" href="properties.html#museum">The building</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="stewart">Ask about Stewart Hall</a><a class="btn ghost" href="properties.html#museum">The building</a></div>
     </div>
   </div>
 </section>
@@ -179,7 +179,7 @@ textarea{min-height:120px;resize:vertical}
       <p class="lede">A small, reverent room on the National Register, kept exactly as the Mennonite community built it.</p>
       <p>Original bleacher-style benches for 130 to 150, a pulpit platform for the ceremony, and acoustics that flatter a string quartet or a single voice. Bring your own restroom facility; the museum will tell you who to call.</p>
       <div class="facts" id="facts-church"></div>
-      <div class="acts"><a class="btn" href="#enquire" data-pick="church">Enquire about the meetinghouse</a><a class="btn ghost" href="properties.html#meetinghouse">Its history</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="church">Ask about the meetinghouse</a><a class="btn ghost" href="properties.html#meetinghouse">Its history</a></div>
     </div>
   </div>
 </section>
@@ -192,19 +192,19 @@ textarea{min-height:120px;resize:vertical}
       <div><span class="big">1</span><h3>A security deposit is required</h3><p>Equal to the rental fee, charged when the contract is signed, and returned after the event if the room is clean, nothing is damaged and the key comes back.</p></div>
       <div><span class="big">2</span><h3>An insurance form</h3><p>Every rental needs an event-insurance form on file. Most homeowner's policies or a one-day event policy will do; the office will send you the form.</p></div>
       <div><span class="big">3</span><h3>Members pay less</h3><p>Museum members get discounted rental rates on all three venues. <a href="membership.html" style="color:var(--gold-lit)">Membership starts at $25.</a></p></div>
-      <div><span class="big">4</span><h3>A person replies</h3><p>Enquiries go to the museum office, staffed by volunteers. Expect an answer within three business days; call <a href="tel:+17244527341" style="color:var(--gold-lit)">(724) 452-7341</a> if it's urgent.</p></div>
+      <div><span class="big">4</span><h3>A person replies</h3><p>Requests go to the museum office, staffed by volunteers. Expect an answer within three business days; call <a href="tel:+17244527341" style="color:var(--gold-lit)">(724) 452-7341</a> if it's urgent.</p></div>
     </div>
   </div>
 </section>
 
-<section class="enquire" id="enquire">
+<section class="request" id="request">
   <div class="wrap">
     <div>
       <span class="lbl">Check a date</span>
       <h2>Tell us what you're planning</h2>
       <p class="lede">No commitment — this just starts the conversation. The office will confirm the date is free and send the contract and insurance form.</p>
-      <form id="enq" name="rental-enquiry" method="POST" action="rental.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="rental-enquiry">
+      <form id="enq" name="rental-request" method="POST" action="rental.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rental-request">
         <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
         <div class="grid2">
           <label><span class="lbl">Venue</span><select id="fVenue" name="venue"></select></label>
@@ -217,7 +217,7 @@ textarea{min-height:120px;resize:vertical}
           <label><span class="lbl">Email or phone</span><input type="text" id="fContact" name="contact" required></label>
         </div>
         <label><span class="lbl">Anything else</span><textarea id="fNotes" name="notes" placeholder="Interested in adding the wine cellar? Need the barn for a whole weekend?"></textarea></label>
-        <button class="btn" type="submit" style="margin-top:18px">Send enquiry</button>
+        <button class="btn" type="submit" style="margin-top:18px">Send request</button>
         <div class="confirm" id="confirm"></div>
       </form>
       <div class="stubNote proto">
@@ -314,7 +314,7 @@ textarea{min-height:120px;resize:vertical}
   });
   var c = document.getElementById("confirm");
   if (/[?&]sent=1/.test(location.search)) {
-    c.textContent = "Thank you — your enquiry is in the museum's inbox. Someone will be in touch within 3 business days.";
+    c.textContent = "Thank you — your request is in the museum's inbox. Someone will be in touch within 3 business days.";
     c.classList.add("show");
     c.scrollIntoView({ block: "center" });
   }

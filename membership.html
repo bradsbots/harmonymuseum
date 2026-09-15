@@ -45,7 +45,7 @@
 <main class="page">
   <span class="lbl eyebrow">Historic Harmony, Inc. · a 501(c)(3) organization</span>
   <h2 class="title">Become a member</h2>
-  <p class="lede">Members keep the lights on in nine buildings that are older than the county. In return: free admission, discounts on events, the shop and the rental halls, and the members' newsletter in the post.</p>
+  <p class="lede">Members keep the lights on in nine buildings that are older than the county. In return: free admission, discounts on events, the shop and the rental halls, and the members' newsletter by mail.</p>
 
   <div class="tiers">
     <div class="tier"><span class="lbl">Individual</span><div class="amt">$25<small>a year</small></div><p>One person.</p></div>
@@ -64,7 +64,7 @@
     <li>Discounted event rates</li>
     <li>Discounted museum shop purchases</li>
     <li>Discounted rental rates on Stewart Hall, the 1805 Barn and the Mennonite Meetinghouse</li>
-    <li>The members' newsletter, by post</li>
+    <li>The members' newsletter, by mail</li>
     <li>Gatherings and special programs</li>
     <li>First call to volunteer for events, or to train as a docent and share the town's history with visitors</li>
     <li>For high-school and college students: volunteering here is a real addition to a résumé or college application</li>
@@ -157,7 +157,7 @@
   j.innerHTML = G.membershipUrl
     ? '<h3>Join online</h3><p>Pay by card in a minute through ' + (G.provider || 'our payment partner') + '; your membership starts today.</p><a class="btn" href="' + G.membershipUrl + '">Join now</a>'
     : '<h3>How to join</h3><p>Call the office on <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> (' + S.hours.days + ', ' + S.hours.hoursShort +
-      ') or stop by the museum, or post a cheque with your name, address and the membership level to:</p><p><b>' + G.chequesTo + '</b></p>' +
+      ') or stop by the museum, or mail a check with your name, address and the membership level to:</p><p><b>' + G.checksTo + '</b></p>' +
       '<p class="proto" style="font-size:14px;opacity:.7">Online signup (Zeffy) appears here automatically once <code>giving.membershipUrl</code> is set in data/site.js — the museum needs to create the Zeffy account first.</p>';
 })();
 </script>

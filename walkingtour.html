@@ -159,8 +159,8 @@ html.live .proto{display:none!important}
   }
 
   var map = L.map("map", { zoomControl: true });
-  // Leaflet's default prefix is a Ukrainian-flag "Leaflet" link; its BSD licence needs no credit.
-  // The OSM "© OpenStreetMap contributors" attribution below is the one the licence requires.
+  // Leaflet's default prefix is a Ukrainian-flag "Leaflet" link; its BSD license needs no credit.
+  // The OSM "© OpenStreetMap contributors" attribution below is the one the license requires.
   map.attributionControl.setPrefix(false);
   map.fitBounds(L.latLngBounds(STOPS.map(function(s){ return [s.lat, s.lng]; })).pad(0.08));
   var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
