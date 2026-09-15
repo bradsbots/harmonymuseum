@@ -87,6 +87,8 @@
   var hd = document.getElementById("hoursDays"), hn = document.getElementById("hoursNote");
   if (hd) hd.textContent = S.hours.days + ", " + S.hours.hoursShort;
   if (hn) hn.textContent = S.hours.note;
+  document.querySelectorAll(".ft-days").forEach(function (el) { el.textContent = S.hours.days + ", " + S.hours.hoursShort; });
+  document.querySelectorAll(".ft-note").forEach(function (el) { el.textContent = S.hours.note; });
   var adm = document.getElementById("admission");
   if (adm) {
     adm.innerHTML = S.admission.map(function (p) {

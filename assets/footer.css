@@ -1,0 +1,26 @@
+/* Shared site footer — the same block on every page (markup lives in each HTML file;
+   tools/apply_footer.py stamps it). Hours text is filled from data/site.js. */
+footer.site{background:var(--indigo-deep,#182338);color:var(--paper,#E9E3D4);padding:56px 22px 28px;font-size:15.5px;line-height:1.55}
+footer.site .wrap{max-width:1180px;margin:0 auto;padding:0 6px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px 40px;opacity:1}
+footer.site h4{font-family:"Bodoni Moda",Didot,serif;font-size:26px;font-weight:600;margin:0 0 6px;line-height:1.1;color:var(--paper,#E9E3D4)}
+footer.site .lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;font-weight:600;color:var(--gold,#B08D52);display:block;margin-bottom:12px}
+footer.site p{margin:0 0 6px;opacity:.8}
+footer.site a{color:inherit;text-decoration:none}
+footer.site a:hover{color:var(--gold-lit,#D8B87C)}
+footer.site .brand p{max-width:34ch}
+
+/* contact rows: icon + label, always both */
+footer.site .contact{list-style:none;margin:0;padding:0}
+footer.site .contact li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;padding:7px 0;border-bottom:1px solid rgba(233,227,212,.12)}
+footer.site .contact li:last-child{border-bottom:0}
+footer.site .contact svg{width:18px;height:18px;margin-top:3px;fill:none;stroke:var(--gold-lit,#D8B87C);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+footer.site .contact small{display:block;font-family:"Archivo Narrow",sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;margin-top:1px}
+
+footer.site .links{list-style:none;margin:0;padding:0;columns:2;column-gap:20px}
+footer.site .links li{padding:3px 0;break-inside:avoid;opacity:.85}
+
+footer.site .bottom{max-width:1180px;margin:34px auto 0;padding:16px 6px 0;border-top:1px solid rgba(233,227,212,.16);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+footer.site .bottom a:hover{opacity:1}
+
+@media(max-width:900px){footer.site .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){footer.site .wrap{grid-template-columns:1fr;gap:28px}footer.site .links{columns:2}}
