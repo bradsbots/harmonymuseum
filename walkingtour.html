@@ -125,8 +125,8 @@ html.live .proto{display:none!important}
       <div class="chips" id="panelChips"></div>
       <h2 id="panelName"></h2>
       <div class="addr" id="panelAddr"></div>
-      <div class="variants" id="panelVariants" hidden></div>
-      <div class="approxNote" id="panelApprox" hidden>Location is approximate — placed from the printed brochure map, pending a confirmed address from the museum.</div>
+      <div class="variants proto" id="panelVariants" hidden></div>
+      <div class="approxNote" id="panelApprox" hidden>Location is approximate — placed from the printed brochure map<span class="proto">, pending a confirmed address from the museum</span>.</div>
       <p id="panelDesc"></p>
       <a class="go" id="panelNav" target="_blank" rel="noopener">Open in your maps app</a>
     </div>
@@ -201,7 +201,7 @@ html.live .proto{display:none!important}
     }
     var chips = '<span class="chip ' + tone(s) + '">' + eraLabel(s) + "</span>"
               + '<span class="chip plain">' + (s.inTown ? "In town" : "Outlying") + "</span>";
-    if (s.needsConfirmation) chips += '<span class="chip warn">Name under review</span>';
+    if (s.needsConfirmation) chips += '<span class="chip warn proto">Name under review</span>';
     document.getElementById("panelChips").innerHTML = chips;
     document.getElementById("panelName").textContent = n + ". " + s.name;
     document.getElementById("panelAddr").textContent = s.address || "";
@@ -235,7 +235,7 @@ html.live .proto{display:none!important}
   function rowHTML(s){
     return '<div class="stopRow" data-n="' + s.number + '" tabindex="0" role="button">' +
       '<span class="n ' + tone(s) + '">' + s.number + "</span><div><h3>" + s.name +
-      (s.needsConfirmation ? ' <span class="lbl" style="color:var(--madder)">· name under review</span>' : "") +
+      (s.needsConfirmation ? ' <span class="lbl proto" style="color:var(--madder)">· name under review</span>' : "") +
       "</h3><p>" + eraLabel(s) + (s.address ? " · " + s.address : "") + "</p></div></div>";
   }
   document.getElementById("listTown").innerHTML = STOPS.filter(function(s){ return s.inTown; }).map(rowHTML).join("");

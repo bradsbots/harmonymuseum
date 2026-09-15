@@ -129,7 +129,7 @@ textarea{min-height:110px;resize:vertical}
     c.scrollIntoView({ block: "center" });
   }
   document.getElementById("enq").addEventListener("submit", function(e){
-    if (!S.prototype) return;                      /* live: let Netlify Forms take it */
+    if (document.documentElement.classList.contains("live")) return;   /* live: Netlify Forms takes it */
     e.preventDefault();
     c.textContent = "Preview — nothing was sent. On the live site this goes straight to the museum's inbox.";
     c.classList.add("show");

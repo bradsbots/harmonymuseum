@@ -11,8 +11,17 @@
   }
   var today = now();
 
-  /* Prototype flag: once data/site.js says prototype:false, anything marked .proto disappears */
-  if (!S.prototype) document.documentElement.classList.add("live");
+  /* Prototype flag: once data/site.js says prototype:false, anything marked .proto disappears.
+     While it's on, ask search engines not to index the preview so it never outranks the real site. */
+  /* ?live=1 previews the launched look without editing the data file */
+  var isProto = S.prototype && !/[?&]live=1/.test(location.search);
+  if (!isProto) {
+    document.documentElement.classList.add("live");
+  } else {
+    var robots = document.createElement("meta");
+    robots.name = "robots"; robots.content = "noindex, nofollow";
+    document.head.appendChild(robots);
+  }
 
   /* Booking mode — "phone" until a hosted service is chosen, then "online" */
   var B = S.booking || { mode: "phone" };
