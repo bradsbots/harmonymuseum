@@ -1,0 +1,56 @@
+# Netlify redirect map: every URL on the old WordPress site -> its new home.
+# Format: old-path  new-path  status.  301 = permanent (search engines update).
+# If hosting somewhere without _redirects support, the same map is honoured by
+# the <meta refresh> stubs that tools/make_redirect_stubs.py can generate.
+
+# Visiting
+/plan-a-visit/                index.html#today            301
+/location/                    index.html#visit            301
+/contact-us/                  contact.html                301
+/harmony-walking-tour/        walkingtour.html            301
+/museum-properties/           properties.html             301
+/calendar-of-events/          calendar.html               301
+/events/                      calendar.html               301
+/events/*                     calendar.html               301
+
+# Rentals
+/facility-rentals/            rental.html                 301
+/stewart-hall/                rental.html?venue=stewart   301
+/harmony-museum-barn/         rental.html?venue=barn      301
+/mennonite-meetinghouse/      rental.html?venue=church    301
+/mennonite-meeting-house      rental.html?venue=church    301
+/photographers-information/   rental.html                 301
+
+# About / history
+/who-we-are/                  about.html                  301
+/what-we-do/                  about.html                  301
+/history-of-harmony/          history.html                301
+/the-harmony-line/            history.html#harmony-line   301
+/news/                        news.html                   301
+/news/*                       news.html                   301
+
+# Support
+/membership/                  membership.html             301
+/product/*                    membership.html             301
+/donate/                      donate.html                 301
+/volunteer/                   get-involved.html           301
+/get-involved/                get-involved.html           301
+/shop/                        shop.html                   301
+
+# Old event one-offs — no equivalent page; send to the calendar
+/harmoniefest-2024/           calendar.html               301
+/silvester/                   calendar.html               301
+/haymaker-ii-flea-market/     calendar.html               301
+
+# WordPress/WooCommerce plumbing that has no equivalent
+/cart/                        membership.html             301
+/checkout/                    membership.html             301
+/my-account-5/                membership.html             301
+/add-listing/                 /                           301
+/sitemap/                     /                           301
+/search/                      /                           301
+/privacy/                     privacy.html                301
+/terms/                       privacy.html                301
+/terms-and-conditions/        privacy.html                301
+/wp-admin/*                   /                           301
+/wp-content/uploads/2019/07/Walking-Tour-Map.pdf  assets/originals/Walking-Tour-Map.pdf  301
