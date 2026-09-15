@@ -1,0 +1,8 @@
+# While data/site.js has prototype:true every page also carries a noindex meta,
+# so the GitHub Pages preview stays out of search regardless of this file.
+User-agent: *
+Allow: /
+Disallow: /content/
+Disallow: /tools/
+Disallow: /docs/
+Sitemap: https://harmonymuseum.org/sitemap.xml

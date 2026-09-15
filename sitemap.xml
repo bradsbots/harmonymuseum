@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://harmonymuseum.org/</loc><priority>1.0</priority></url>
+  <url><loc>https://harmonymuseum.org/visit.html</loc><priority>0.9</priority></url>
+  <url><loc>https://harmonymuseum.org/booking.html</loc><priority>0.9</priority></url>
+  <url><loc>https://harmonymuseum.org/walkingtour.html</loc><priority>0.9</priority></url>
+  <url><loc>https://harmonymuseum.org/rental.html</loc><priority>0.9</priority></url>
+  <url><loc>https://harmonymuseum.org/properties.html</loc><priority>0.8</priority></url>
+  <url><loc>https://harmonymuseum.org/history.html</loc><priority>0.8</priority></url>
+  <url><loc>https://harmonymuseum.org/harmony-line.html</loc><priority>0.6</priority></url>
+  <url><loc>https://harmonymuseum.org/calendar.html</loc><priority>0.7</priority></url>
+  <url><loc>https://harmonymuseum.org/news.html</loc><priority>0.7</priority></url>
+  <url><loc>https://harmonymuseum.org/shop.html</loc><priority>0.6</priority></url>
+  <url><loc>https://harmonymuseum.org/membership.html</loc><priority>0.7</priority></url>
+  <url><loc>https://harmonymuseum.org/donate.html</loc><priority>0.7</priority></url>
+  <url><loc>https://harmonymuseum.org/get-involved.html</loc><priority>0.6</priority></url>
+  <url><loc>https://harmonymuseum.org/about.html</loc><priority>0.6</priority></url>
+  <url><loc>https://harmonymuseum.org/contact.html</loc><priority>0.6</priority></url>
+</urlset>

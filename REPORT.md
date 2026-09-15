@@ -1,10 +1,54 @@
-# Harmony Museum prototype — extraction report
+# Harmony Museum — build report
 
-**Status: all five build-order steps done.** Assets local; 28 stops extracted,
+**Status (2026-09-15): launch-ready pending the museum's answers.** Full site — 20
+pages — on a zero-build static stack. Everything the museum hasn't confirmed is
+either the currently published value or a visible TODO; nothing is invented.
+
+## Launch state
+
+| Flag in `data/site.js` | Now | At launch |
+|---|---|---|
+| `prototype` | `true` — preview notes shown, `noindex` injected, `?live=1` previews launch | `false` |
+| `booking.mode` | `"phone"` — every Book button is a call link | `"online"` + `onlineUrl` once FareHarbor/Bookeo exists |
+| `shop.mode` | `"list"` — what's in the shop, buy in person | `"cart"` only if someone commits to shipping (needs Square) |
+| `newsletter.formAction` | empty — signup shows "not connected yet" | Kit form URL |
+| `giving.membershipUrl` / `donateUrl` | empty — pages show phone + cheque address | hosted checkout links (Zeffy recommended) |
+| `featured[]` | @412onthemove's Sept 2026 tour reel (Instagram embed on click) | swap URL for a newer post |
+
+Done for launch: self-hosted fonts (`tools/fetch_fonts.py`), `_redirects` for all 34
+old WordPress URLs, `netlify.toml`, `404.html`, `sitemap.xml`, `robots.txt`, favicon
+from the Sophia mark, Netlify Forms markup on the rental and contact forms (live only
+when `prototype:false`), admission/hours/events/venue fees all read from `data/site.js`.
+
+**Hosting plan:** Netlify (free; forms built in) deploying from this repo; custom domain
+harmonymuseum.org via the museum's registrar. GitHub Pages stays as the preview.
+The repo should move to a GitHub org owned by the museum.
+
+**Facts taken from the museum's current site (content/live-site/) — confirm:**
+- Rental fees: Barn $600 + $600 deposit (Fri–Mon); Stewart Hall $350 + $350
+  (8 a.m.–11 p.m.); Meetinghouse $200 + $200 (9 a.m.–midnight). All dated Oct 1, 2020.
+- Closures: Dec 24–26; Dec 31 – Jan 3; "closed January and February, reopening in
+  March – date TBD". Encoded as Dec 24–26 and Dec 31 – Feb 28 (2026-27).
+- Admission $3 / $7 / $6, under 5 free, members free. **Board approved an increase
+  on 2026-09-15 — amounts pending.**
+- "12 places per tour" is in the brief but appears **nowhere** on the museum's site.
+- Ziegler Log House: listing page says 538 Main St, properties page says 546. Used 546.
+- Board of directors: the live site shows two conflicting lists; used the newer text list.
+- Membership tiers $25/$35/$100/$500; business $50/$100/$500. Currently sold via
+  WooCommerce checkout on the old site — that path dies with it.
+- Donate page on the old site is broken (renders a raw `[gravityform]` shortcode).
+
+**Still to pull from the old host:** Form 990 PDFs (2019–22), photographer permission
+form PDF, the 16 Harmony Line period photos, the Weihnachtsmarkt flyer images.
+
+---
+
+## Original extraction report (2026-08-15)
+
+All five build-order steps done. Assets local; 28 stops extracted,
 cross-checked and geocoded (10 exact / 18 approximate); Leaflet + OpenStreetMap tour
 map live (`walkingtour.html`); content in data files with the dated-closures fix
-implemented and demonstrable; booking and newsletter stubbed pending service signup.
-Stack: zero-build static (see §2b).
+implemented and demonstrable. Stack: zero-build static (see §2b).
 
 ## 0. Geocoding & map (steps 3–4)
 
