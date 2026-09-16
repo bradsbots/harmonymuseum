@@ -2,7 +2,7 @@
    tools/apply_footer.py stamps it). Hours text is filled from data/site.js. */
 footer.site{background:var(--indigo-deep,#182338);color:var(--paper,#E9E3D4);padding:56px 22px 28px;font-size:15.5px;line-height:1.55}
 footer.site .wrap{max-width:1180px;margin:0 auto;padding:0 6px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px 40px;opacity:1}
-footer.site h4{font-family:"Bodoni Moda",Didot,serif;font-size:26px;font-weight:600;margin:0 0 6px;line-height:1.1;color:var(--paper,#E9E3D4)}
+footer.site h4{font-family:"Bodoni Moda",Didot,serif;font-variation-settings:"opsz" 20;font-size:26px;font-weight:600;margin:0 0 6px;line-height:1.1;color:var(--paper,#E9E3D4)}
 footer.site .lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;font-weight:600;color:var(--gold,#B08D52);display:block;margin-bottom:12px}
 footer.site p{margin:0 0 6px;opacity:.8}
 footer.site a{color:inherit;text-decoration:none}

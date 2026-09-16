@@ -16,7 +16,7 @@
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:"Bodoni Moda",Didot,serif;margin:0;line-height:1.05;font-weight:600;letter-spacing:-.01em}
+h1,h2,h3,h4{font-family:"Bodoni Moda",Didot,serif;font-variation-settings:"opsz" 20;margin:0;line-height:1.05;font-weight:600;letter-spacing:-.01em}
 .lbl{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:600}
 @media(max-width:600px){.lbl{letter-spacing:.11em;font-size:10.5px;line-height:1.6}}
 a{color:inherit}
@@ -111,7 +111,7 @@ html.live .proto{display:none!important}
 .reel button .play{width:68px;height:68px;border-radius:50%;border:2px solid var(--gold-lit);display:flex;align-items:center;justify-content:center;transition:background .18s}
 .reel button .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent var(--gold-lit);margin-left:4px}
 .reel button:hover .play{background:rgba(216,184,124,.18)}
-.reel button .mark{font-family:"Bodoni Moda",serif;font-size:64px;color:var(--gold-lit);line-height:1;text-transform:none;letter-spacing:0;font-weight:400}
+.reel button .mark{font-family:"Bodoni Moda",serif;font-variation-settings:"opsz" 20;font-size:64px;color:var(--gold-lit);line-height:1;text-transform:none;letter-spacing:0;font-weight:400}
 .reel .instagram-media{margin:0!important;max-width:100%!important;min-width:0!important}
 .reel.loaded{aspect-ratio:auto;background:transparent}
 .reel.loaded button{display:none}
@@ -124,12 +124,12 @@ html.live .proto{display:none!important}
 .head .lbl{color:var(--madder);display:block;margin-bottom:11px}
 .glance{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;border-top:2px solid var(--ink);padding-top:28px}
 .glance .lbl{color:var(--madder);display:block;margin-bottom:12px}
-.glance .big{font-family:"Bodoni Moda",serif;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;letter-spacing:-.01em;margin-bottom:16px;font-variant-numeric:tabular-nums}
+.glance .big{font-family:"Bodoni Moda",serif;font-variation-settings:"opsz" 20;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;letter-spacing:-.01em;margin-bottom:16px;font-variant-numeric:tabular-nums}
 .glance p{margin:0 0 12px;max-width:52ch}
 .glance .out{font-size:16px;opacity:.8;border-top:1px solid var(--rule);padding-top:14px;margin-top:20px}
 .glance .out a{color:var(--madder);text-decoration:none;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:600;border-bottom:1px solid var(--madder);padding-bottom:2px;white-space:nowrap}
 .price{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dotted var(--rule);padding:9px 0;font-size:16.5px;font-variant-numeric:tabular-nums}
-.price span:last-child{font-family:"Bodoni Moda",serif;font-weight:600;font-size:19px}
+.price span:last-child{font-family:"Bodoni Moda",serif;font-variation-settings:"opsz" 20;font-weight:600;font-size:19px}
 .glance .fine{font-size:14.5px;opacity:.7;margin-top:14px}
 @media(max-width:800px){.glance{grid-template-columns:1fr;gap:34px}}
 
