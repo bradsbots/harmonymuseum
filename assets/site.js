@@ -89,6 +89,9 @@
   if (hn) hn.textContent = S.hours.note;
   document.querySelectorAll(".ft-days").forEach(function (el) { el.textContent = S.hours.days + ", " + S.hours.hoursShort; });
   document.querySelectorAll(".ft-note").forEach(function (el) { el.textContent = S.hours.note; });
+  var al = document.getElementById("admissionLine");
+  if (al) al.textContent = S.admission.filter(function (p) { return p[0] !== "Ages 18–64"; })
+    .map(function (p) { return p[0].replace("Ages ", "ages ").replace("and up", "and up") + " " + p[1]; }).join(" · ");
   var adm = document.getElementById("admission");
   if (adm) {
     adm.innerHTML = S.admission.map(function (p) {

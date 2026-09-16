@@ -117,6 +117,7 @@ html.live .proto{display:none!important}
 
 /* ledger */
 .today{background:var(--paper)}
+.howVisit{max-width:64ch;margin:-14px 0 26px;font-size:17px;opacity:.85}
 .head{display:flex;align-items:baseline;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:32px}
 .head h2{font-size:clamp(28px,3.8vw,42px)}
 .head .lbl{color:var(--madder);display:block;margin-bottom:11px}
@@ -201,7 +202,7 @@ html.live .proto{display:none!important}
   <div class="wrap">
     <span class="eyebrow lbl">Historic Harmony, Inc. · nine properties · founded 1804</span>
     <h1>Where the Harmony Society began</h1>
-    <p>The Harmony Society's brick warehouse — wine cellar and all — is now the museum. Guided tours at 1:00 and 2:30, Tuesday through Saturday.</p>
+    <p>The Harmony Society's brick warehouse — wine cellar and all — is now the museum. The buildings are seen by guided tour only: 1:00 and 2:30, Tuesday through Saturday. The town itself is open any time.</p>
     <div class="acts">
       <a class="btn" href="visit.html">Plan a visit</a>
       <a class="btn onphoto" href="walkingtour.html">Walking tour map</a>
@@ -215,7 +216,7 @@ html.live .proto{display:none!important}
       <a class="door" href="#today">
         <div class="frame tone" style="aspect-ratio:4/3"><img src="assets/originals/Properties-Zeigler-Log-Cabin-1024x768.jpg" alt="Ziegler Log House, a reconstructed 19th-century cabin on Main Street"></div>
         <h3>Take the guided tour</h3>
-        <p>The 1809 warehouse and the Ziegler Log House, furnished as Mennonite families kept it. Tours at 1:00 and 2:30.</p>
+        <p>The only way inside: a docent walks you through the 1809 warehouse, the wine cellar and the Ziegler Log House. 1:00 and 2:30, no reservation needed.</p>
         <span class="go">Today's tours</span>
       </a>
       <a class="door" href="walkingtour.html">
@@ -258,6 +259,7 @@ html.live .proto{display:none!important}
       <div><span class="lbl" id="todayLabel">Tuesday – Saturday</span><h2 id="todayHead">Tours</h2></div>
       <a class="btn ghost" href="calendar.html">Full calendar</a>
     </div>
+    <p class="howVisit">You can't wander the buildings on your own — a docent takes you through, and it's the best part. Just turn up for the 1:00 or 2:30; groups should call ahead. Everything outdoors — the 28-stop walking tour, the Harmonist Cemetery, Rapp's Seat — is yours any time, free.</p>
     <div class="ledger">
       <div class="row hdr"><span class="lbl">Time</span><span class="lbl">Tour</span><span class="lbl">Places</span><span></span></div>
       <div id="tourRows"></div>
@@ -265,6 +267,11 @@ html.live .proto{display:none!important}
         <span class="when">Any</span>
         <span class="what">Walking tour of historic Harmony<small>Self-guided · 28 stops · free · ¼ mile or 3 miles, your call</small></span>
         <span class="seats">Open</span><span class="act"><a class="btn ghost" href="walkingtour.html">Open map</a></span>
+      </div>
+      <div class="row admissionRow">
+        <span class="when">$10</span>
+        <span class="what">Admission, adults 18–64<small id="admissionLine">65 and up and veterans $8 · ages 6–17 $5 · under 5 and members free</small></span>
+        <span class="seats">At the door</span><span class="act"><a class="btn ghost" href="visit.html#hours">Plan a visit</a></span>
       </div>
       <div class="row">
         <span class="when">By appt</span>

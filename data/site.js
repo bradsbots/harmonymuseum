@@ -26,7 +26,7 @@ window.SITE = {
     days: "Tuesday – Saturday",
     tourTimes: ["1:00", "2:30"],
     closedDays: [0, 1],            /* 0=Sunday, 1=Monday */
-    note: "Guided tours only, at 1:00 and 2:30.",
+    note: "Inside the buildings by guided tour only — tours leave at 1:00 and 2:30. Grounds, walking tour and cemeteries are open any time.",
     capacityPerTour: null          /* museum hasn't set a number (2026-09-15); null = don't show one */
   },
 
