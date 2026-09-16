@@ -27,7 +27,7 @@
   var B = S.booking || { mode: "phone" };
   var online = B.mode === "online" && !!B.onlineUrl;
   var bookHref = online ? B.onlineUrl : S.contact.phoneHref;
-  window.SITE_BOOK = { online: online, href: bookHref, label: online ? "Book" : "Call to reserve" };
+  window.SITE_BOOK = { online: online, href: bookHref, label: online ? "Reserve" : "Call to reserve" };
 
   function inClosure(d) {
     return (S.closures || []).some(function (c) {
@@ -74,7 +74,7 @@
     if (lbl) lbl.textContent = dayFmt.format(day);
     if (head) head.textContent = isToday ? "Tours today" : "Next tours";
     var cta = online
-      ? '<span class="seats">Book ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Book</a></span>'
+      ? '<span class="seats">Reserve ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Reserve</a></span>'
       : '<span class="seats">Reserve by phone</span><span class="act"><a class="btn" href="' + bookHref + '">Call</a></span>';
     tourRows.innerHTML = S.hours.tourTimes.map(function (t) {
       return '<div class="row"><span class="when">' + t + '</span>' +
@@ -98,7 +98,7 @@
   var on = document.getElementById("onlineNote");
   if (on) {
     on.innerHTML = online
-      ? '<a href="' + bookHref + '" style="color:var(--gold)">Book online</a> — ' +
+      ? '<a href="' + bookHref + '" style="color:var(--gold)">Reserve online</a> — ' +
         S.onlinePricing.map(function (p) { return p[0] + " " + p[1]; }).join(" · ") + "."
       : 'Reserve a place by phone: <a href="' + S.contact.phoneHref + '" style="color:var(--gold)">' + S.contact.phone + "</a>.";
   }

@@ -85,8 +85,7 @@ html.live .proto{display:none!important}
   <div class="stubNote proto">
     <b>How this stays true:</b> tour days come from the weekly pattern and dated closures in
     <code>data/site.js</code>; events and venue holds are one-line entries in the same file.
-    Seat-level availability lives in the hosted booking service — clicking a tour day hands
-    off to the booking page. Entries marked SAMPLE are demo data.
+    Clicking a tour day opens the tours page. Entries marked SAMPLE are demo data.
   </div>
 </div>
 
@@ -122,7 +121,7 @@ html.live .proto{display:none!important}
       var cls = "day" + (closed ? " closed" : "") + (key === iso(today) ? " today" : "");
       var cell = '<div class="' + cls + '"><span class="n" data-dow="' + DOW[d.getDay()] + '">' + day + "</span>";
       if (closed) cell += '<span class="tag closedTag">Closed</span>';
-      else if (open) cell += '<a class="tag tour" href="booking.html">Tours 1:00 &amp; 2:30</a>';
+      else if (open) cell += '<a class="tag tour" href="tours.html">Tours 1:00 &amp; 2:30</a>';
       (S.events || []).forEach(function(e){
         if (e.date !== key) return;
         var txt = (e.time ? e.time + " · " : "") + e.title;
