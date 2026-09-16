@@ -39,8 +39,9 @@ python -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-8
 1. **Never invent museum facts.** Prices, hours, dates, names, fees, credentials come
    from the museum. If something is unknown, leave a `TODO` comment or ask; don't guess.
 2. **American English.** request (not enquiry), check (not cheque), rent (not hire), mail (not post).
-3. **No "book", "book now", "buy tickets" anywhere** while booking is phone-only. Say
-   "Plan a visit", "call to reserve", "just turn up".
+3. **Don't promise online booking** while reservations are phone-only — no "book now",
+   "book online", "buy tickets online", "reserve online". Say "Plan a visit", "call to
+   reserve", "just turn up". The word "tickets" by itself is fine (events have tickets).
 4. **The buildings are seen by guided tour only** (1:00 and 2:30, Tue–Sat); outdoors is
    open any time. Say both halves together wherever hours appear.
 5. **One solid red button per block**, ghost buttons for secondary links, small-caps text

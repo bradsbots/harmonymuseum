@@ -77,7 +77,8 @@ for f in PAGES:
 
 # ── 4. house rules ────────────────────────────────────────────────────────────────
 BRITISH = re.compile(r"\b(enquir\w*|cheque\w*|for hire|hire the|by post|in the post|programme|colour|organis\w+|centre|favourite|whilst)\b", re.I)
-BOOKING = re.compile(r"\b(book (a |the |your )?tour|book now|book online|buy tickets|tickets)\b", re.I)
+# Only phrases that promise an online transaction — "tickets" on its own is fine (events have tickets)
+BOOKING = re.compile(r"\b(book (a |the |your )?tour|book now|book online|book ahead|reserve online|buy tickets( online)?|tickets online|online (booking|reservations?|checkout))\b", re.I)
 for f in PAGES:
     s = read(f)
     text = re.sub(r"<script.*?</script>|<style.*?</style>|<!--.*?-->", " ", s, flags=re.S)   # visible copy only
