@@ -1,11 +1,5 @@
 /* Shared styles for the inner (non-homepage) pages: tokens, type, header bar, prose.
    Page-specific rules stay in each page's own <style>. */
-:root{
-  --ink:#141A24;--indigo:#1F2E48;--indigo-deep:#182338;
-  --paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
-  --madder:#8C3A2E;--gold:#B08D52;--gold-lit:#D8B87C;--sage:#6C7A5C;
-  --rule:rgba(20,26,36,.14);
-}
 *{box-sizing:border-box}
 body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17.5px;line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.12;text-wrap:balance}
@@ -44,7 +38,7 @@ html.live .proto{display:none!important}
 
 /* buttons */
 .btn{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;font-weight:600;background:var(--madder);color:var(--paper);border:0;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-block}
-.btn:hover{background:#A2453A}
+.btn:hover{background:var(--madder-hover)}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
 .btn.ghost:hover{background:var(--paper-deep)}
 

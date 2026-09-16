@@ -1,0 +1,11 @@
+/* The palette — the only place colors are defined. Every page links this first.
+   Primary ten from the brief; the five "deep/hover" values are derived tints. */
+:root{
+  --ink:#141A24;        --ink-deep:#0E141C;
+  --indigo:#1F2E48;     --indigo-deep:#182338;   --slate:#4A5568;
+  --paper:#E9E3D4;      --paper-deep:#DDD5C1;    --white:#F6F3EA;   --field:#FFFFFF;
+  --madder:#8C3A2E;     --madder-hover:#A2453A;
+  --gold:#B08D52;       --gold-lit:#D8B87C;      --gold-deep:#7A5E2F;
+  --sage:#6C7A5C;       --sage-deep:#49543E;
+  --rule:rgba(20,26,36,.14); --rule-gold:rgba(176,141,82,.32);
+}

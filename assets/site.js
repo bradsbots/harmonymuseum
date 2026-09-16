@@ -98,9 +98,9 @@
   var on = document.getElementById("onlineNote");
   if (on) {
     on.innerHTML = online
-      ? '<a href="' + bookHref + '" style="color:var(--gold)">Reserve online</a> — ' +
+      ? '<a href="' + bookHref + '" style="color:var(--madder)">Reserve online</a> — ' +
         S.onlinePricing.map(function (p) { return p[0] + " " + p[1]; }).join(" · ") + "."
-      : 'Reserve a place by phone: <a href="' + S.contact.phoneHref + '" style="color:var(--gold)">' + S.contact.phone + "</a>.";
+      : 'Reserve a place by phone: <a href="' + S.contact.phoneHref + '" style="color:var(--madder)">' + S.contact.phone + "</a>.";
   }
 
   /* Featured Instagram post — official embed, loaded only when the visitor clicks */

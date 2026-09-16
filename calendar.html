@@ -7,12 +7,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/tokens.css">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
-:root{
-  --ink:#141A24;--paper:#E9E3D4;--paper-deep:#DDD5C1;--white:#F6F3EA;
-  --madder:#8C3A2E;--gold:#B08D52;--sage:#6C7A5C;--rule:rgba(20,26,36,.14);
-}
 *{box-sizing:border-box}
 body{margin:0;background:var(--white);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.5;font-weight:300}
 h1,h2{font-family:"Bodoni Moda",Didot,serif;margin:0;font-weight:600;line-height:1.1}
@@ -42,11 +39,11 @@ header h1{font-size:20px}
 .day .n{font-family:"Bodoni Moda",serif;font-weight:600;font-size:16px}
 .day.today .n{color:var(--madder)}
 .tag{display:block;font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:5px;padding:3px 6px;text-decoration:none;line-height:1.35}
-.tag.tour{background:rgba(176,141,82,.16);color:#7A5E2F}
+.tag.tour{background:rgba(176,141,82,.16);color:var(--gold-deep)}
 a.tag.tour:hover{background:var(--gold);color:var(--ink)}
 .tag.event{background:rgba(140,58,46,.12);color:var(--madder)}
 a.tag.event:hover{background:var(--madder);color:var(--paper)}
-.tag.venue{background:rgba(108,122,92,.16);color:#49543E}
+.tag.venue{background:rgba(108,122,92,.16);color:var(--sage-deep)}
 .tag.closedTag{color:rgba(20,26,36,.55);padding-left:0;background:none}
 .stubNote{background:var(--paper);border-left:3px solid var(--gold);padding:13px 17px;font-size:15px;margin:26px 0 0}
 html.live .proto{display:none!important}
