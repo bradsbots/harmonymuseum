@@ -21,11 +21,11 @@ html{scroll-behavior:smooth}
 .hero{position:relative;min-height:min(62vh,560px);display:flex;align-items:flex-end;color:var(--paper);background:var(--indigo-deep)}
 .hero .frame{position:absolute;inset:0}
 .hero .frame img{filter:saturate(.9) contrast(1.02)}
-.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,26,36,.92),rgba(20,26,36,.45) 50%,rgba(20,26,36,.15))}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,26,36,.96),rgba(20,26,36,.72) 46%,rgba(20,26,36,.3)),linear-gradient(to right,rgba(20,26,36,.62),rgba(20,26,36,0) 62%)}
 .hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:42px;width:100%}
 .hero .lbl.eyebrow{color:var(--gold-lit)!important;display:block;margin-bottom:14px}
-.hero h2{font-size:clamp(36px,5.6vw,66px);max-width:16ch;color:var(--paper);letter-spacing:-.01em}
-.hero p{font-size:18.5px;max-width:54ch;opacity:.88;margin:16px 0 26px}
+.hero h2{font-size:clamp(36px,5.6vw,66px);max-width:16ch;color:var(--paper);letter-spacing:-.01em;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.hero p{font-size:19px;max-width:44ch;opacity:.95;margin:16px 0 26px;text-shadow:0 1px 2px rgba(0,0,0,.35)}
 .hero .credit{position:absolute;right:16px;bottom:10px;z-index:3;font-family:"Archivo Narrow",sans-serif;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,227,212,.45)}
 .jump{display:flex;gap:10px;flex-wrap:wrap}
 .btn.onphoto{background:transparent;color:var(--paper);border:1px solid rgba(233,227,212,.55)}
@@ -63,7 +63,7 @@ html{scroll-behavior:smooth}
 .addon b{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;color:var(--madder);display:block;margin-bottom:4px}
 
 @media(max-width:900px){
-  .venue .wrap{grid-template-columns:1fr;gap:28px}
+  .venue .wrap,.venue.flip .wrap{grid-template-columns:1fr;gap:28px}
   .venue.flip .wrap>.gallery{order:0}
   .venue{padding:52px 0}
 }
@@ -119,7 +119,7 @@ textarea{min-height:120px;resize:vertical}
   <div class="wrap">
     <span class="eyebrow lbl">Weddings · receptions · concerts · meetings</span>
     <h2>Three rooms older than the county</h2>
-    <p>An 1805 barn strung with lights, a hall with a vaulted stone wine cellar underneath, and a brick meetinghouse where music carries. All three belong to the museum; every rental keeps them standing.</p>
+    <p>An 1805 barn strung with lights, a hall with a stone wine cellar beneath it, and a brick meetinghouse where music carries. Every rental keeps them standing.</p>
     <div class="jump">
       <a class="btn" href="#request">Check a date</a>
       <a class="btn onphoto" href="#barn">The barn</a>
@@ -157,13 +157,13 @@ textarea{min-height:120px;resize:vertical}
       <figcaption>218 Mercer Street · attached to the museum</figcaption>
     </figure>
     <div class="copy">
-      <span class="lbl">Dining, dancing &amp; a cellar · 1809</span>
+      <span class="lbl">Hall &amp; wine cellar · 1809</span>
       <h2>Stewart Hall and the wine cellar</h2>
       <p class="lede">The practical room — kitchen, bar, stage, accessible restrooms — with the Harmony Society's stone wine cellar directly below.</p>
       <p>The hall seats 120 at tables, with a raised stage-and-bar area for a band or a head table. Down a stone stair is the vaulted cellar the Harmonists dug in 1809: 42 by 18 feet of flagstone and candlelight, for a toast, a tasting or the photographs.</p>
       <div class="facts" id="facts-stewart"></div>
       <div class="addon"><b>Add the wine cellar</b>Available only with a Stewart Hall rental, for an additional <span id="cellarFee">$100</span> rental fee.</div>
-      <div class="acts"><a class="btn" href="#request" data-pick="stewart">Ask about Stewart Hall</a><a class="btn ghost" href="properties.html#museum">The building</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="stewart">Ask about the hall</a><a class="btn ghost" href="properties.html#museum">The building</a></div>
     </div>
   </div>
 </section>
