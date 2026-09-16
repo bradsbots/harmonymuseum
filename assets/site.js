@@ -64,21 +64,16 @@
     }
   }
 
-  /* Homepage "Tours today" ledger — today's tour times, or the next open day's */
-  var tourRows = document.getElementById("tourRows");
-  if (tourRows) {
+  /* Homepage "Visiting today" — today's date, or the next open day's */
+  var tt = document.getElementById("tourTimes");
+  if (tt) {
     var day = new Date(today), isToday = true, guard = 0;
     while (!(openDay(day) && !inClosure(day)) && guard++ < 400) { day.setDate(day.getDate() + 1); isToday = false; }
     var dayFmt = new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric" });
     var lbl = document.getElementById("todayLabel"), head = document.getElementById("todayHead");
     if (lbl) lbl.textContent = dayFmt.format(day);
-    if (head) head.textContent = isToday ? "Tours today" : "Next tours";
-    var times = S.hours.tourTimes.join(" &amp; ");
-    tourRows.innerHTML = online
-      ? '<div class="row"><span class="when">' + times + '</span><span class="what">Guided tour of the museum<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>' +
-        '<span class="seats">Reserve ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Reserve</a></span></div>'
-      : '<div class="row"><span class="when">' + times + '</span><span class="what">Guided tour of the museum<small>1809 warehouse, wine cellar &amp; Ziegler Log House · about an hour</small></span>' +
-        '<span class="seats">Just turn up</span><span class="act"></span></div>';
+    if (head) head.textContent = isToday ? "Visiting today" : "Next open day";
+    tt.innerHTML = S.hours.tourTimes.join(" &amp; ");
   }
 
   /* Hours + admission blocks read from data, so prices live in exactly one place */
@@ -87,9 +82,6 @@
   if (hn) hn.textContent = S.hours.note;
   document.querySelectorAll(".ft-days").forEach(function (el) { el.textContent = S.hours.days + ", " + S.hours.hoursShort; });
   document.querySelectorAll(".ft-note").forEach(function (el) { el.textContent = S.hours.note; });
-  var al = document.getElementById("admissionLine");
-  if (al) al.textContent = S.admission.filter(function (p) { return p[0] !== "Ages 18–64"; })
-    .map(function (p) { return p[0].replace("Ages ", "ages ").replace("and up", "and up") + " " + p[1]; }).join(" · ");
   var adm = document.getElementById("admission");
   if (adm) {
     adm.innerHTML = S.admission.map(function (p) {

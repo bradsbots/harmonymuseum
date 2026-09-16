@@ -115,22 +115,21 @@ html.live .proto{display:none!important}
 .reel.loaded button{display:none}
 @media(max-width:880px){.feat .wrap{grid-template-columns:1fr;gap:28px}.reel{max-width:400px}}
 
-/* ledger */
+/* visiting today */
 .today{background:var(--paper)}
-.howVisit{max-width:64ch;margin:-14px 0 26px;font-size:17px;opacity:.85}
-.head{display:flex;align-items:baseline;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:32px}
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:34px}
 .head h2{font-size:clamp(28px,3.8vw,42px)}
 .head .lbl{color:var(--madder);display:block;margin-bottom:11px}
-.ledger{border-top:2px solid var(--ink)}
-.row{display:grid;grid-template-columns:132px 1fr 116px 126px;align-items:center;gap:20px;min-height:56px;border-bottom:1px solid var(--rule);padding:12px 0}
-.row.hdr{border-bottom:1px solid var(--ink);min-height:0;padding:0 0 9px}
-.row.hdr span{color:rgba(20,26,36,.5)}
-.row .when{font-family:"Bodoni Moda",serif;font-size:23px;font-weight:600;font-variant-numeric:tabular-nums}
-.row .what small{display:block;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px;color:rgba(20,26,36,.48);margin-top:3px}
-.row .seats{font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--sage)}
-.row .seats.none{color:var(--madder)}
-.row .act{text-align:right}
-@media(max-width:760px){.row{grid-template-columns:1fr auto;grid-template-areas:"when seats" "what act";row-gap:11px;padding:17px 0}.row.hdr{display:none}.row .when{grid-area:when}.row .what{grid-area:what}.row .seats{grid-area:seats;text-align:right}.row .act{grid-area:act;text-align:left}}
+.glance{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;border-top:2px solid var(--ink);padding-top:28px}
+.glance .lbl{color:var(--madder);display:block;margin-bottom:12px}
+.glance .big{font-family:"Bodoni Moda",serif;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;letter-spacing:-.01em;margin-bottom:16px;font-variant-numeric:tabular-nums}
+.glance p{margin:0 0 12px;max-width:52ch}
+.glance .out{font-size:16px;opacity:.8;border-top:1px solid var(--rule);padding-top:14px;margin-top:20px}
+.glance .out a{color:var(--madder);text-decoration:none;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:600;border-bottom:1px solid var(--madder);padding-bottom:2px;white-space:nowrap}
+.price{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dotted var(--rule);padding:9px 0;font-size:16.5px;font-variant-numeric:tabular-nums}
+.price span:last-child{font-family:"Bodoni Moda",serif;font-weight:600;font-size:19px}
+.glance .fine{font-size:14.5px;opacity:.7;margin-top:14px}
+@media(max-width:800px){.glance{grid-template-columns:1fr;gap:34px}}
 
 /* properties strip */
 .props{background:var(--indigo-deep);color:var(--paper)}
@@ -256,27 +255,20 @@ html.live .proto{display:none!important}
 <section class="today" id="today">
   <div class="wrap">
     <div class="head">
-      <div><span class="lbl" id="todayLabel">Tuesday – Saturday</span><h2 id="todayHead">Tours</h2></div>
+      <div><span class="lbl" id="todayLabel">Tuesday – Saturday</span><h2 id="todayHead">Visiting today</h2></div>
       <a class="btn ghost" href="calendar.html">Full calendar</a>
     </div>
-    <p class="howVisit">A docent takes you through the buildings — that's the only way in, and the best part. Everything outdoors is open any time, free.</p>
-    <div class="ledger">
-      <div class="row hdr"><span class="lbl">When</span><span class="lbl">What</span><span class="lbl">How</span><span></span></div>
-      <div id="tourRows"></div>
-      <div class="row">
-        <span class="when">Any time</span>
-        <span class="what">Walking tour of historic Harmony<small>Self-guided · 28 stops · free · ¼ mile or 3 miles, your call</small></span>
-        <span class="seats">Outdoors</span><span class="act"><a class="btn ghost" href="walkingtour.html">Open map</a></span>
+    <div class="glance">
+      <div class="tour">
+        <span class="lbl">Guided tour · the only way inside</span>
+        <div class="big" id="tourTimes">1:00 &amp; 2:30</div>
+        <p>About an hour with a docent through the 1809 warehouse, the wine cellar and the Ziegler Log House. Tuesday through Saturday — just turn up.</p>
+        <p class="out">Everything outdoors is open any time, free: the 28-stop walking tour, the Harmonist Cemetery, Rapp's Seat. <a href="walkingtour.html">Open the map &rarr;</a></p>
       </div>
-      <div class="row admissionRow">
-        <span class="when">$10</span>
-        <span class="what">Admission, adults 18–64<small id="admissionLine">65 and up and veterans $8 · ages 6–17 $5 · under 5 and members free</small></span>
-        <span class="seats">Pay at the door</span><span class="act"><a class="btn ghost" href="visit.html#hours">Plan a visit</a></span>
-      </div>
-      <div class="row">
-        <span class="when">By appt</span>
-        <span class="what">Group &amp; school tours<small>Any day, by arrangement</small></span>
-        <span class="seats">Call ahead</span><span class="act"><a class="btn ghost" href="tel:+17244527341">Call</a></span>
+      <div class="adm">
+        <span class="lbl">Admission</span>
+        <div id="admission"></div>
+        <p class="fine">Pay at the door. Groups and school visits by arrangement — <a href="tel:+17244527341">(724) 452-7341</a>.</p>
       </div>
     </div>
   </div>
