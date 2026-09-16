@@ -59,8 +59,16 @@ python -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-8
 ## Checking your work
 
 ```
+python tools/check.py             # ALWAYS run before pushing — takes a few seconds
 python -m http.server 8765        # then open http://127.0.0.1:8765/
 ```
+
+`tools/check.py` catches the things that actually break this site: a typo in
+`data/site.js` (which would blank every page's hours), links to renamed pages, the
+house rules below, footers edited by hand, hex colors outside tokens.css. It also runs
+on GitHub after every push — a red ✗ on the commit means something's wrong; run it
+locally to see what. `--external` additionally follows every outside link (slow; runs
+weekly on GitHub by itself).
 
 Look at the page at phone width too (narrow the window to ~400px). Before pushing,
 make sure nothing scrolls sideways and no heading runs past three lines on a phone.

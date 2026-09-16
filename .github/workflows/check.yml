@@ -1,0 +1,22 @@
+name: Site checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays: also follow outside links, catches hijacked/dead domains
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Fast checks (data file, links, house rules)
+        run: python tools/check.py
+      - name: Outside links (weekly)
+        if: github.event_name == 'schedule'
+        run: python tools/check.py --external
