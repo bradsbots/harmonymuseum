@@ -86,7 +86,7 @@ window.SITE = {
       by: "@412onthemove",
       date: "2026-09-12",
       title: "Come along on a guided tour",
-      blurb: "Pittsburgh's 412 On The Move filmed the tour with Christina in September 2026 — the 1809 warehouse, the wine cellar and the Ziegler Log House in three minutes."
+      blurb: "Pittsburgh's 412 On The Move filmed the guided tour in September 2026 — the 1809 warehouse, the wine cellar and the Ziegler Log House in three minutes."
     }
   ],
 
