@@ -73,14 +73,12 @@
     var lbl = document.getElementById("todayLabel"), head = document.getElementById("todayHead");
     if (lbl) lbl.textContent = dayFmt.format(day);
     if (head) head.textContent = isToday ? "Tours today" : "Next tours";
-    var cta = online
-      ? '<span class="seats">Reserve ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Reserve</a></span>'
-      : '<span class="seats">Reserve by phone</span><span class="act"><a class="btn" href="' + bookHref + '">Call</a></span>';
-    tourRows.innerHTML = S.hours.tourTimes.map(function (t) {
-      return '<div class="row"><span class="when">' + t + '</span>' +
-        '<span class="what">Museum guided tour<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>' +
-        cta + "</div>";
-    }).join("");
+    var times = S.hours.tourTimes.join(" &amp; ");
+    tourRows.innerHTML = online
+      ? '<div class="row"><span class="when">' + times + '</span><span class="what">Guided tour of the museum<small>1809 warehouse, wine cellar &amp; Ziegler Log House</small></span>' +
+        '<span class="seats">Reserve ahead</span><span class="act"><a class="btn" href="' + bookHref + '">Reserve</a></span></div>'
+      : '<div class="row"><span class="when">' + times + '</span><span class="what">Guided tour of the museum<small>1809 warehouse, wine cellar &amp; Ziegler Log House · about an hour</small></span>' +
+        '<span class="seats">Just turn up</span><span class="act"></span></div>';
   }
 
   /* Hours + admission blocks read from data, so prices live in exactly one place */
