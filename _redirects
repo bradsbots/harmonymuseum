@@ -5,7 +5,8 @@
 
 # Visiting
 /plan-a-visit/                visit.html                  301
-/booking.html                 tours.html                  301
+/booking.html                 visit.html                  301
+/tours.html                   visit.html                  301
 /location/                    index.html#visit            301
 /contact-us/                  contact.html                301
 /harmony-walking-tour/        walkingtour.html            301

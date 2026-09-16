@@ -201,7 +201,7 @@ exist here. The domain stays the museum's; only DNS points at the host.
   but the museum owns the configuration and the credit-card account questions.
 - Avoid: any WordPress booking plugin (maintenance), Eventbrite ($1.79+3.7% on a $7
   ticket is disproportionate).
-- The booking page (`tours.html`) is a UI stub; at launch its Book buttons become
+- The booking page (`visit.html`) is a UI stub; at launch its Book buttons become
   deep links into the chosen service's hosted checkout.
 
 **Newsletter — Kit,** per the brief: free to 10,000 subscribers, hosted signup form,
@@ -292,7 +292,7 @@ flips to "closed today", booking slots vanish for the window).
 ```
 index.html                 homepage — local assets, data-driven banner/hours, works offline
 walkingtour.html           Leaflet + OSM tour map: 28 stops, panel, locate-me, list fallback
-tours.html               booking UI stub — schedule generated from data/site.js closures
+visit.html               booking UI stub — schedule generated from data/site.js closures
 data/site.js               THE volunteer-edited file: hours, closures, admission, events
 assets/site.js             shared page logic (banner windows, hours, newsletter stub)
 assets/vendor/leaflet/     Leaflet 1.9.4, vendored — no CDN at runtime
