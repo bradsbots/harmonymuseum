@@ -127,13 +127,17 @@
     });
   }
 
-  /* Mobile menu toggle */
-  var mb = document.getElementById("menuBtn"), nav = document.getElementById("mainNav");
-  if (mb && nav) {
+  /* Mobile menu toggle — any .menuBtn opens the nav named in its aria-controls */
+  document.querySelectorAll(".menuBtn").forEach(function (mb) {
+    var nav = document.getElementById(mb.getAttribute("aria-controls"));
+    if (!nav) return;
     mb.addEventListener("click", function () {
       mb.setAttribute("aria-expanded", String(nav.classList.toggle("open")));
     });
-  }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("open")) { nav.classList.remove("open"); mb.setAttribute("aria-expanded", "false"); mb.focus(); }
+    });
+  });
 
   /* Newsletter band — shown only if the museum turns public signup on (it's a members' perk for now) */
   var band = document.getElementById("newsletterBand"), NL = S.newsletter || {};

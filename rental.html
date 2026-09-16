@@ -49,7 +49,8 @@ html{scroll-behavior:smooth}
 .copy p{max-width:50ch}
 
 .facts{border-top:2px solid var(--ink);margin:22px 0 0}
-.facts .row{display:grid;grid-template-columns:118px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15.5px;align-items:baseline}
+.facts .row{display:grid;grid-template-columns:118px minmax(0,1fr);gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15.5px;align-items:baseline}
+@media(max-width:520px){.facts .row{grid-template-columns:1fr;gap:4px}}
 .facts .row .k{font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;font-weight:600;opacity:.6}
 .facts .row .amt{font-family:"Bodoni Moda",serif;font-size:21px;font-weight:600;font-variant-numeric:tabular-nums}
 .facts .row .amt small{font-family:"Newsreader",serif;font-size:15px;font-weight:300;margin-left:6px}
@@ -106,7 +107,8 @@ textarea{min-height:120px;resize:vertical}
 <header class="bar">
   <a class="back" href="index.html">&larr; Museum</a>
   <h1>Host an event</h1>
-  <nav><a href="#barn">Barn</a><a href="#stewart">Stewart Hall</a><a href="#church">Meetinghouse</a><a href="#request">Ask</a><a href="visit.html">Visit</a><a href="contact.html">Contact</a></nav>
+  <nav id="barNav"><a href="#barn">Barn</a><a href="#stewart">Stewart Hall</a><a href="#church">Meetinghouse</a><a href="#request">Ask</a><a href="visit.html">Visit</a><a href="contact.html">Contact</a></nav>
+  <button class="menuBtn" type="button" aria-expanded="false" aria-controls="barNav" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 
 <section class="hero">
