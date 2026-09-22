@@ -23,7 +23,7 @@ staging: what you push is what visitors see (once the domain is switched over).
 Regenerate the JS copy of the walking-tour data after editing the JSON:
 
 ```
-python -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-8'));open('data/walking-tour.js','w',encoding='utf-8').write('window.WALKING_TOUR = '+json.dumps(d,ensure_ascii=False,indent=1)+';\n')"
+python3 -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-8'));open('data/walking-tour.js','w',encoding='utf-8').write('window.WALKING_TOUR = '+json.dumps(d,ensure_ascii=False,indent=1)+';\n')"
 ```
 
 ## Launch switches in `data/site.js`
@@ -60,8 +60,8 @@ python -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-8
 ## Checking your work
 
 ```
-python tools/check.py             # ALWAYS run before pushing — takes a few seconds
-python -m http.server 8765        # then open http://127.0.0.1:8765/
+python3 tools/check.py            # ALWAYS run before pushing (`python` on Windows) — takes a few seconds
+python3 -m http.server 8765       # then open http://127.0.0.1:8765/
 ```
 
 `tools/check.py` catches the things that actually break this site: a typo in
