@@ -87,5 +87,5 @@ That's it — GitHub Pages rebuilds in about a minute. If you break something, `
 
 ## What's still owed by the museum
 
-See `REPORT.md` ("Still open") — Zeffy account, Katina's degree subjects, March reopening
+See `REPORT.md` ("Still open") — Zeffy account, March reopening
 date, people per tour, a few photos, and the domain/Bluehost logins for switch-over day.

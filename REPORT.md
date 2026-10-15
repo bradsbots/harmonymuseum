@@ -41,7 +41,8 @@ The repo should move to a GitHub org owned by the museum.
 - Replies within 3 business days; phone/email unchanged.
 - Ziegler Log House is 546 Main. Kathy Luek removed from the board; Katina Koontz's
   credentials (B.A., M.A.) kept — required for the historical-society designation.
-  ⚠ The old site never said what the degrees are in or from where — asked the museum.
+  Degrees supplied 2026-10-15: B.A. in History, University of Pittsburgh; M.A. in Museum
+  Studies, Duquesne University; certificates from AASLH and SMA — now on the About page.
 - Instagram reel stays.
 
 **Still to pull from the old host:** Form 990 PDFs (2019–22), photographer permission

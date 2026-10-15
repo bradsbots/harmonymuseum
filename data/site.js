@@ -90,6 +90,20 @@ window.SITE = {
     }
   ],
 
+  /* Homepage spotlight — a band under the big photo that promotes one big event.
+     It shows ONLY between start and end (inclusive), then disappears by itself.
+     Leave the array empty for no band. Test with ?today=YYYY-MM-DD. */
+  spotlight: [
+    {
+      start: "2026-10-01", end: "2026-11-15",
+      label: "Saturday & Sunday, November 14 – 15",
+      title: "Weihnachtsmarkt — the German Christmas Market",
+      text: "Glühwein, music and holiday shopping in the town the Harmonists built. Admission benefits the museum.",
+      link: "news.html#weihnachtsmarkt",
+      linkText: "Market details"
+    }
+  ],
+
   /* Online prices — only shown when booking.mode is "online" (decision deferred 2026-09-15).
      Same as the door until the museum decides otherwise. */
   onlinePricing: [

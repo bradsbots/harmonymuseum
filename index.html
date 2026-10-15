@@ -87,6 +87,15 @@ html.live .proto{display:none!important}
 .hero p{font-size:19px;max-width:44ch;opacity:.95;margin:18px 0 28px;text-shadow:0 1px 2px rgba(0,0,0,.35)}
 .hero .acts{display:flex;gap:13px;flex-wrap:wrap}
 .hero .eyebrow{color:var(--gold-lit);display:block;margin-bottom:16px}
+/* event spotlight band — dated in data/site.js, hidden outside its window */
+section.spot{padding:0}
+.spot{background:var(--indigo-deep);color:var(--paper);border-top:1px solid var(--rule-gold)}
+.spot .wrap{display:flex;align-items:center;gap:28px;padding-top:22px;padding-bottom:22px}
+.spot .lbl{color:var(--gold-lit);display:block;margin-bottom:6px}
+.spot h2{font-size:26px;font-variation-settings:"opsz" 20;line-height:1.15}
+.spot p{margin:6px 0 0;opacity:.85;max-width:60ch}
+.spot .btn{margin-left:auto;flex:none}
+@media(max-width:760px){.spot .wrap{flex-direction:column;align-items:flex-start;gap:14px}.spot .btn{margin-left:0}.spot h2{font-size:22px;font-variation-settings:"opsz" 12}}
 .credit{position:absolute;right:16px;bottom:10px;z-index:3;font-family:"Archivo Narrow",sans-serif;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,227,212,.45)}
 
 /* three doors */
@@ -211,6 +220,17 @@ html.live .proto{display:none!important}
     </div>
   </div>
 </div>
+
+<section class="spot" id="spotlight" hidden>
+  <div class="wrap">
+    <div>
+      <span class="lbl" id="spotLbl"></span>
+      <h2 id="spotTitle"></h2>
+      <p id="spotText"></p>
+    </div>
+    <a class="btn onphoto" id="spotLink" href="news.html"></a>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
@@ -413,7 +433,23 @@ html.live .proto{display:none!important}
   Most were uploaded in 2019 and are 1024px wide; they hold up at these crop sizes but not full-bleed on a large display.
 </div>
 
-<script src="data/site.js?v=5"></script>
+<script src="data/site.js?v=6"></script>
 <script src="assets/site.js?v=4"></script>
+<script>
+/* Event spotlight — shows the current record from SITE.spotlight, if any */
+(function () {
+  var t = window.SITE_TODAY || new Date();
+  var on = (SITE.spotlight || []).filter(function (x) {
+    return new Date(x.start + "T00:00:00") <= t && t <= new Date(x.end + "T23:59:59");
+  })[0];
+  if (!on) return;
+  document.getElementById("spotLbl").textContent = on.label;
+  document.getElementById("spotTitle").textContent = on.title;
+  document.getElementById("spotText").textContent = on.text;
+  var a = document.getElementById("spotLink");
+  a.textContent = on.linkText; a.href = on.link;
+  document.getElementById("spotlight").hidden = false;
+})();
+</script>
 </body>
 </html>
