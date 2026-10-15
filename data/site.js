@@ -106,8 +106,8 @@ window.SITE = {
       where: "Downtown Harmony", link: "news.html#weihnachtsmarkt", note: "$10 · children 12 and under and seniors 65+ $5" },
     { date: "2026-11-15", time: "12 – 4 p.m.", title: "Weihnachtsmarkt — German Christmas Market, day two",
       where: "Downtown Harmony", link: "news.html#weihnachtsmarkt", note: "$10 · children 12 and under and seniors 65+ $5" },
-    { date: "2026-12-31", time: "Evening", title: "Silvester — New Year's Eve, German style",
-      where: "Stewart Hall", note: "Details to be announced" }
+    { date: "2026-12-31", title: "Silvester — New Year's Eve, German style",
+      note: "Details to be announced" }
   ],
 
   /* Rental venues and fees — confirmed by the museum 2026-09-15. A refundable security
