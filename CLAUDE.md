@@ -55,7 +55,8 @@ python3 -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-
 10. Katina Koontz's credentials ("B.A., M.A.") stay on the About page — they matter for
     the historical-society designation.
 11. Don't link to `harmonybusinessassociation.com` — the domain was hijacked (gambling
-    redirect, Sept 2026). Plain text until they have a working site.
+    redirect, Sept 2026). Link their Facebook page
+    (facebook.com/HarmonyBusinessAssociation) until they have a working site.
 
 ## Checking your work
 

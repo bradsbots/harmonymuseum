@@ -69,7 +69,6 @@
     <li>The members' newsletter, by mail</li>
     <li>Gatherings and special programs</li>
     <li>First call to volunteer for events, or to train as a docent and share the town's history with visitors</li>
-    <li>For high-school and college students: volunteering here is a real addition to a résumé or college application</li>
   </ul>
 
   <h3 style="font-size:24px;margin-top:44px">Business members</h3>
@@ -85,8 +84,8 @@
     <li><a href="https://www.oldeconomyvillage.org/" rel="noopener">Friends of Old Economy Village</a></li>
     <li><a href="https://grspecialty.com" rel="noopener">George Riggin Specialty Automotive</a></li>
     <li><a href="https://www.gcoh.org" rel="noopener">Grace Church of Harmony</a></li>
-    <li><a href="https://harmonieladen.com" rel="noopener">Harmonie Laden</a></li>
-    <li>Harmony Business Association<!-- domain hijacked (gambling redirect) as of 2026-09-16; relink when it's back --></li>
+    <li><a href="https://www.facebook.com/harmonieladen/" rel="noopener">Harmonie Laden</a></li>
+    <li><a href="https://www.facebook.com/HarmonyBusinessAssociation/" rel="noopener">Harmony Business Association</a><!-- their own domain was hijacked (gambling redirect) 2026-09-16; Facebook page instead --></li>
     <li><a href="https://www.harmonyfamilychiropractic.com" rel="noopener">Harmony Family Chiropractic</a></li>
     <li><a href="https://northcountrybrewing.com/the-harmony-inn/" rel="noopener">Harmony Inn</a></li>
     <li><a href="https://www.hzeiglerhvac.com" rel="noopener">Harold Zeigler Heating and Cooling</a></li>
@@ -158,8 +157,8 @@
   var S = window.SITE, G = S.giving || {}, j = document.getElementById("join");
   j.innerHTML = G.membershipUrl
     ? '<h3>Join online</h3><p>Pay by card in a minute through ' + (G.provider || 'our payment partner') + '; your membership starts today.</p><a class="btn" href="' + G.membershipUrl + '">Join now</a>'
-    : '<h3>How to join</h3><p>Call the office on <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> (' + S.hours.days + ', ' + S.hours.hoursShort +
-      ') or stop by the museum, or mail a check with your name, address and the membership level to:</p><p><b>' + G.checksTo + '</b></p>' +
+    : '<h3>How to join</h3><p>Call the office at <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> (' + S.hours.days + ', ' + S.hours.hoursShort +
+      '), stop by the museum, or mail a check with your name, address and the membership level to:</p><p><b>' + G.checksTo + '</b></p>' +
       '<p class="proto" style="font-size:14px;opacity:.7">Online signup (Zeffy) appears here automatically once <code>giving.membershipUrl</code> is set in data/site.js — the museum needs to create the Zeffy account first.</p>';
 })();
 </script>
