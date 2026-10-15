@@ -46,8 +46,8 @@ header h1{font-size:20px;flex:1;min-width:200px}
 .panel.open{display:flex}
 @media(min-width:761px){.panel{top:0;right:0;bottom:0;width:390px;box-shadow:-6px 0 30px rgba(20,26,36,.25)}}
 @media(max-width:760px){.panel{left:0;right:0;bottom:0;max-height:62%;border-top:3px solid var(--gold)}}
-.panel .photo{background:var(--indigo);aspect-ratio:16/9;flex:none}
-.panel .photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.03)}
+.panel .photo{background:var(--indigo);aspect-ratio:16/9;flex:none;position:relative;overflow:hidden}
+.panel .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.03)}
 .panel .photo .noimg{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--paper);gap:6px}
 .panel .photo .noimg .big{font-family:"Bodoni Moda",serif;font-variation-settings:"opsz" 20;font-size:44px}
 .panel .body{padding:18px 20px 24px}
@@ -137,11 +137,11 @@ html.live .proto{display:none!important}
 <script>
 (function(){
   var DATA = window.WALKING_TOUR, STOPS = DATA.stops;
-  // photos exist only for museum-owned properties (museum's own 2019 shots)
+  // photos exist only for museum-owned properties; optional third item = crop focus (object-position)
   var PHOTOS = {
-    1:  ["Properties-Museum.jpg", "The 1809 Harmony Society warehouse, now the museum, at 218 Mercer Street"],
-    4:  ["Properties-Zeigler-Log-Cabin-1024x768.jpg", "Ziegler Log House, a reconstructed 19th-century cabin on Main Street"],
-    14: ["Properties-Wagner-1024x768.jpg", "Wagner-Bentel Haus at 222 Mercer Street"],
+    1:  ["Museum-1.jpg", "The 1809 Harmony Society warehouse, now the Harmony Museum, at 218 Mercer Street"],
+    4:  ["Ziegler-Cabin.jpg", "The Ziegler Log House: weathered log walls, a window box of purple flowers and the house sign", "50% 35%"],
+    14: ["Wagner-Bentel-2.jpg", "Inside the Wagner/Bentel Haus: hand-hewn beams, a large clock face, display cases and old wooden tools", "50% 55%"],
     24: ["Properties-Harmonist-Barn-1024x682.jpg", "The 1805 Harmonist/Ziegler Barn on Mercer Road"],
     25: ["Properties-meeting-house-sm.jpg", "The 1825 Mennonite Meetinghouse on Wise Road"],
     27: ["Properties-Rapps-Seat-1024x768.jpg", "Rapp's Seat, the stone outcrop above the town"],
@@ -190,7 +190,8 @@ html.live .proto{display:none!important}
 
     var ph = document.getElementById("panelPhoto");
     if (PHOTOS[n]) {
-      ph.innerHTML = '<img src="assets/originals/' + PHOTOS[n][0] + '" alt="' + PHOTOS[n][1] + '">';
+      ph.innerHTML = '<img src="assets/originals/' + PHOTOS[n][0] + '" alt="' + PHOTOS[n][1] + '"' +
+        (PHOTOS[n][2] ? ' style="object-position:' + PHOTOS[n][2] + '"' : '') + '>';
     } else {
       ph.innerHTML = '<div class="noimg"><span class="big">' + n + '</span><span class="lbl">No photograph yet</span></div>';
     }
