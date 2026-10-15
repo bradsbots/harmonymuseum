@@ -14,12 +14,16 @@
 <link rel="stylesheet" href="assets/inner.css">
 <style>
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-top:2px solid var(--ink);margin:26px 0 40px}
-.facts div{padding:18px 18px 20px 0;border-right:1px solid var(--rule)}
-.facts div:last-child{border-right:0}
+.facts>div{padding:18px 24px 20px;border-right:1px solid var(--rule)}
+.facts>div:first-child{padding-left:0}
+.facts>div:last-child{border-right:0;padding-right:0}
 .facts h3{font-size:14px;font-family:"Archivo Narrow",sans-serif;text-transform:uppercase;letter-spacing:.16em;color:var(--madder);margin-bottom:10px;font-weight:600}
 .facts p{margin:0 0 6px;font-size:16.5px}
-.price{display:flex;justify-content:space-between;border-bottom:1px dotted var(--rule);padding:5px 0;font-size:15.5px;font-variant-numeric:tabular-nums}
-@media(max-width:760px){.facts{grid-template-columns:1fr}.facts div{border-right:0;border-bottom:1px solid var(--rule)}}
+.price{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dotted var(--rule);padding:7px 0;font-size:16px;font-variant-numeric:tabular-nums}
+.price:first-child{padding-top:0}
+.price:last-child{border-bottom:0}
+.price span:last-child{font-weight:600}
+@media(max-width:760px){.facts{grid-template-columns:1fr}.facts>div{padding:18px 0 20px;border-right:0;border-bottom:1px solid var(--rule)}}
 .stops{display:grid;grid-template-columns:1fr 1fr;gap:34px 40px;margin-top:10px}
 @media(max-width:760px){.stops{grid-template-columns:1fr}}
 .stop .frame{aspect-ratio:16/9;margin-bottom:12px}
@@ -65,10 +69,10 @@
   <h3 style="font-size:26px;margin-bottom:6px">While you're here</h3>
   <div class="stops">
     <div class="stop">
-      <div class="frame"><img src="assets/originals/Properties-Wagner-1024x768.jpg" alt="The Wagner/Bentel Haus at 222 Mercer Street, home of the museum shop"></div>
+      <div class="frame"><img src="assets/originals/Shop-2.jpg" alt="The museum shop: a long wooden counter, shelves of old bottles and lanterns, and barrels beneath a candle chandelier"></div>
       <h3>The museum shop</h3>
-      <p>In a separate building across the parking lot at 222 Mercer Street, so you can shop even when the museum is closed. Books, prints, and unique, affordable gifts. Members get a discount.</p>
-      <span style="opacity:.6;font-size:15px">Tuesday – Saturday, 1–4 p.m. · members get a discount</span>
+      <p>Now inside the main museum building at 218 Mercer Street — no tour needed to shop. Books, prints, and unique, affordable gifts. Members get a discount.</p>
+      <span style="opacity:.6;font-size:15px">Tuesday – Saturday, 1–4 p.m.</span>
     </div>
     <div class="stop">
       <div class="frame"><img src="assets/originals/Properties-Weavers-Cabin-1024x768.jpg" alt="The Weavers Cabin at Mercer and Spring Streets"></div>
@@ -78,13 +82,13 @@
     <div class="stop">
       <div class="frame"><img src="assets/originals/Properties-meeting-house-sm.jpg" alt="The 1825 Mennonite Meetinghouse"></div>
       <h3>The walking tour</h3>
-      <p>Most of the historic buildings in town are privately owned, but you can still walk past every one of them reading what happened there. Twenty minutes for the town center, two hours for the full loop.</p>
+      <p>Most of the historic buildings in town are privately owned, but you can still walk past every one of them and read what happened there. Twenty minutes for the town center, two hours for the full loop.</p>
       <a href="walkingtour.html">Open the map &rarr;</a>
     </div>
     <div class="stop">
       <div class="frame"><img src="assets/originals/Properties-Harmonist-Cemetery.jpg" alt="The Harmonist Cemetery gate"></div>
       <h3>Genealogy library</h3>
-      <p>Learning about your ancestors is exciting and slow. To use the library, make an appointment with the museum administrator first — if you drop in, there may be no one available. Call <a href="tel:+17244527341">(724) 452-7341</a> or <a href="contact.html">send a message</a>.</p>
+      <p>Learning about your ancestors is exciting and slow. To use the library, make an appointment with the museum administrator first. Call <a href="tel:+17244527341">(724) 452-7341</a> or <a href="contact.html">send a message</a>.</p>
     </div>
   </div>
 

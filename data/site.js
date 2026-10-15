@@ -12,7 +12,7 @@ window.SITE = {
     onlineUrl: ""
   },
 
-  /* Gift shop page. "off": on hold (2026-09-15) — a short "the shop is at 222 Mercer" page,
+  /* Gift shop page. "off": on hold (2026-09-15) — a short "the shop is in the museum at 218 Mercer" page,
      no catalog, not in the nav. "list": show what's in the shop, buy in person.
      "cart": online ordering (needs Square and a volunteer who ships). */
   shop: { mode: "off" },
