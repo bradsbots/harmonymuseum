@@ -41,7 +41,9 @@ html{scroll-behavior:smooth}
 .gallery .frame{background:var(--indigo);min-height:0}
 .gallery .main{grid-row:1/3}
 .gallery.four .main{grid-row:1/4;aspect-ratio:4/5}
-.gallery.four .side{aspect-ratio:auto}
+.gallery.four{grid-template-rows:repeat(3,1fr)}
+.gallery.four .side{aspect-ratio:auto;position:relative}
+.gallery.four .side img{position:absolute;inset:0}
 .gallery .side{aspect-ratio:4/3}
 .gallery .frame{cursor:zoom-in}
 .gallery .frame img{transition:transform .5s}
@@ -167,9 +169,10 @@ textarea{min-height:120px;resize:vertical}
 
 <section class="venue flip" id="stewart" data-venue="stewart">
   <div class="wrap">
-    <figure class="gallery">
-      <div class="frame main"><img src="assets/originals/venues/Wine-Cellar.jpg" alt="The 1809 wine cellar beneath the museum: a vaulted stone ceiling, flagstone floor, barrels and a chandelier"></div>
-      <div class="frame side"><img src="assets/originals/venues/Wine-Cellar-Steps.jpg" alt="The stone stair down into the wine cellar from Stewart Hall"></div>
+    <figure class="gallery four">
+      <div class="frame main"><img src="assets/originals/venues/Wine-Cellar-1.jpg" alt="The vaulted stone wine cellar of 1809, lit by a candle chandelier"></div>
+      <div class="frame side"><img src="assets/originals/venues/Wine-Cellar-Stairs.jpg" alt="Stone steps under a brick arch leading down into the 1809 wine cellar"></div>
+      <div class="frame side"><img src="assets/originals/venues/Wine-Cellar-2.jpg" alt="Old barrels and wooden wine presses against the cellar's stone walls"></div>
       <div class="frame side"><img src="assets/originals/venues/Stewart-Hall-looking-at-stage.jpg" alt="Stewart Hall's main floor looking toward the raised stage"></div>
       <figcaption>218 Mercer Street · attached to the museum</figcaption>
     </figure>
@@ -180,7 +183,7 @@ textarea{min-height:120px;resize:vertical}
       <p>The hall seats 120 at tables, with a raised stage-and-bar area for a band or a head table. Down a stone stair is the vaulted cellar the Harmonists dug in 1809: 42 by 18 feet of flagstone and candlelight, for a toast, a tasting or the photographs.</p>
       <div class="facts" id="facts-stewart"></div>
       <div class="addon"><b>Add the wine cellar</b>Available only with a Stewart Hall rental, for an additional <span id="cellarFee">$100</span> rental fee.</div>
-      <div class="acts"><a class="btn" href="#request" data-pick="stewart">Ask about the hall</a><a class="btn ghost" href="properties.html#museum">The building</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="stewart">Ask about the hall</a><a class="btn ghost" href="properties.html#museum">Building history</a></div>
     </div>
   </div>
 </section>
@@ -199,7 +202,7 @@ textarea{min-height:120px;resize:vertical}
       <p class="lede">A small, reverent room on the National Register, kept exactly as the Mennonite community built it.</p>
       <p>Original bleacher-style benches for 130 to 150, a pulpit platform for the ceremony, and acoustics that flatter a string quartet or a single voice. Bring your own restroom facility; the museum will tell you who to call.</p>
       <div class="facts" id="facts-church"></div>
-      <div class="acts"><a class="btn" href="#request" data-pick="church">Ask about the meetinghouse</a><a class="btn ghost" href="properties.html#meetinghouse">Its history</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="church">Ask about the meetinghouse</a><a class="btn ghost" href="properties.html#meetinghouse">Meetinghouse history</a></div>
     </div>
   </div>
 </section>
