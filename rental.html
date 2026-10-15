@@ -40,6 +40,8 @@ html{scroll-behavior:smooth}
 .gallery{display:grid;grid-template-columns:2fr 1fr;gap:6px;margin:0}
 .gallery .frame{background:var(--indigo);min-height:0}
 .gallery .main{grid-row:1/3}
+.gallery.four .main{grid-row:1/4;aspect-ratio:4/5}
+.gallery.four .side{aspect-ratio:auto}
 .gallery .side{aspect-ratio:4/3}
 .gallery .frame{cursor:zoom-in}
 .gallery .frame img{transition:transform .5s}
@@ -80,7 +82,8 @@ html{scroll-behavior:smooth}
   .venue.flip .wrap>.gallery{order:0}
   .venue{padding:52px 0}
 }
-@media(max-width:520px){.gallery{grid-template-columns:1fr 1fr}.gallery .main{grid-column:1/3;grid-row:auto;aspect-ratio:4/3}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr 1fr}.gallery .main{grid-column:1/3;grid-row:auto;aspect-ratio:4/3}
+  .gallery.four{grid-template-columns:1fr 1fr 1fr}.gallery.four .main,.gallery.four figcaption{grid-column:1/4}.gallery.four .main{aspect-ratio:4/3}.gallery.four .side{aspect-ratio:1}}
 
 /* how it works */
 .how{background:var(--paper);border-top:1px solid var(--rule);padding:64px 0}
@@ -132,7 +135,7 @@ textarea{min-height:120px;resize:vertical}
   <div class="wrap">
     <span class="eyebrow lbl">Weddings · receptions · concerts · meetings</span>
     <h2>Three rooms older than the county</h2>
-    <p>An 1805 barn strung with lights, a hall with a stone wine cellar beneath it, and a brick meetinghouse where music carries. Every rental keeps them standing.</p>
+    <p>An 1805 barn strung with lights, a hall with a stone wine cellar beneath it, and a brick meetinghouse where music carries.</p>
     <div class="jump">
       <a class="btn" href="#request">Check a date</a>
       <a class="btn onphoto" href="#barn">The barn</a>
@@ -144,19 +147,20 @@ textarea{min-height:120px;resize:vertical}
 
 <section class="venue" id="barn" data-venue="barn">
   <div class="wrap">
-    <figure class="gallery">
-      <div class="frame main"><img src="assets/originals/venues/barn-9.jpg" alt="Inside the 1805 Harmonist Barn: hand-hewn posts and beams, four bays, icicle lights along the rafters"></div>
+    <figure class="gallery four">
+      <div class="frame main"><img src="assets/originals/venues/Barn-Hoco.jpg" alt="Inside the 1805 Harmonist Barn: round tables in white linen, candles and flowers, paper lanterns and lights hung from the rafters"></div>
+      <div class="frame side"><img src="assets/originals/venues/Barn-Wedding-3.jpg" alt="A Pittsburgh cookie table at a wedding in the barn, under string lights"></div>
+      <div class="frame side"><img src="assets/originals/venues/Barn-Wedding-1.jpg" alt="White fabric and string lights draped across the barn's beams for a wedding"></div>
       <div class="frame side"><img src="assets/originals/venues/barn-7.jpg" alt="The red Harmonist Barn and its brick silo on Mercer Road"></div>
-      <div class="frame side"><img src="assets/originals/venues/barn-10.jpg" alt="Nineteenth-century farm tools hung on the barn's plank walls"></div>
       <figcaption>303 Mercer Road · one of the oldest barns west of the Alleghenies</figcaption>
     </figure>
     <div class="copy">
       <span class="lbl">The largest room · 1805</span>
       <h2>The Harmonist Barn</h2>
       <p class="lede">Built by the Harmony Society for sheep, raised by the Mennonites for hay, and now the best-lit barn in Butler County.</p>
-      <p>Four bays of hand-hewn timber, 42 by 64 feet, with room for a ceremony at one end and dancing at the other. The lights stay up. Rentals run Friday to Monday, so you decorate on Friday, celebrate on Saturday and clean up on Sunday.</p>
+      <p>Four bays of hand-hewn timber, 42 by 64 feet, with room for a ceremony at one end and dancing at the other. Rentals run Friday to Monday, decorate on Friday, celebrate on Saturday and clean up on Sunday.</p>
       <div class="facts" id="facts-barn"></div>
-      <div class="acts"><a class="btn" href="#request" data-pick="barn">Ask about the barn</a><a class="btn ghost" href="properties.html#barn">Its history</a></div>
+      <div class="acts"><a class="btn" href="#request" data-pick="barn">Ask about the barn</a><a class="btn ghost" href="properties.html#barn">Barn history</a></div>
     </div>
   </div>
 </section>
@@ -324,7 +328,7 @@ textarea{min-height:120px;resize:vertical}
       (v.window ? '<div class="row"><span class="k">Hours</span><span class="v">' + v.window + '</span></div>' : '') +
       '<div class="row fees"><span class="k">Fees</span><span class="v"><span class="amt">' + v.fee + '<small>rental</small></span>' +
       '<span class="amt">' + v.deposit + '<small>security deposit</small></span></span></div>' +
-      '<div class="holds">' + (holds.length ? "Already taken: " + holds.join(" · ") : "No dates currently held — ask about yours.") + '</div>';
+      (holds.length ? '<div class="holds">Already taken: ' + holds.join(" · ") + '</div>' : '');
   });
   var stewart = V.filter(function(v){ return v.key === "stewart"; })[0];
   if (stewart && stewart.extra) { var m = stewart.extra.match(/\$\d+/); if (m) document.getElementById("cellarFee").textContent = m[0]; }

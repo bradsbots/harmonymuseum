@@ -114,7 +114,7 @@ window.SITE = {
      deposit is REQUIRED for every rental and is charged when the contract is signed. */
   venues: [
     { key: "barn",    name: "1805 Harmonist Barn",   cap: "260 auditorium · 200 seated",
-      fee: "$600", deposit: "$600", window: "Friday to Monday — decorate Friday, event Saturday, clean up Sunday/Monday",
+      fee: "$600", deposit: "$600", window: "Friday to Monday",
       size: "42 × 64 ft, four bays · outside restroom" },
     { key: "stewart", name: "Stewart Hall",          cap: "120 dining · full kitchen · wine cellar add-on",
       fee: "$350", deposit: "$350", window: "8 a.m. to 11 p.m.",
