@@ -39,6 +39,11 @@ window.SITE = {
       start: "2025-11-20", end: "2026-03-02",
       message: "The museum is closed for the season — reopening March 3, 2026. Walking tour and grounds remain open."
     },
+    /* Confirmed 2026-10-27: closed Nov 26–27 for Thanksgiving. */
+    {
+      start: "2026-11-26", end: "2026-11-27",
+      message: "Closed November 26 – 27 for Thanksgiving. Reopening Saturday, November 28."
+    },
     /* Confirmed 2026-09-15: closed Dec 24–26. No winter closure is scheduled — the
        museum may run tours in January. Add a record here if that changes. */
     {
