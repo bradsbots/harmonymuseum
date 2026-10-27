@@ -48,6 +48,7 @@ header h1{font-size:20px;flex:1;min-width:200px}
 @media(max-width:760px){.panel{left:0;right:0;bottom:0;max-height:62%;border-top:3px solid var(--gold)}}
 .panel .photo{background:var(--indigo);aspect-ratio:16/9;flex:none;position:relative;overflow:hidden}
 .panel .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.03)}
+.panel .photo .shut{position:absolute;top:12px;left:12px;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--madder);color:var(--white);padding:5px 10px}
 .panel .photo .noimg{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--paper);gap:6px}
 .panel .photo .noimg .big{font-family:"Bodoni Moda",serif;font-variation-settings:"opsz" 20;font-size:44px}
 .panel .body{padding:18px 20px 24px}
@@ -147,6 +148,8 @@ html.live .proto{display:none!important}
     27: ["Properties-Rapps-Seat-1024x768.jpg", "Rapp's Seat, the stone outcrop above the town"],
     28: ["Properties-Harmonist-Cemetery.jpg", "The Harmonist Cemetery gate with its revolving stone door"]
   };
+  // stops temporarily closed to visitors: badge on the photo + a chip
+  var CLOSED = { 27: "Closed for repairs" };
   function tone(s){ return s.era === "harmonist" ? "gold" : s.era === "mennonite" ? "sage" : "inkd"; }
   function eraLabel(s){
     return s.era === "harmonist" ? "Harmonist era" : s.era === "mennonite" ? "Mennonite era"
@@ -191,12 +194,14 @@ html.live .proto{display:none!important}
     var ph = document.getElementById("panelPhoto");
     if (PHOTOS[n]) {
       ph.innerHTML = '<img src="assets/originals/' + PHOTOS[n][0] + '" alt="' + PHOTOS[n][1] + '"' +
-        (PHOTOS[n][2] ? ' style="object-position:' + PHOTOS[n][2] + '"' : '') + '>';
+        (PHOTOS[n][2] ? ' style="object-position:' + PHOTOS[n][2] + '"' : '') + '>' +
+        (CLOSED[n] ? '<span class="shut">' + CLOSED[n] + '</span>' : '');
     } else {
       ph.innerHTML = '<div class="noimg"><span class="big">' + n + '</span><span class="lbl">No photograph yet</span></div>';
     }
     var chips = '<span class="chip ' + tone(s) + '">' + eraLabel(s) + "</span>"
               + '<span class="chip plain">' + (s.inTown ? "In town" : "Outlying") + "</span>";
+    if (CLOSED[n]) chips += '<span class="chip warn">' + CLOSED[n] + '</span>';
     if (s.needsConfirmation) chips += '<span class="chip warn proto">Name under review</span>';
     document.getElementById("panelChips").innerHTML = chips;
     document.getElementById("panelName").textContent = n + ". " + s.name;

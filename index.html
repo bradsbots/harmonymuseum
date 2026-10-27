@@ -155,6 +155,7 @@ section.spot{padding:0}
 .p span{font-family:"Archivo Narrow",sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.72;margin-top:5px;display:block}
 .p.wide{grid-column:span 2}
 .p.wide .frame{aspect-ratio:2/1}
+.p .shut{position:absolute;top:12px;left:12px;z-index:1;font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--madder);color:var(--white);padding:5px 10px}
 @media(max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}.p.wide{grid-column:span 2}}
 
 /* venues */
@@ -314,7 +315,8 @@ section.spot{padding:0}
       </a>
       <a class="p" href="properties.html#rapps-seat">
         <div class="frame tone"><img src="assets/originals/Properties-Rapps-Seat-1024x768.jpg" alt="Rapp's Seat, a stone outcrop above the town"></div>
-        <div class="lay"><h4>Rapp's Seat</h4><span>Currently closed for repairs</span></div>
+        <span class="shut">Closed for repairs</span>
+        <div class="lay"><h4>Rapp's Seat</h4><span>Evergreen Mill Rd · a steep climb</span></div>
       </a>
       <a class="p wide" href="properties.html#barn">
         <div class="frame tone"><img src="assets/originals/Properties-Harmonist-Barn-1024x682.jpg" alt="The Harmonist/Ziegler Barn on Mercer Road"></div>
