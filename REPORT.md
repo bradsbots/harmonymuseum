@@ -45,8 +45,13 @@ The repo should move to a GitHub org owned by the museum.
   Studies, Duquesne University; certificates from AASLH and SMA — now on the About page.
 - Instagram reel stays.
 
-**Still to pull from the old host:** Form 990 PDFs (2019–22), photographer permission
-form PDF, the 16 Harmony Line period photos, the Weihnachtsmarkt flyer images.
+**Still to pull from the old host:** photographer permission form PDF (pending
+decision), the Weihnachtsmarkt flyer images.
+
+**Decided 2026-10-30:** Harmony Line period photos — not moving over. Form 990 PDFs —
+not hosted; About page says copies are available at the museum office. People per
+tour — no maximum for now (`capacityPerTour: null`). Walking-tour stops 19/22 era —
+left undetermined. Winter schedule — museum still undecided.
 
 ---
 
