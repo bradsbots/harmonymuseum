@@ -71,13 +71,13 @@ window.SITE = {
     directions: "I-79 exits 87–88 · 30 miles north of Pittsburgh"
   },
 
-  /* Ways to pay. The museum chose Zeffy (2026-09-15); account to be created under
-     hmuseum@zoominternet.net. Paste the Zeffy form links here when they exist.
-     Empty = the pages show phone + mail instructions. */
+  /* Ways to pay. Zeffy account under hmuseum@zoominternet.net (links added 2026-10-30).
+     Pages show the Zeffy button plus phone + mail-a-check instructions.
+     Empty = the pages show phone + mail instructions only. */
   giving: {
     provider: "Zeffy",
-    membershipUrl: "",
-    donateUrl: "",
+    membershipUrl: "https://www.zeffy.com/en-US/ticketing/historic-harmony-incs-memberships",
+    donateUrl: "https://www.zeffy.com/en-US/donation-form/support-historic-harmony-inc",
     checksTo: "Historic Harmony, Inc., 218 Mercer Street, Harmony, PA 16037",
     replyDays: "3 business days"
   },

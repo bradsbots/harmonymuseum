@@ -12,7 +12,7 @@ either the currently published value or a visible TODO; nothing is invented.
 | `booking.mode` | `"phone"` — every Book button is a call link (museum decision) | `"online"` + `onlineUrl` if/when they pick a service |
 | `shop.mode` | `"off"` — shop on hold; page says where/when, not in nav | `"list"` or `"cart"` in phase 2 |
 | `newsletter.publicSignup` | `false` — members' perk by mail, no public form | leave false |
-| `giving.membershipUrl` / `donateUrl` | empty — pages show phone + check address | Zeffy form links once the museum creates the account |
+| `giving.membershipUrl` / `donateUrl` | Zeffy links set 2026-10-30 — pages show the Zeffy button plus phone + check address | done |
 | `featured[]` | @412onthemove's Sept 2026 tour reel (Instagram embed on click) | swap URL for a newer post |
 
 Done for launch: self-hosted fonts (`tools/fetch_fonts.py`), `_redirects` for all 34
@@ -36,7 +36,7 @@ The repo should move to a GitHub org owned by the museum.
   Stewart Hall 8–11; Meetinghouse 8 a.m.–8 p.m.; wine cellar only with Stewart Hall,
   +$100 rental fee.
 - Membership: Sustaining $100–499, Advocate $500+, Business $50+. Payments via
-  **Zeffy**, account under hmuseum@zoominternet.net (not yet created).
+  **Zeffy**, account under hmuseum@zoominternet.net (created; links on site 2026-10-30).
 - Newsletter: members-only, by mail — public signup removed.
 - Replies within 3 business days; phone/email unchanged.
 - Ziegler Log House is 546 Main. Kathy Luek removed from the board; Katina Koontz's

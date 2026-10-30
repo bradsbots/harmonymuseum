@@ -103,10 +103,12 @@
 <script>
 (function(){
   var S = window.SITE, G = S.giving || {}, g = document.getElementById("give");
+  var byCheck = '<p>Checks, payable to Historic Harmony, Inc., mail to:</p><p><b>' + G.checksTo + '</b></p>',
+      talk = '<p>To talk about a memorial gift, a bequest, or a donor-advised fund, call <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> or write to <a href="mailto:' + S.contact.email + '">' + S.contact.email + '</a>.</p>';
   g.innerHTML = G.donateUrl
-    ? '<h3>Give online</h3><p>Card, one-time or monthly. You\'ll get a receipt by email.</p><a class="btn" href="' + G.donateUrl + '">Donate now</a>'
-    : '<h3>How to give</h3><p>Checks, payable to Historic Harmony, Inc., mail to:</p><p><b>' + G.checksTo + '</b></p>' +
-      '<p>To talk about a memorial gift, a bequest, or a donor-advised fund, call <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> or write to <a href="mailto:' + S.contact.email + '">' + S.contact.email + '</a>.</p>' +
+    ? '<h3>How to give</h3><p>Online by card through ' + (G.provider || 'our payment partner') + '. You\'ll get a receipt by email.</p><a class="btn" href="' + G.donateUrl + '">Donate now</a>' +
+      '<p>Or by mail — checks, payable to Historic Harmony, Inc., to:</p><p><b>' + G.checksTo + '</b></p>' + talk
+    : '<h3>How to give</h3>' + byCheck + talk +
       '<p class="proto" style="font-size:14px;opacity:.7">An online Donate button (Zeffy) appears here automatically once <code>giving.donateUrl</code> is set in data/site.js — the museum needs to create the Zeffy account first.</p>';
 })();
 </script>

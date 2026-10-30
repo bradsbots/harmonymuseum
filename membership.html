@@ -116,7 +116,8 @@
 (function(){
   var S = window.SITE, G = S.giving || {}, j = document.getElementById("join");
   j.innerHTML = G.membershipUrl
-    ? '<h3>Join online</h3><p>Pay by card in a minute through ' + (G.provider || 'our payment partner') + '; your membership starts today.</p><a class="btn" href="' + G.membershipUrl + '">Join now</a>'
+    ? '<h3>How to join</h3><p>Online by card through ' + (G.provider || 'our payment partner') + ' — it takes a minute.</p><a class="btn" href="' + G.membershipUrl + '">Join now</a>' +
+      '<p>Or call the office at <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a>, stop by the museum, or mail a check with your name, address and the membership level to:</p><p><b>' + G.checksTo + '</b></p>'
     : '<h3>How to join</h3><p>Call the office at <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a> (' + S.hours.days + ', ' + S.hours.hoursShort +
       '), stop by the museum, or mail a check with your name, address and the membership level to:</p><p><b>' + G.checksTo + '</b></p>' +
       '<p class="proto" style="font-size:14px;opacity:.7">Online signup (Zeffy) appears here automatically once <code>giving.membershipUrl</code> is set in data/site.js — the museum needs to create the Zeffy account first.</p>';
