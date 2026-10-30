@@ -100,7 +100,8 @@ window.SITE = {
 
   /* Homepage spotlight — a band under the big photo that promotes one big event.
      It shows ONLY between start and end (inclusive), then disappears by itself.
-     Leave the array empty for no band. Test with ?today=YYYY-MM-DD. */
+     Leave the array empty for no band. Test with ?today=YYYY-MM-DD.
+     Optional: tickets (an outside ticket page) — becomes the red button; link turns into the plain one. */
   spotlight: [
     {
       start: "2026-10-01", end: "2026-11-15",
@@ -108,7 +109,8 @@ window.SITE = {
       title: "Weihnachtsmarkt — the German Christmas Market",
       text: "Glühwein, music and holiday shopping in the town the Harmonists built. Admission benefits the museum.",
       link: "news.html#weihnachtsmarkt",
-      linkText: "Market details"
+      linkText: "Market details",
+      tickets: "https://www.eventbrite.com/e/christmas-market-tickets-2001402543885"
     }
   ],
 

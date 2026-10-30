@@ -94,8 +94,9 @@ section.spot{padding:0}
 .spot .lbl{color:var(--gold-lit);display:block;margin-bottom:6px}
 .spot h2{font-size:26px;font-variation-settings:"opsz" 20;line-height:1.15}
 .spot p{margin:6px 0 0;opacity:.85;max-width:60ch}
-.spot .btn{margin-left:auto;flex:none}
-@media(max-width:760px){.spot .wrap{flex-direction:column;align-items:flex-start;gap:14px}.spot .btn{margin-left:0}.spot h2{font-size:22px;font-variation-settings:"opsz" 12}}
+.spot .acts{margin-left:auto;flex:none;display:flex;gap:10px;flex-wrap:wrap}
+.spot .btn[hidden]{display:none}
+@media(max-width:760px){.spot .wrap{flex-direction:column;align-items:flex-start;gap:14px}.spot .acts{margin-left:0}.spot h2{font-size:22px;font-variation-settings:"opsz" 12}}
 .credit{position:absolute;right:16px;bottom:10px;z-index:3;font-family:"Archivo Narrow",sans-serif;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,227,212,.45)}
 
 /* three doors */
@@ -229,7 +230,10 @@ section.spot{padding:0}
       <h2 id="spotTitle"></h2>
       <p id="spotText"></p>
     </div>
-    <a class="btn onphoto" id="spotLink" href="news.html"></a>
+    <div class="acts">
+      <a class="btn" id="spotTickets" href="#" target="_blank" rel="noopener" hidden>Get tickets on Eventbrite</a>
+      <a class="btn onphoto" id="spotLink" href="news.html"></a>
+    </div>
   </div>
 </section>
 
@@ -446,6 +450,7 @@ section.spot{padding:0}
   document.getElementById("spotText").textContent = on.text;
   var a = document.getElementById("spotLink");
   a.textContent = on.linkText; a.href = on.link;
+  if (on.tickets) { var tk = document.getElementById("spotTickets"); tk.href = on.tickets; tk.hidden = false; }
   document.getElementById("spotlight").hidden = false;
 })();
 </script>
