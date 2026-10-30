@@ -49,6 +49,7 @@
     <div class="tier"><span class="lbl">Sustaining</span><div class="amt">$100<small>to $499</small></div><p>For those who can give a little more.</p></div>
     <div class="tier"><span class="lbl">Advocate</span><div class="amt">$500<small>and up</small></div><p>The museum's most committed supporters.</p></div>
   </div>
+  <p id="term" style="font-size:16px;opacity:.8;margin:14px 0 0" hidden></p>
 
   <div class="join" id="join"></div>
 
@@ -110,11 +111,12 @@
     <span><a href="privacy.html">Privacy</a><span class="proto"> · Preview — not the live site</span></span>
   </div>
 </footer>
-<script src="data/site.js?v=9"></script>
+<script src="data/site.js?v=10"></script>
 <script src="assets/site.js?v=4"></script>
 <script>
 (function(){
-  var S = window.SITE, G = S.giving || {}, j = document.getElementById("join");
+  var S = window.SITE, G = S.giving || {}, j = document.getElementById("join"), t = document.getElementById("term");
+  if (G.membershipThrough) { t.textContent = "New memberships run through " + G.membershipThrough + "."; t.hidden = false; }
   j.innerHTML = G.membershipUrl
     ? '<h3>How to join</h3><p>Online by card through ' + (G.provider || 'our payment partner') + ' — it takes a minute.</p><p><a class="btn" href="' + G.membershipUrl + '">Join now</a></p>' +
       '<p>Or call the office at <a href="' + S.contact.phoneHref + '">' + S.contact.phone + '</a>, stop by the museum, or mail a check with your name, address and the membership level to:</p><p><b>' + G.checksTo + '</b></p>'

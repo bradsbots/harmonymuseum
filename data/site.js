@@ -78,6 +78,9 @@ window.SITE = {
     provider: "Zeffy",
     membershipUrl: "https://www.zeffy.com/en-US/ticketing/historic-harmony-incs-memberships",
     donateUrl: "https://www.zeffy.com/en-US/donation-form/support-historic-harmony-inc",
+    /* All new memberships currently end on this date (museum, 2026-10-30). Shown under
+       the prices on the Membership page. Empty = no line shown. */
+    membershipThrough: "December 31, 2027",
     checksTo: "Historic Harmony, Inc., 218 Mercer Street, Harmony, PA 16037",
     replyDays: "3 business days"
   },
