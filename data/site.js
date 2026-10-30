@@ -107,7 +107,7 @@ window.SITE = {
       start: "2026-10-01", end: "2026-11-15",
       label: "Saturday & Sunday, November 14 – 15",
       title: "Weihnachtsmarkt — the German Christmas Market",
-      text: "Glühwein, music and holiday shopping in the town the Harmonists built. Admission benefits the museum.",
+      text: "Glühwein, music and holiday shopping in the town the Harmonists built. Admission benefits the museum. Tickets on Eventbrite or at the gate.",
       link: "news.html#weihnachtsmarkt",
       linkText: "Market details",
       tickets: "https://www.eventbrite.com/e/christmas-market-tickets-2001402543885"
