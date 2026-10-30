@@ -46,6 +46,8 @@ python3 -c "import json;d=json.load(open('data/walking-tour.json',encoding='utf-
    open any time. Say both halves together wherever hours appear.
 5. **One solid red button per block**, ghost buttons for secondary links, small-caps text
    links inside cards. Icons always paired with text (never an icon alone).
+   Each card in a row of cards counts as its own block (Get Involved: Volunteer,
+   Join and Give buttons are all solid red — decided 2026-10-30).
 6. **Type:** Bodoni Moda for headings (`font-variation-settings:"opsz" 20`; `"opsz" 12`
    at 24px and under — the hairlines vanish otherwise), Newsreader for body, Archivo
    Narrow caps for labels. Don't add fonts.
